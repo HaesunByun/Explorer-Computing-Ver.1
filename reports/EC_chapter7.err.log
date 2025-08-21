@@ -1,0 +1,129 @@
+Traceback (most recent call last):
+  File "D:\users\anaconda3\lib\site-packages\jupyter_cache\executors\utils.py", line 64, in single_nb_execution
+    **kwargs,
+  File "D:\users\anaconda3\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "D:\users\anaconda3\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "D:\users\anaconda3\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "D:\users\anaconda3\lib\asyncio\base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "D:\users\anaconda3\lib\site-packages\nbclient\client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "D:\users\anaconda3\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "D:\users\anaconda3\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pygame
+import random
+
+pygame.init()
+
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("풍선을 잡아라!")
+clock = pygame.time.Clock()
+
+
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.image.load('./images/player.jpg').convert_alpha()
+        self.rect = self.image.get_rect()
+        self.rect.center = (400, 300)
+        self.velocity = pygame.math.Vector2(0, 0)
+
+    def update(self):
+        self.velocity.x = 0  # 매 프레임 좌우 속도 초기화
+        self.velocity.y += 0.5 #
+
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            self.velocity.x = -5  
+        if keys[pygame.K_RIGHT]:
+            self.velocity.x = 5
+        if keys[pygame.K_UP] and self.rect.bottom >= 600:
+            self.velocity.y = -10  # Jump
+
+        self.rect.x += self.velocity.x
+        self.rect.y += self.velocity.y
+
+        if self.rect.bottom >= 600:
+            self.rect.bottom = 600
+            self.velocity.y = 0
+
+        # 화면을 벋어나는 것을 방지    
+        if self.rect.left <= 0:
+            self.rect.left = 0
+        if self.rect.right >= 800:
+            self.rect.right = 800  
+################################################## 풍선이 아래로 내려오는 상황
+class Enemy(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.image.load('./images/balloon.png').convert_alpha()
+        self.image = pygame.transform.scale(self.image, (60, 80))
+        self.rect = self.image.get_rect()
+        self.rect.center = (random.randint(50, 750), random.randint(-100, -40))  # 화면 보이지 않는 위쪽에서 만들어져서 아래로 내려오게 함
+        self.velocity = random.uniform(1.0, 2.5)  # 풍선 낙하 속도
+        self.mask = pygame.mask.from_surface(self.image)
+
+    def update(self):
+        self.rect.y += self.velocity
+        if self.rect.top > 600:  # 화면 아래로 나가면 제거
+            self.kill()
+
+all_sprites = pygame.sprite.Group()
+player = Player()
+all_sprites.add(player)
+
+balloon_group = pygame.sprite.Group() 
+
+# 처음에 3개 풍선
+for _ in range(3):
+    balloon_group.add(Enemy())
+
+
+running = True
+while running:
+    screen.fill((255, 255, 255))    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    while len(balloon_group) < 3:
+        balloon_group.add(Enemy())   
+
+    all_sprites.update()  # Update all sprites in the group
+    all_sprites.draw(screen)  # Draw all sprites in the group
+
+    balloon_group.update()        
+    balloon_group.draw(screen)
+
+    pygame.display.flip()
+    clock.tick(60)    
+
+pygame.quit()
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[1;32m<ipython-input-1-dc388966bbf2>[0m in [0;36m<module>[1;34m[0m
+[0;32m     58[0m [1;33m[0m[0m
+[0;32m     59[0m [0mall_sprites[0m [1;33m=[0m [0mpygame[0m[1;33m.[0m[0msprite[0m[1;33m.[0m[0mGroup[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 60[1;33m [0mplayer[0m [1;33m=[0m [0mPlayer[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     61[0m [0mall_sprites[0m[1;33m.[0m[0madd[0m[1;33m([0m[0mplayer[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     62[0m [1;33m[0m[0m
+
+[1;32m<ipython-input-1-dc388966bbf2>[0m in [0;36m__init__[1;34m(self)[0m
+[0;32m     12[0m     [1;32mdef[0m [0m__init__[0m[1;33m([0m[0mself[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     13[0m         [0msuper[0m[1;33m([0m[1;33m)[0m[1;33m.[0m[0m__init__[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 14[1;33m         [0mself[0m[1;33m.[0m[0mimage[0m [1;33m=[0m [0mpygame[0m[1;33m.[0m[0mimage[0m[1;33m.[0m[0mload[0m[1;33m([0m[1;34m'./images/player.jpg'[0m[1;33m)[0m[1;33m.[0m[0mconvert_alpha[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     15[0m         [0mself[0m[1;33m.[0m[0mrect[0m [1;33m=[0m [0mself[0m[1;33m.[0m[0mimage[0m[1;33m.[0m[0mget_rect[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     16[0m         [0mself[0m[1;33m.[0m[0mrect[0m[1;33m.[0m[0mcenter[0m [1;33m=[0m [1;33m([0m[1;36m400[0m[1;33m,[0m [1;36m300[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+
+[1;31mFileNotFoundError[0m: No file './images/player.jpg' found in working directory 'C:\Users\user\Explorer-Computing-Ver.1'.
+FileNotFoundError: No file './images/player.jpg' found in working directory 'C:\Users\user\Explorer-Computing-Ver.1'.
+

@@ -337,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +355,37 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>사운드와 음악 추가</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">✅ 사운드 효과 넣기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🚀<strong>해보기 1: 사운드 효과 넣기</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">✅ 배경 음악 넣기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">🚀<strong>해보기 2: 배경 음악 넣기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 논리 및 규칙</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">✅ 충돌 감지</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">🚀<strong>해보기 3: 충돌 감지 및 제거</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🚀<strong>해보기 4: 목표물 추가 및 이동</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">✅ 점수 기록 및 업데이트</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🚀<strong>해보기 5: 점수 시스템</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">✅ 승리 및 패배 조건</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">🚀<strong>해보기 6: 승리 및 패배 조건</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>레벨 생성</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">✅ 여러 레벨 디자인</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">✅ 레벨 간 전환</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -369,13 +402,594 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-7">
 <h1>Chapter 7. 게임 고도화하기<a class="headerlink" href="#chapter-7" title="Permalink to this headline">#</a></h1>
 <div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<p><font size=5> <strong> ✅ 학습목표와 기대효과</strong></font></p>
+<ul class="simple">
+<li><p>학습목표</p>
+<ul>
+<li><p>Pygame을 활용하여 사운드와 배경음악을 효과적으로 적용하는 방법을 익힌다.</p></li>
+<li><p>게임의 흐름에 맞는 논리 구조와 규칙을 구현해본다.</p></li>
+<li><p>난이도 조절을 위한 레벨 구성과 장면 전환 기능을 구현해본다.</p></li>
+</ul>
+</li>
+<li><p>기대효과</p>
+<ul>
+<li><p>게임의 몰입도를 높이는 요소들을 직접 구현하며 프로그래밍 능력을 향상시킬 수 있다.</p></li>
+<li><p>다양한 게임 장르에 활용 가능한 기초 제작 기술을 습득하게 된다.</p></li>
+</ul>
+</li>
+</ul>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div" title="Permalink to this headline">#</a></h2>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image20.png?v=1234" width=400>  </div><ul class="simple">
+<li><p>아래 코드는 지난주까지 배운 소스코드이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;풍선을 잡아라!&quot;</span><span class="p">)</span>
+<span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./images/player.jpg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">Vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 매 프레임 좌우 속도 초기화</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mf">0.5</span> <span class="c1">#</span>
+
+        <span class="n">keys</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>  
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_UP</span><span class="p">]</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="mi">600</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>  <span class="c1"># Jump</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="mi">600</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="o">=</span> <span class="mi">600</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># 화면을 벋어나는 것을 방지    </span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="mi">800</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="mi">800</span>  
+<span class="c1">################################################## 풍선이 아래로 내려오는 상황</span>
+<span class="k">class</span> <span class="nc">Enemy</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./images/balloon.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">750</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">))</span>  <span class="c1"># 화면 보이지 않는 위쪽에서 만들어져서 아래로 내려오게 함</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>  <span class="c1"># 풍선 낙하 속도</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">from_surface</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">top</span> <span class="o">&gt;</span> <span class="mi">600</span><span class="p">:</span>  <span class="c1"># 화면 아래로 나가면 제거</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+
+<span class="n">all_sprites</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">()</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">()</span>
+<span class="n">all_sprites</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+
+<span class="n">balloon_group</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">()</span> 
+
+<span class="c1"># 처음에 3개 풍선</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">balloon_group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Enemy</span><span class="p">())</span>
+
+
+<span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>    
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">balloon_group</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">balloon_group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Enemy</span><span class="p">())</span>   
+
+    <span class="n">all_sprites</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>  <span class="c1"># Update all sprites in the group</span>
+    <span class="n">all_sprites</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>  <span class="c1"># Draw all sprites in the group</span>
+
+    <span class="n">balloon_group</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>        
+    <span class="n">balloon_group</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>
+
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+    <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>    
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+📢 안내 
+<ul class="simple">
+<li><p>템플릿 소스 코드를 확장하면서 위아래로 자주 이동해야 하므로, 템플릿 코드를 새 파일에 복사해 두고 원본 파일과 번갈아 보며 작업해주세요.</p></li>
+<li><p>메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: <strong>Ex_ch7_source.ipynb</strong> -&gt; 저장위치 지정후 엔터</p></li>
+</ul>
+</div></div>
+<div class="section" id="id1">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>사운드와 음악 추가</strong></div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>사운드와 음악은 게임 개발에서 중요한 요소로, 게임의 깊이와 몰입감을 더해준다.</p></li>
+<li><p>Pygame은 사운드와 음악을 로드하고, 재생하며, 관리하는 간단하고 효과적인 방법을 제공한다.</p></li>
+<li><p>사운드 효과는 게임 내 특정 행동이나 이벤트(예: 점프, 총알 발사, 객체와 충돌 등)를 강조하기 위해 사용되는 짧은 오디오 클립이다.</p></li>
+<li><p>Pygame은 <code class="docutils literal notranslate"><span class="pre">pygame.mixer</span></code> 모듈을 사용하여 사운드 효과를 로드하고 재생할 수 있다.</p></li>
+</ul>
+<div class="section" id="id2">
+<h3>✅ 사운드 효과 넣기<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>믹서 초기화: 사운드를 로드하고 재생하기 전에, 믹서를 초기화해야 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>사운드 효과 로드하기</p>
+<ul>
+<li><p>사운드 효과를 로드하려면 <code class="docutils literal notranslate"><span class="pre">pygame.mixer.Sound()</span></code> 함수를 사용한다.</p></li>
+<li><p>음악파일을 sound 폴더 하나 만들어서 그 안에 넣어 놓도록 한다.</p></li>
+<li><p>아래 링크를 클릭하여 사운드 위젯이 나오면 마우스 오른쪽 버튼 눌러 다운로드 한후, sound 폴더에 저장한다.</p></li>
+<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/jump.mp3">https://haesunbyun.github.io/common/images/jump.mp3</a> (무료배포 가능한 음악임)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jump_sound</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">Sound</span><span class="p">(</span><span class="s1">&#39;./sound/jump.mp3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>사운드 효과 재생하기</p>
+<ul>
+<li><p>사운드 효과를 로드한 후, <code class="docutils literal notranslate"><span class="pre">Sound</span></code> 객체의 <code class="docutils literal notranslate"><span class="pre">play()</span></code> 메서드를 사용하여 해당 사운드를 재생할 수 있다.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">KEYDOWN</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_UP</span><span class="p">:</span>
+                <span class="n">jump_sound</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>🚀<strong>해보기 1: 사운드 효과 넣기</strong><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch7_source.ipynb에 사운드 효과 넣기 코드를 추가하세요.
+</div></div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>✅ 배경 음악 넣기<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>배경 음악 로드하기</p>
+<ul>
+<li><p>배경 음악은 지속적으로 재생되며 게임의 전반적인 분위기와 분위기를 설정하는 역할을 한다.</p></li>
+<li><p>사운드 효과와 달리 배경 음악은 보통 게임 플레이 중에 반복되는 긴 오디오 트랙이다.</p></li>
+<li><p>배경 음악을 로드하려면 <code class="docutils literal notranslate"><span class="pre">pygame.mixer.music.load()</span></code> 함수를 사용한다.</p></li>
+<li><p>아래 링크를 클릭하여 사운드 위젯이 나오면 마우스 오른쪽 버튼 눌러 다운로드 한후, sound 폴더에 저장한다.</p></li>
+<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/background.mp3">https://haesunbyun.github.io/common/images/background.mp3</a> (무료배포 가능한 음악임)</p></li>
+<li><p>이 배경 음악이 맘에 들지 않으면 다른 음악을 사용해도 됨</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 배경음악 로드하기</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./sound/background.mp3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>배경 음악 재생하기</p>
+<ul>
+<li><p>배경 음악을 재생하려면 <code class="docutils literal notranslate"><span class="pre">pygame.mixer.music.play()</span></code> 함수를 사용한다.</p></li>
+<li><p>이 함수의 옵션으로는 <code class="docutils literal notranslate"><span class="pre">loops</span></code>와 <code class="docutils literal notranslate"><span class="pre">start</span></code>가 있다.</p></li>
+<li><p><strong>loops</strong>: 음악을 반복할 횟수. <code class="docutils literal notranslate"><span class="pre">-1</span></code>로 설정하면 음악이 무한 반복된다.</p></li>
+<li><p><strong>start</strong>: 음악 파일에서 재생을 시작할 위치 (초 단위)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 배경음악 무한 반복 재생하기</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">loops</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>음악 정지 및 일시 정지</p>
+<ul>
+<li><p>배경 음악 재생을 제어하려면 <code class="docutils literal notranslate"><span class="pre">stop()</span></code>과 <code class="docutils literal notranslate"><span class="pre">pause()</span></code> 메서드를 사용할 수 있습니다.</p></li>
+<li><p><strong>stop()</strong>: 음악을 즉시 정지</p></li>
+<li><p><strong>pause()</strong>: 음악을 일시 정지</p></li>
+<li><p><strong>unpause()</strong>: 음악을 다시 재개</p></li>
+<li><p>이 기능들을 pause와 unpause는 s키로 토글기능을 갖고 하고, stop은 x 키와 연동시켜보자.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 음악 일시정지 상태 변수</span>
+<span class="n">paused</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_s</span><span class="p">:</span>  <span class="c1"># S 키로 토글</span>
+    <span class="k">if</span> <span class="n">paused</span><span class="p">:</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">unpause</span><span class="p">()</span>
+        <span class="n">paused</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span>
+        <span class="n">paused</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_x</span><span class="p">:</span>  <span class="c1"># X 키로 완전 정지</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">paused</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>볼륨 설정</p>
+<ul>
+<li><p>배경 음악의 볼륨은 <code class="docutils literal notranslate"><span class="pre">set_volume()</span></code> 메서드를 사용하여 조정할 수 있다.</p></li>
+<li><p>볼륨 레벨은 0.0에서 1.0 사이의 값으로 설정할 수 있다.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pygame</span><span class="o">.</span><span class="n">mixer</span><span class="o">.</span><span class="n">music</span><span class="o">.</span><span class="n">set_volume</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># 50% 볼륨</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>pygame에서 윈도우를 닫아도 배경음악이 멈추지 않고 계속 재생될 때에는 음악이 백그라운드에서 계속 실행되어 발생한다.</p></li>
+<li><p>그럴 경우 메뉴에서 Kernel → Restart</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>🚀<strong>해보기 2: 배경 음악 넣기</strong><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch7_source.ipynb에 배경 음악 넣기 코드를 추가하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id6">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 논리 및 규칙</strong></div><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>게임 논리와 규칙을 구현하는 것은 게임 개발의 핵심이다.</p></li>
+<li><p>게임이 어떻게 동작하는지, 플레이어가 게임 세계와 어떻게 상호작용하는지, 게임이 어떻게 진행되는지를 결정해야 한다.</p></li>
+<li><p>캐릭터의 이동, 적의 행동, 승리와 패배 조건 등 게임의 모든 측면이 포함되어야 한다.</p></li>
+<li><p>이전에 우리는 캐릭터의 이동과 적의 행동을 구현하였다.</p></li>
+<li><p>이번에는 캐릭터와 적의 충돌감지를 구현해보자.</p></li>
+</ul>
+<div class="section" id="id7">
+<h3>✅ 충돌 감지<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>충돌 감지는 상호작용하는 게임 플레이에서 매우 중요하다. 예를 들어, 플레이어 스프라이트가 적, 벽 또는 다른 객체와 충돌할 때 이를 감지하는 기능이 필요하다. Pygame은 여러 가지 충돌 감지 방법을 제공한다.</p></li>
+</ul>
+<ul>
+<li><p>충돌 감지 함수는 다음과 같다.</p>
+  <font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수 이름</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite.collide_rect(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p>두 스프라이트의 <code class="docutils literal notranslate"><span class="pre">rect</span></code> 사각형이 겹치는지 검사 (단순 박스 충돌)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite.collide_circle(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p>두 스프라이트의 중심 좌표 거리로 충돌 검사 (<code class="docutils literal notranslate"><span class="pre">radius</span></code> 속성이 필요함)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite.collide_mask(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p>마스크 기반 픽셀 단위 충돌 검사 (더 정밀한 충돌을 감지할 수 있게 해줌)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite.spritecollide(sprite,</span> <span class="pre">group,</span> <span class="pre">dokill)</span></code></p></td>
+<td><p>하나의 스프라이트가 그룹 내 어떤 스프라이트와 충돌하는지 검사</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite.spritecollideany(sprite,</span> <span class="pre">group)</span></code></p></td>
+<td><p>그룹 내 스프라이트 중 하나라도 충돌하면 True 반환</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite.groupcollide(group1,</span> <span class="pre">group2,</span> <span class="pre">dokill1,</span> <span class="pre">dokill2)</span></code></p></td>
+<td><p>두 그룹 간 충돌 검사 및 충돌한 항목 반환</p></td>
+</tr>
+</tbody>
+</table>
+  </font></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 단순 박스 충돌</span>
+<span class="k">for</span> <span class="n">balloon</span> <span class="ow">in</span> <span class="n">balloon_group</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">collide_rect</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">balloon</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;충돌!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>마스크(Mask): 마스크는 스프라이트 이미지에서 픽셀의 투명도를 나타내는 1비트 이미지이다.</p></li>
+<li><p>마스크에서 검은색 부분은 해당 위치가 투명한 픽셀을 의미하고, 흰색 부분은 불투명한 픽셀을 의미한다.</p></li>
+<li><p>이를 통해 투명 영역을 제외한 실제 이미지의 충돌만 감지할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># player와 balloon 모두 마스크 설정</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">from_surface</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>  <span class="c1"># 마스크 생성</span>
+
+<span class="c1"># 충돌 검사</span>
+<span class="n">hit</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">spritecollide</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">balloon_group</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">collide_mask</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">hit</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hit</span><span class="p">)):</span>
+        <span class="n">balloon_group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Enemy</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>충돌 검사를 위해 player와 balloon_group의 마스크가 겹치는지 검사한다.</p></li>
+<li><p>충돌하였다면 풍선이 제거가 되어야 하는데 세 번째 인자 True가 충돌한 풍선을 그룹에서 제거하라는 의미이다.</p></li>
+<li><p>제거 후에는 풍선을 더 만들어낸다.</p></li>
+<li><p>이 코드를 반복문 안에 넣어준다.</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>🚀<strong>해보기 3: 충돌 감지 및 제거</strong><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch7_source.ipynb에 충돌 감지 및 제거 코드를 추가하세요.
+</div><hr class="docutils" />
+<p>이번에는 추가적으로 풍선 괴물을 게임에 넣어보고 승리와 패배 조건, 게임 레벨화를 해보기로 한다.</p>
+<ul class="simple">
+<li><p>풍선괴물 이미지 다운로드</p>
+<ul>
+<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/ghost.png">https://haesunbyun.github.io/common/images/ghost.png</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>🚀<strong>해보기 4: 목표물 추가 및 이동</strong><a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<p>Ex_ch7_source.ipynb에 Enemy_ghost 클래스 설계하고 동작하도록 코드를 넣어주세요.</p>
+<p>Enemy_ghost 클래스 설계는 다음과 같다.</p>
+<ol class="arabic simple">
+<li><p>속성 (Attributes)</p>
+<ul class="simple">
+<li><p>이미지 (self.image): 고스트(유령) 이미지를 불러와서 크기 조절 (pygame.transform.scale)</p>
+<ul>
+<li><p>처음 위치는 화면 하단 근처 (예: y=550)</p></li>
+</ul>
+</li>
+<li><p>이동 속도 (self.velocity)</p>
+<ul>
+<li><p>좌우로 움직일 속도 (양수면 오른쪽, 음수면 왼쪽)</p></li>
+<li><p>random.uniform()으로 속도를 무작위로 설정 가능</p></li>
+</ul>
+</li>
+<li><p>충돌 마스크 (self.mask)</p>
+<ul>
+<li><p>이미지 모양대로 충돌 판정이 가능하도록 pygame.mask.from_surface() 사용</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>동작 (Methods)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code>() : 생성자</p>
+<ul>
+<li><p>이미지 불러오기, 크기 조절</p></li>
+<li><p>초기 위치 설정 (화면 하단에 랜덤한 x 좌표)</p></li>
+<li><p>초기 속도 무작위 설정</p></li>
+<li><p>충돌 마스크 생성</p></li>
+</ul>
+</li>
+<li><p>update() : 매 프레임마다 실행되는 동작</p>
+<ul>
+<li><p>좌우 이동</p></li>
+<li><p>self.rect.x += self.velocity</p></li>
+<li><p>벽에 닿으면 방향 반전</p></li>
+<li><p>오른쪽 끝 도달 → self.velocity를 음수로 전환 (왼쪽으로 이동)</p></li>
+<li><p>왼쪽 끝 도달 → self.velocity를 양수로 전환 (오른쪽으로 이동)</p></li>
+<li><p>속도와 위치 제한</p></li>
+<li><p>화면 범위 안에서만 움직이도록 self.rect.left와 self.rect.right 값 조정</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div></div>
+<hr class="docutils" />
+<div class="section" id="id10">
+<h3>✅ 점수 기록 및 업데이트<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>플레이어의 점수를 추적하는 것은 많은 게임에서 필수적이다.</p></li>
+<li><p>우리는 이미 chapter5에서 점수를 넣는 방법을 배웠다.</p></li>
+<li><p>이 게임에도 점수를 넣어 나타내보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#점수 초기화 및 폰트 설정</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+
+<span class="c1">#충돌할 때 점수 업데이트</span>
+<span class="n">score</span> <span class="o">+=</span> <span class="n">points</span>
+
+<span class="k">def</span> <span class="nf">display_score</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>
+    <span class="n">score_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">score_text</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>🚀<strong>해보기 5: 점수 시스템</strong><a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch7_source.ipynb에 점수 시스템 코드를 추가하세요.
+</div></div>
+<hr class="docutils" />
+<div class="section" id="id12">
+<h3>✅ 승리 및 패배 조건<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>플레이어가 게임에서 승리하거나 패배하는 조건을 정의한다. 예를 들어, 플레이어는 특정 점수에 도달하면 승리하거나 적과 충돌하면 패배할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 충돌하면 끝나는 게임이라면 </span>
+<span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<span class="kn">import</span> <span class="nn">tkinter.messagebox</span>  <span class="c1"># 메시지창을 위한 모듈 추가</span>
+
+<span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">spritecollideany</span><span class="p">(</span><span class="n">player</span><span class="p">,</span>  <span class="n">ghost_group</span><span class="p">):</span>
+    <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Game Over&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;게임이 끝났습니다!&#39;&quot;</span><span class="p">)</span>
+    <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finish_score</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">finish_score</span><span class="p">:</span>
+    <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Win&quot;</span><span class="p">,</span> <span class="s2">&quot;YOU WIN&quot;</span><span class="p">)</span>
+    <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>  
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>🚀<strong>해보기 6: 승리 및 패배 조건</strong><a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch7_source.ipynb에 승리 및 패배 조건 코드를 추가하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id14">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>레벨 생성</strong></div><a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>레벨은 새로운 도전 과제, 적, 목표를 도입할 수 있다.</p></li>
+</ul>
+<div class="section" id="id15">
+<h3>✅ 여러 레벨 디자인<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>레벨 데이터</strong>: 레벨 데이터를 구조화된 형식으로 저장한다. 예를 들어, 딕셔너리 리스트를 사용하여 각 딕셔너리가 하나의 레벨을 나타내고, 해당 레벨의 레이아웃, 적, 기타 요소들에 대한 정보를 포함시킬 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 레벨과 목표 점수 설정</span>
+<span class="n">level</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">max_level</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">level_goal</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+
+<span class="c1"># 레벨업 메시지 관련</span>
+<span class="n">level_up_message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">win_message</span> <span class="o">=</span> <span class="s2">&quot;YOU WIN&quot;</span>
+<span class="n">message_timer</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MESSAGE_DURATION</span> <span class="o">=</span> <span class="mi">2000</span>  <span class="c1"># 2초</span>
+<span class="n">level_up_pause</span> <span class="o">=</span> <span class="kc">False</span>  
+<span class="n">WIN_DURATION</span> <span class="o">=</span> <span class="mi">3000</span>  <span class="c1"># 3초</span>
+<span class="n">win_timer</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>✅ 레벨 간 전환<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>레벨 간 전환은 플레이어가 현재 레벨을 완료했을 때 이를 감지하고, 다음 레벨을 로드하는 과정이다.</p></li>
+<li><p>레벨 완료 감지: 플레이어가 목표에 도달했거나 레벨을 완료하는 다른 조건을 충족했는지 확인한다.</p></li>
+<li><p>여기서는 간단하게 각 단계별 score 점수로만 레벨업을 해보도록 하자.</p></li>
+<li><p>또한 레벨업을 했을 때 풍선유령의 개수를 늘려보도록 하자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ghost 생성 함수</span>
+<span class="k">def</span> <span class="nf">spawn_ghosts</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">ghost_group</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>  <span class="c1"># 기존 유령 모두 제거    </span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">ghost_group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Enemy_ghost</span><span class="p">())</span>
+
+
+<span class="c1"># 레벨업 조건 체크</span>
+<span class="k">if</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="n">max_level</span> <span class="ow">and</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">level_goal</span><span class="p">[</span><span class="n">level</span><span class="p">]:</span>
+    <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">level_up_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">level</span><span class="si">}</span><span class="s2">단계에 진입했습니다!&quot;</span>
+    <span class="n">message_timer</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">get_ticks</span><span class="p">()</span>
+    <span class="n">level_up_pause</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># 잠시 멈춤            </span>
+    <span class="n">spawn_ghosts</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>  <span class="c1"># 레벨만큼 유령 생성</span>
+
+<span class="c1"># # 레벨업 쉬는 시간 처리</span>
+<span class="c1"># if level_up_pause:</span>
+<span class="c1">#     if pygame.time.get_ticks() - message_timer &gt;= MESSAGE_DURATION:</span>
+<span class="c1">#         level_up_pause = False </span>
+
+<span class="c1"># 레벨업 메시지 표시 (2초간)</span>
+<span class="k">if</span> <span class="n">level_up_message</span> <span class="ow">and</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">get_ticks</span><span class="p">()</span> <span class="o">-</span> <span class="n">message_timer</span> <span class="o">&lt;</span> <span class="n">MESSAGE_DURATION</span><span class="p">:</span>
+    <span class="n">msg_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">level_up_message</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">msg_text</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">level_up_message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>               
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div><a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
+<p>오늘 수업에서는 Pygame을 활용하여 사운드와 배경음악을 적용하는 방법을 실습해 보았다.
+또한 게임의 흐름에 맞는 논리 구조와 규칙을 설계하며 전체적인 진행 방식을 구현했다.
+난이도 조절을 위한 레벨 구성과 장면 전환 기능을 통해 게임의 완성도를 한 단계 높였다.
+이 과정에서 게임의 몰입도를 높이는 핵심 요소들을 직접 구현하며 프로그래밍 능력을 향상시킬 수 있었다.
+앞으로는 이번에 익힌 기초 기술을 바탕으로 다양한 장르의 게임 제작에도 응용할 수 있을 것이다.</p>
 <hr class="docutils" />
 <font color='Blue' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,6 +1044,43 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>사운드와 음악 추가</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">✅ 사운드 효과 넣기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🚀<strong>해보기 1: 사운드 효과 넣기</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">✅ 배경 음악 넣기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">🚀<strong>해보기 2: 배경 음악 넣기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 논리 및 규칙</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">✅ 충돌 감지</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">🚀<strong>해보기 3: 충돌 감지 및 제거</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🚀<strong>해보기 4: 목표물 추가 및 이동</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">✅ 점수 기록 및 업데이트</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🚀<strong>해보기 5: 점수 시스템</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">✅ 승리 및 패배 조건</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">🚀<strong>해보기 6: 승리 및 패배 조건</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>레벨 생성</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">✅ 여러 레벨 디자인</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">✅ 레벨 간 전환</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -337,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +355,50 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-strong-gui-strong-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>GUI란?</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">샘플 소스 코드</div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-tkinter-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">tkinter 모듈</div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">모듈과 윈도우 생성하기</div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">✅ 라이브러리, 패키지, 모듈</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">✅ 모듈과 모듈 불러오기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">✅ 클래스와 인스턴스</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">✅ 윈도우의 속성 설정</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">위젯</div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">✅ 레이블 위젯</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">🚀<strong>해보기 1: 레이블 추가</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">✅ 위젯 레이아웃 하기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">🚀<strong>해보기 2: 레이블 배치하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">✅ 엔트리 위젯</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 3: 엔트리 배치하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">✅ 버튼 위젯</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🚀<strong>해보기 4: 버튼 배치하기</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">버튼 바인딩을 위한 함수 정의</div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">🚀<strong>해보기 5: 함수 정의하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">실행파일 만들기</div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">🚀<strong>실습 1: 온도변환 프로그램</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi">🚀<strong>실습 2: BMI 계산기</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>실습 3: 계산기</strong></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -370,12 +416,630 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <h1>Chapter 2. GUI 기초와 위젯 사용<a class="headerlink" href="#chapter-2-gui" title="Permalink to this headline">#</a></h1>
 <div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
 <font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<ul class="simple">
+<li><p>학습목표<br></p>
+<ul>
+<li><p>기본적인 GUI(그래픽 사용자 인터페이스) 기반 프로그램 개발 환경을 이해한다.<br></p></li>
+<li><p>이벤트 기반 프로그래밍의 기본 개념을 익힌다.<br></p></li>
+<li><p>간단한 GUI 프로그램을 만들어본다.<br>
+<br></p></li>
+</ul>
+</li>
+<li><p>기대효과<br></p>
+<ul>
+<li><p>GUI 기반 프로그램 개발의 개념을 이해하고 GUI의 정의와 중요성을 알수 있다.<br></p></li>
+<li><p>이벤트 기반 프로그래밍의 개념과 GUI를 표현하기 위한 모듈인 Tkinter 사용법을 익힐 수 있다.<br></p></li>
+<li><p>버튼 클릭 시 함수를 연동하거나 메시지를 출력하는 방법을 익힐 수 있다.<br></p></li>
+</ul>
+</li>
+</ul>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-strong-gui-strong-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>GUI란?</strong></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-strong-gui-strong-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>GUI</strong>(Graphical User Interface)는 <strong>사용자가 컴퓨터나 프로그램을 쉽게 조작할 수 있도록 그래픽 요소를 활용한 인터페이스</strong>를 의미한다.</p></li>
+<li><p><strong>GUI의 주요 특징</strong></p>
+<ul>
+<li><p>그래픽 요소 활용: 아이콘, 버튼, 창, 메뉴 등을 사용하여 직관적으로 조작 가능하다.</p></li>
+<li><p>마우스 및 터치 지원: 키보드뿐만 아니라 마우스, 터치스크린을 활용 가능하다.</p></li>
+<li><p>사용자 친화적: 명령어 입력 방식(CLI)보다 배우기 쉽고 접근성이 높다.</p></li>
+<li><p>멀티태스킹 지원: 여러 창을 동시에 띄워서 작업 가능하다.</p></li>
+</ul>
+</li>
+<li><p><strong>GUI의 구성 요소</strong></p>
+<ul>
+<li><p>윈도우(Window): 프로그램이 실행되는 창</p></li>
+<li><p>아이콘(Icon): 프로그램이나 파일을 나타내는 작은 그림</p></li>
+<li><p>버튼(Button): 클릭하여 명령을 실행하는 요소</p></li>
+<li><p>메뉴(Menu): 사용 가능한 기능 목록을 제공하는 인터페이스</p></li>
+<li><p>스크롤바(Scrollbar): 화면을 넘겨서 추가 내용을 볼 수 있도록 함</p></li>
+</ul>
+</li>
+<li><p><strong>GUI 주요 개발 도구</strong></p>
+<ul>
+<li><p>Tkinter, PyQt 등으로 가능하나 우리 수업에서는 Tkinter를 사용한다.</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>GUI는 사용자의 접근성과 사용 편의성을 높이기 위해 만들어졌으며, <strong>이벤트 기반 프로그래밍</strong> 방식으로 동작한다.</p></li>
+<li><p>이벤트 기반 프로그래밍은 사용자 입력에 따라 프로그램이 즉시 반응하는 방식으로, 키보드 입력, 마우스 위치 감지, 클릭 등의 이벤트를 통해 사용자와 실시간으로 상호작용한다.</p></li>
+<li><p>이러한 방식은 모바일 앱, 웹 애플리케이션 등 다양한 응용 프로그램에서 널리 활용된다.</p></li>
+</ul>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">샘플 소스 코드</div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>아래 샘플 소스 코드를 실행시켜보자.</p></li>
+<li><p>작은 윈도우 하나가 열리면서 <font color='green'>’Hello, Tkinter!’</font>라는 메시지가 보일 것이다.</p></li>
+<li><p>GUI 기반 프로그램을 만들기 위해, 우리는 먼저 하나의 윈도우 창을 만들어 보았다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tkinter 테스트&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;300x200&quot;</span><span class="p">)</span>
+
+<span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello, Tkinter!&quot;</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-tkinter-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">tkinter 모듈</div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-tkinter-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>tkinter모듈은 파이썬에서 user interaction을 지원하기 위한 그래픽 모듈이다.</p></li>
+<li><p>‘tk interface’의 약자이며 여기서 tk는 GUI 라이브러리 이름이다.</p></li>
+<li><p>tkinter 모듈은 다양한 위젯을 제공한다. 위젯은 사용자 인터페이스를 작성하기 위하여 tkinter에서 제공하는 작은 도구를 의미한다.</p></li>
+<li><p>아래는 tkinter에서 제공하는 다양한 위젯을 보여준다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image1.png" width=300>  
+<img src="https://haesunbyun.github.io/common/images/comps/image2.png" width=500></div></div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">모듈과 윈도우 생성하기</div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>이제 본격적으로 윈도우 기반의 온도변환프로그램을 만들어보자. 아래는 여러분이 tkinter로 만들 온도변환프로그램의 모습이다.</p>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image3.png" width=300></div><div class="section" id="id2">
+<h3>✅ 라이브러리, 패키지, 모듈<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>GUI 프로그래밍을 하기 위해서는 가장 먼저 tkinter 모듈을 불러와야 한다.</p></li>
+<li><p>파이썬을 공부하다 보면 라이브러리, 패키지, 모듈 같은 용어를 자주 접하게 된다. 이 용어들이 어떤 의미인지 먼저 알아보자.</p></li>
+<li><p>모듈은 가장 작은 단위로, 하나의 .py 파일을 의미하며 관련 있는 함수나 클래스를 포함하고 있다.</p></li>
+<li><p>패키지는 여러 모듈을 하나로 묶은 폴더 구조이다.</p></li>
+<li><p>라이브러리는 패키지와 모듈들을 하나의 도구 모음처럼 구성한 것으로, 특정 기능을 쉽게 사용할 수 있도록 제공된다.</p></li>
+<li><p>개념의 크기로 보면 라이브러리 &gt; 패키지 &gt; 모듈 순이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c1"># tkinter 모듈에 있는 모든 함수를 포함</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>               <span class="c1"># Tk 클래스의 윈도우 객체를 생성</span>
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;온도 변환 프로그램&#39;</span><span class="p">)</span> <span class="c1"># 윈도우 이름</span>
+<span class="n">window</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s1">&#39;350x180&#39;</span><span class="p">)</span> <span class="c1"># 윈도우 사이즈, 소문자 x로 쓰세요.</span>
+
+<span class="c1"># 여러 위젯 넣어주기</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span> <span class="c1"># 윈도우 이벤트를 처리한다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+📢 안내 
+<ul class="simple">
+<li><p>템플릿 소스 코드를 확장하면서 위아래로 자주 이동하는 것이 번거로우므로, 코드를 새 파일에 복사해 두고 강의자료와 번갈아 보며 작업해주세요.</p></li>
+<li><p>메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: <strong>Ex_ch2_source.ipynb</strong> -&gt; 저장 경로 지정 후 엔터</p></li>
+</ul>
+</div></div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>✅ 모듈과 모듈 불러오기<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p><strong>모듈</strong>은 서로 관련있는 함수나 클래스를 모아 놓은 집합이다. 파이썬에는 random, math, sys, … 등 수 많은 모듈들이 정의되어 있고 필요할 때 불러서 쓸 수 있다. 모듈은 한번만 불러오면 현재 소스코드 파일을 닫을 때까지 사용할 수 있으므로 여러 번 불러올 필요가 없다. 따라서 일반적으로 모듈을 불러오는 코드는 소스코드의 맨 위에 모아 놓는다.
+모듈을 불러오는 키워드는 import이다.
+모듈을 불러오는 방법은 두 가지가 있다.</p>
+<ul class="simple">
+<li><p>첫 번째는 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">모듈명</span></code>으로 불러온다.</p></li>
+<li><p>예를 들어, tkinter 모듈을 불러오려면 아래와 같이 쓰면 된다.</p></li>
+<li><p>이때 as 키워드를 통해서 tkinter의 별칭을 만들어 줄 수 있다.</p></li>
+<li><p>tkinter 모듈안에는 위젯을 만들 수 있는 많은 함수들이 있는데 <code class="docutils literal notranslate"><span class="pre">모듈명.함수명()</span></code>의 형식으로 점(.)으로 연결하여 사용한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+<span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>두 번째는 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">모듈명</span> <span class="pre">import</span> <span class="pre">*</span></code>로 불러온다. 여기서의 *은 모든 것이라는 의미를 담고 있는데 즉, tkinter 모듈안에 모든 것을 불러온다는 뜻이다.</p></li>
+<li><p>이와 같이 불러온 경우에는 <code class="docutils literal notranslate"><span class="pre">모듈명.함수명()이</span> <span class="pre">아니라</span> <span class="pre">함수명()만</span></code> 써야한다.</font></p></li>
+<li><p>from tkinter import *와 함께 다른 모듈(math, os 등)에서도 *를 쓰면 어떤 함수/클래스가 어디서 왔는지 알기 어렵기 때문에 첫 번째 방법을 권장한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span> 
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+<span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>✅ 클래스와 인스턴스<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>다음 코드는 Tk 클래스의 윈도우 인스턴스를 생성하는 코드이다.</p></li>
+<li><p>tkinter 모듈에는 Tk() 클래스가 있는데 Tk() 클래스는 tkinter 모듈 안에 정의된, 윈도우가 공통적으로 가지는 속성과 동작을 담고 있는 클래스이다.</p></li>
+<li><p>이 Tk() 클래스를 이용해 <code class="docutils literal notranslate"><span class="pre">윈도우</span></code>라는 객체의 인스턴스(즉, GUI 창)를 생성할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">window</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>  <span class="c1">#Tk 클래스의 윈도우 인스턴스를 생성</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>객체? 클래스? 인스턴스? 단어가 새롭고 어려울 것이다. 잠깐 그 개념을 익히고 가보자.</p></li>
+<li><p><strong>객체</strong>는 데이터와 그 데이터에 관련되는 동작(절차, 방법, 기능)을 모두 포함한 개념이다.</p></li>
+<li><p>이 세상에 존재하는 모든 것, 예를 들어, 학생, 자동차, 책상, 버튼 등 모든 것이 객체가 될 수 있으며, 모든 객체는 속성(attribute)과 동작(action, method)을 가지고 있다.</p></li>
+<li><p>예로, 자동차라는 객체는 메이커, 모델, 색상, 연식, 가격 등의 속성을 가지고 있고, 주행하기, 방향바꾸기, 주차하기, 음성인식 등의 동작을 한다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/adt2.png" style="width:300px;"></div><ul class="simple">
+<li><p>파이썬에서는 <code class="docutils literal notranslate"><span class="pre">클래스를</span> <span class="pre">통해</span> <span class="pre">객체를</span> <span class="pre">구현</span></code>한다.</p></li>
+<li><p>클래스는 서로 관련된 데이터(속성, 값)와 해당 데이터를 다루는 함수(동작)들을 하나로 묶어 추상화한 것으로, 객체를 정의하기 위한 템플릿(폼, 포맷, 양식), 객체에 대한 설계도라고 볼 수 있다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/adt3.png" style="width:300px;"></div>
+<ul class="simple">
+<li><p>클래스로부터 만들어지는 각각의 객체들을 그 클래스의 인스턴스(instance)라고 한다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/adt4.png" style="width:600px;"></div>
+<ul class="simple">
+<li><p>위 그림에서 와플 기계는 와플을 찍어내는 틀이다. 와플 기계를 클래스로 비유한다면 와플 기계에서 나오는 와플들은 와플 클래스의 인스턴스라고 한다.</p></li>
+<li><p>tkinter 모듈안에 정의되어 있는 Tk() 클래스에는 <code class="docutils literal notranslate"><span class="pre">윈도우</span></code> 객체가 정의되어 있고, 우리는 여러개의 윈도우 인스턴스를 생성할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="n">window1</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>  <span class="c1">#Tk 클래스의 윈도우1 인스턴스를 생성</span>
+<span class="n">window2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>  <span class="c1">#Tk 클래스의 윈도우2 인스턴스를 생성</span>
+<span class="n">window3</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>  <span class="c1">#Tk 클래스의 윈도우3 인스턴스를 생성</span>
+
+<span class="n">window1</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+<span class="n">window2</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+<span class="n">window3</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id5">
+<h3>✅ 윈도우의 속성 설정<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>윈도우 인스턴스는 다양한 속성을 설정할 수 있는 여러 메서드를 제공한다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메소드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예제</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">title(text)</span></code></p></td>
+<td><p>창 제목 설정</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.title(&quot;내</span> <span class="pre">Tkinter</span> <span class="pre">창&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">geometry(&quot;WxH+X+Y&quot;)</span></code></p></td>
+<td><p>창 크기 및 위치 설정</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.geometry(&quot;500x300+100+100&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resizable(width,</span> <span class="pre">height)</span></code></p></td>
+<td><p>창 크기 조정 가능 여부 설정</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.resizable(False,</span> <span class="pre">False)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iconbitmap(file)</span></code></p></td>
+<td><p>창 아이콘 변경 (Windows 전용)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.iconbitmap(&quot;icon.ico&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">configure(bg=color)</span></code></p></td>
+<td><p>창 배경색 변경</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.configure(bg=&quot;lightblue&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">state(state)</span></code></p></td>
+<td><p>창 상태 변경 (<code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">iconic</span></code>, <code class="docutils literal notranslate"><span class="pre">zoomed</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.state(&quot;zoomed&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">attributes(option,</span> <span class="pre">value)</span></code></p></td>
+<td><p>창 투명도, 항상 위 설정 등</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.attributes(&quot;-alpha&quot;,</span> <span class="pre">0.8)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></td>
+<td><p>창을 강제로 업데이트</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.update()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">destroy()</span></code></p></td>
+<td><p>창을 닫고 종료</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">window.destroy()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font>
+<ul class="simple">
+<li><p>아래는 윈도우 제목을 ‘온도 변환 프로그램’, 윈도우 크기를 ‘350x180’으로 설정한 코드이다.</p></li>
+<li><p>GUI 프로그램은 이벤트 기반 프로그래밍이므로 항상 이벤트를 대기하고 있어야 한다.</p></li>
+<li><p>따라서 window.mainloop()을 호출하여 윈도우가 종료되지 않고, 사용자 이벤트(입력)를 계속해서 기다리는 상태로 유지한다.</p></li>
+<li><p>window.mainloop() 코드는 사용자가 윈도우를 닫을 때까지 계속해서 이벤트를 처리하라는 뜻이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;온도 변환 프로그램&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;350x180&quot;</span><span class="p">)</span>
+
+<span class="c1"># 여러 위젯이 들어간다.</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id6">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">위젯</div><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>이제 윈도우 안에 들어가는 위젯들을 만들어 넣어보자.</p></li>
+</ul>
+<div class="section" id="id7">
+<h3>✅ 레이블 위젯<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>레이블 위젯은 tkinter에서 텍스트나 이미지를 화면에 표시하는 위젯이다.</p></li>
+<li><p>버튼처럼 클릭 이벤트가 필요하지 않은 정적인 정보(제목, 설명, 아이콘 등)를 표시할 때 사용한다.</p></li>
+<li><p>레이블 위젯의 옵션은 다음과 같다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>옵션 이름</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text</span></code></p></td>
+<td><p>라벨에 표시할 문자열</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">font</span></code></p></td>
+<td><p>글꼴 설정 (예: <code class="docutils literal notranslate"><span class="pre">(&quot;Arial&quot;,</span> <span class="pre">12,</span> <span class="pre">&quot;bold&quot;)</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fg</span></code></p></td>
+<td><p>글자 색 (<code class="docutils literal notranslate"><span class="pre">foreground</span></code>의 줄임말, 예: <code class="docutils literal notranslate"><span class="pre">&quot;red&quot;</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bg</span></code></p></td>
+<td><p>배경 색 (<code class="docutils literal notranslate"><span class="pre">background</span></code>의 줄임말, 예: <code class="docutils literal notranslate"><span class="pre">&quot;white&quot;</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">width</span></code></p></td>
+<td><p>라벨의 너비 (문자 기준)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">height</span></code></p></td>
+<td><p>라벨의 높이 (문자 기준)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">padx</span></code></p></td>
+<td><p>내부 좌우 여백 (padding x)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pady</span></code></p></td>
+<td><p>내부 상하 여백 (padding y)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">relief</span></code></p></td>
+<td><p>테두리 스타일 (<code class="docutils literal notranslate"><span class="pre">flat</span></code>, <code class="docutils literal notranslate"><span class="pre">sunken</span></code>, <code class="docutils literal notranslate"><span class="pre">raised</span></code>, <code class="docutils literal notranslate"><span class="pre">groove</span></code>, <code class="docutils literal notranslate"><span class="pre">ridge</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">borderwidth</span></code></p></td>
+<td><p>테두리 두께</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">anchor</span></code></p></td>
+<td><p>텍스트 위치 (<code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code> 등)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">justify</span></code></p></td>
+<td><p>여러 줄일 때 텍스트 정렬 (<code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">image</span></code></p></td>
+<td><p>이미지 표시 (PhotoImage 객체 사용)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">compound</span></code></p></td>
+<td><p>텍스트와 이미지 동시 표시 방식 (<code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+</font>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#label을 만든다.</span>
+<span class="n">label_1</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;온도 변환 프로그램&#39;</span><span class="p">)</span>
+<span class="n">label_2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;섭씨&#39;</span><span class="p">)</span>
+<span class="n">label_3</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;화씨&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h4>🚀<strong>해보기 1: 레이블 추가</strong><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch2_source.ipynb에 레이블을 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id9">
+<h3>✅ 위젯 레이아웃 하기<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>위젯을 추가한 후에는 반드시 레이아웃 메서드를 통해 윈도우에 위젯이 배치되도록 해야 한다.</p></li>
+<li><p>GUI 레이아웃을 설정하는 메서드에는 grid(), pack(), place()가 있다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image4.PNG" width=300>  </div>
+<ul class="simple">
+<li><p><strong>grid()</strong>:</p>
+<ul>
+<li><p>보이지 않는 격자 셀에 위젯을 배치함.</p></li>
+<li><p>특정 행과 열을 지정하여 배치할 수 있음</p></li>
+<li><p>rowspan과 columnspan을 이용하여 여러 행과 여러 열에 걸쳐 배치할 수 있음</p></li>
+<li><p>가장 많이 사용됨 (정렬이 쉽고 유지보수하기 편리함)</p></li>
+</ul>
+</li>
+<li><p><strong>pack()</strong>:</p>
+<ul>
+<li><p>위젯을 위에서 아래로(세로 방향) 또는 왼쪽에서 오른쪽으로(가로 방향) 자동 배치</p></li>
+<li><p>간단한 UI에서는 유용하지만, 복잡한 UI에는 적합하지 않음</p></li>
+</ul>
+</li>
+<li><p><strong>place()</strong>:</p>
+<ul>
+<li><p>좌표(x, y)를 직접 지정하여 위젯을 원하는 위치에 배치</p></li>
+<li><p>픽셀 단위로 정확한 배치를 원할 때 사용하지만, 창 크기가 변경되면 깨질 수 있음</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image3.png" width=300></div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># label을 윈도우에 배치한다.</span>
+<span class="n">label_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">columnspan</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+<span class="n">label_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+<span class="n">label_3</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h4>🚀<strong>해보기 2: 레이블 배치하기</strong><a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch2_source.ipynb에 레이블을 화면에 나타내는 코드를 추가하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id11">
+<h3>✅ 엔트리 위젯<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>텍스트 입력을 받을 수 있는 기본 위젯이다.</p></li>
+<li><p>아래와 같은 메서드가 있다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>메서드</p></th>
+<th class="text-left head"><p>의미</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">get()</span></code></p></td>
+<td class="text-left"><p>현재 입력된 텍스트를 가져옴</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">insert(index,</span> <span class="pre">string)</span></code></p></td>
+<td class="text-left"><p>특정 위치에 문자열 삽입</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">delete(start,</span> <span class="pre">end=None)</span></code></p></td>
+<td class="text-left"><p>특정 위치의 텍스트 삭제</p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">entry_1</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+<span class="n">entry_2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+
+<span class="c1"># entry를 윈도우에 배치한다.</span>
+<span class="n">entry_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">entry_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>🚀<strong>해보기 3: 엔트리 배치하기</strong><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch2_source.ipynb에 엔트리를 추가하고 나타내보세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id13">
+<h3>✅ 버튼 위젯<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>사용자가 클릭할 수 있는 버튼을 생성하는 위젯이다.</p></li>
+<li><p>command옵션을 통해 버튼을 클릭하면 특정 함수(이벤트 핸들러)가 실행되도록 바인딩한다.</p></li>
+<li><p>바인딩: 버튼을 클릭했을 때 동작해야 할 함수와 연동시킨다는 의미</p></li>
+<li><p>바인딩시 소괄호 없이 함수 이름만 넣어야 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 버튼을 만든다.</span>
+<span class="n">btn_1</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;섭씨-&gt;화씨&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">function_c_f</span><span class="p">)</span>
+<span class="n">btn_2</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;화씨-&gt;섭씨&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">function_f_c</span><span class="p">)</span>
+
+<span class="c1"># 버튼을 윈도우에 배치한다.</span>
+<span class="n">btn_1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">columnspan</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+<span class="n">btn_2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">columnspan</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>🚀<strong>해보기 4: 버튼 배치하기</strong><a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch2_source.ipynb에 버튼을 추가하고 나타내보세요.
+</div></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id15">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">버튼 바인딩을 위한 함수 정의</div><a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>버튼을 클릭했을 때 동작할 함수를 정의해보자.</p></li>
+<li><p>function_c_f() 함수를 살펴보고, 이와 비슷하게 function_f_c() 함수를 정의해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_c_f</span><span class="p">():</span>
+  <span class="n">c</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">entry_1</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="p">))</span> <span class="c1">#entry_1의 값을 읽어온다.</span>
+  <span class="n">f</span><span class="o">=</span><span class="mf">9.0</span><span class="o">/</span><span class="mf">5.0</span><span class="o">*</span><span class="n">c</span><span class="o">+</span><span class="mf">32.0</span>
+  <span class="n">entry_2</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">END</span><span class="p">)</span> <span class="c1">#entry_2의 0번째부터 끝까지 값을 지운다.</span>
+  <span class="n">entry_2</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="c1">#entry_2의 0번째 위치에 삽입한다.</span>
+
+<span class="c1"># 화씨를 섭씨로 변환하여 나타내는 함수는 여러분이 아래에 정의해보세요.</span>
+<span class="k">def</span> <span class="nf">function_f_c</span><span class="p">():</span>
+  <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>🚀<strong>해보기 5: 함수 정의하기</strong><a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch2_source.ipynb에 함수를 정의하고 바인딩 시켜보세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id17">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">실행파일 만들기</div><a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>온도변환 프로그램을 실행파일로 만들어보자.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong>소스 코드 저장하기</strong></p>
+<ul class="simple">
+<li><p>하나의 .ipynb 또는 .py 파일에 하나의 프로그램에 대한 완성된 전체 소스코드를 넣어주기 위해 새 파일을 만든다.</p></li>
+<li><p>메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: <a class="reference external" href="http://temperature.py">temperature.py</a> -&gt; 저장 경로 설정한 후 엔터</p></li>
+<li><p>전체 소스 코드를 temperature.py에 복사한다.</p></li>
+</ul>
+</li>
+<li><p><strong>.py → .exe로 변환</strong></p>
+<ul class="simple">
+<li><p>PyInstaller 설치 (한 번만 설치하면 됨)</p>
+<ul>
+<li><p>메뉴에서 [Terminal] → [New Terminal]을 열어 pip install pyinstaller 입력 후 엔터</p></li>
+</ul>
+</li>
+<li><p>아이콘 이미지를 넣어주는 경우(생략가능)</p>
+<ul>
+<li><p>.ico 확장자의 아이콘 파일이 필요하다. (예: app_icon.ico) PNG나 JPG는 안 된다. .ico 확장자 변환 사이트를 활용하면 된다.</p></li>
+</ul>
+</li>
+<li><p>실행파일 만들기</p>
+<ul>
+<li><p>(아이콘을 넣지 않은 경우) 터미널에서 pyinstaller –onefile –noconsole <a class="reference external" href="http://temperature.py">temperature.py</a> 엔터</p></li>
+<li><p>(아이콘을 넣는 경우) pyinstaller –onefile –noconsole –icon=app_icon.ico <a class="reference external" href="http://temperature.py">temperature.py</a></p></li>
+<li><p>맥북의 경우 –onefile 옵션 대신에 –onedir 옵션으로 넣어준다.</p></li>
+</ul>
+</li>
+<li><p>생성된 .exe 파일 위치</p>
+<ul>
+<li><p>./dist/temperature.exe</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p>실행 파일을 만들었다면, 친구나 가족에게 전달하여 별도의 설치 과정 없이 PC에서 프로그램을 실행해볼 수 있다.</p></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h2>🚀<strong>실습 1: 온도변환 프로그램</strong><a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h2>
+<p>아래와 같은 인터페이스를 갖는 온도변환 프로그램으로 화면 구성을 변경해 만들어보세요.</p>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image5.png" width=300>  </div>
+<div style="background-color:rgb(239, 245, 247); padding: 10px; border-radius: 5px;">
+<p>hint:</p>
+<ul class="simple">
+<li><p>엔트리(Entry)의 높이는 height 옵션이 기본적으로 동작하지 않는다.</p></li>
+<li><p>버튼 2개의 높이(즉, 두 줄 정도의 높이)로 맞추고 싶다면 ipady (내부 여백)를 통해 설정해주는 것이 일반적인 방법이다.</p></li>
+</ul>
+</div></div>
+<hr class="docutils" />
+<div class="section" id="bmi">
+<h2>🚀<strong>실습 2: BMI 계산기</strong><a class="headerlink" href="#bmi" title="Permalink to this headline">#</a></h2>
+<p>아래와 같은 인터페이스를 갖는 BMI 계산 프로그램으로 만들어보세요.</p>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image11.png" width=300>  
+<img src="https://haesunbyun.github.io/common/images/comps/image12.png" width=300>  
+</div>
+<div style="background-color:rgb(239, 245, 247); padding: 10px; border-radius: 5px;">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># hint: label을 비어있는 텍스트로 만든후, 변경하려면 .config(text=&quot;텍스트&quot;)와 같이 할 수 있다.</span>
+<span class="n">label_result</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">label_result</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;결과: &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div>
+<div class="section" id="id19">
+<h2>🚀<strong>실습 3: 계산기</strong><a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h2>
+<p>아래와 같은 인터페이스를 갖는 계산 프로그램을 만들어보세요.(난이도 상)</p>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image19.png" width=300></div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 버튼</span>
+<span class="n">button_text</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;%&quot;</span><span class="p">,</span>   <span class="s2">&quot;CE&quot;</span><span class="p">,</span>  <span class="s2">&quot;C&quot;</span><span class="p">,</span>   <span class="s2">&quot;⌫&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;1/x&quot;</span><span class="p">,</span> <span class="s2">&quot;x²&quot;</span><span class="p">,</span>  <span class="s2">&quot;√&quot;</span><span class="p">,</span>   <span class="s2">&quot;÷&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;7&quot;</span><span class="p">,</span>   <span class="s2">&quot;8&quot;</span><span class="p">,</span>   <span class="s2">&quot;9&quot;</span><span class="p">,</span>   <span class="s2">&quot;×&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;4&quot;</span><span class="p">,</span>   <span class="s2">&quot;5&quot;</span><span class="p">,</span>   <span class="s2">&quot;6&quot;</span><span class="p">,</span>   <span class="s2">&quot;−&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>   <span class="s2">&quot;2&quot;</span><span class="p">,</span>   <span class="s2">&quot;3&quot;</span><span class="p">,</span>   <span class="s2">&quot;+&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;±&quot;</span><span class="p">,</span>   <span class="s2">&quot;0&quot;</span><span class="p">,</span>   <span class="s2">&quot;.&quot;</span><span class="p">,</span>   <span class="s2">&quot;=&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># 버튼 생성하는 과정</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">button_text</span><span class="p">)</span><span class="o">+</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">button_text</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">button_text</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="o">=</span><span class="n">button_text</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span> <span class="n">push_text</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">j</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s2">&quot;nsew&quot;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <font color='Blue' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,6 +1094,56 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-strong-gui-strong-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>GUI란?</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">샘플 소스 코드</div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-tkinter-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">tkinter 모듈</div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">모듈과 윈도우 생성하기</div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">✅ 라이브러리, 패키지, 모듈</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">✅ 모듈과 모듈 불러오기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">✅ 클래스와 인스턴스</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">✅ 윈도우의 속성 설정</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">위젯</div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">✅ 레이블 위젯</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">🚀<strong>해보기 1: 레이블 추가</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">✅ 위젯 레이아웃 하기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">🚀<strong>해보기 2: 레이블 배치하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">✅ 엔트리 위젯</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 3: 엔트리 배치하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">✅ 버튼 위젯</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🚀<strong>해보기 4: 버튼 배치하기</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">버튼 바인딩을 위한 함수 정의</div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">🚀<strong>해보기 5: 함수 정의하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;">실행파일 만들기</div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">🚀<strong>실습 1: 온도변환 프로그램</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bmi">🚀<strong>실습 2: BMI 계산기</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>실습 3: 계산기</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

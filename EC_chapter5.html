@@ -337,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +355,65 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-pygame-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>pygame 설치 및 버전 확인</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>기본 코드 파헤치기</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>이벤트 처리 및 화면 업데이트</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🧩 키보드 이벤트 처리</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">🧩 마우스 이벤트 처리</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">🧩 기본 이벤트 종류</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">🧩 화면 업데이트</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">🚀<strong>해보기 1: 화면 업데이트</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 요소 추가하기: 공</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🧩 공 만들기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame-draw">🎨 pygame.draw 함수 정리</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">🚀<strong>해보기 2: 공 만들기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🧩 공 이동 시키기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 3: 공 이동 시키기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">🧩 공 이동 속도 조절</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🚀<strong>해보기 4: 공 이동 속도 조절</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 요소 추가하기: 패들</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">🧩 패들 만들고 마우스와 연동시키기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">🚀<strong>해보기 5: 패들 만들고 마우스와 연동시키기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">🧩 공과의 충돌 이벤트 처리</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>해보기 6: 충돌 이벤트 처리</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 규칙 넣기</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">🧩 게임 실패 넣기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">🚀<strong>해보기 7: 게임 실패 넣기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">🧩 점수 추가</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">🚀<strong>해보기 8: 점수 시스템 추가</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -369,13 +430,719 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-5-pygame">
 <h1>Chapter 5. Pygame 기본과 게임 기획<a class="headerlink" href="#chapter-5-pygame" title="Permalink to this headline">#</a></h1>
 <div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<p><font size=5> <strong> ✅ 학습목표와 기대효과</strong></font></p>
+<ul class="simple">
+<li><p>학습목표</p>
+<ul>
+<li><p>Pygame 라이브러리를 활용하여 통통볼 게임을 만들어본다.</p></li>
+<li><p>먼저, Pygame 라이브러리의 기본 구조를 알아본다.</p></li>
+<li><p>키보드나 마우스 이벤트를 처리하여 사용자와 상호작용하는 방법을 익힌다.</p></li>
+<li><p>게임 개발에 필요한 여러 기본 API를 활용하는 방법을 학습한다.</p></li>
+<li><p>게임 요소의 위치, 속도, 방향 등의 간단한 물리적 움직임을 표현하는 방법을 익힌다.</p></li>
+</ul>
+</li>
+<li><p>기대효과</p>
+<ul>
+<li><p>Pygame 라이브러리의 기본 구조를 이해하고 간단한 게임 구성을 할 수 있다.</p></li>
+</ul>
+</li>
+</ul>
+</div><ul class="simple">
+<li><p>pygame은 파이썬으로 2D 게임을 만들 수 있게 해주는 라이브러리이다.</p></li>
+<li><p>간단한 그림 그리기, 키보드/마우스 입력, 이미지, 소리 재생 기능을 제공한다.</p></li>
+<li><p>파이썬으로 게임을 구현하기 위해서는 먼저 pygame을 설치해야 한다.</p></li>
+</ul>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-pygame-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>pygame 설치 및 버전 확인</strong></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-pygame-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>아래 코드를 통해 pygame을 설치할 수 있다.</p></li>
+<li><p>이때, pip는 Python의 패키지 관리 도구로 외부 라이브러리(모듈)를 설치할 때 사용한다.</p></li>
+<li><p>pip는 파이썬 패키지 저장소(PyPI, <a class="reference external" href="https://pypi.org/">https://pypi.org/</a>)에서 pygame 패키지를 찾아 내려받고, 사용자의 파이썬 환경에 설치한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pygame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>pygame 설치가 끝났다면 import로 pygame을 불러오고 버전을 확인해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div" title="Permalink to this headline">#</a></h2>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image17.png" width=300>  </div><ul class="simple">
+<li><p>pygame을 실행시킬 화면을 만들어보자.</p></li>
+<li><p>아래의 코드를 실행해보면 통통볼 게임이라고 적힌 검정색 창이 뜰 것이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="c1"># 조절 가능한 윈도우를 설정한다.</span>
+<span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="n">pygame</span><span class="o">.</span><span class="n">RESIZABLE</span><span class="p">)</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s1">&#39;통통볼 게임&#39;</span><span class="p">)</span>
+
+<span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>   <span class="c1">#게임 창의 &#39;X&#39; 버튼(닫기 버튼)**을 눌렀을 때 발생</span>
+            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pygame 2.6.1 (SDL 2.28.4, Python 3.7.4)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+</pre></div>
+</div>
+</div>
+</div>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+📢 안내
+<ul class="simple">
+<li><p>템플릿 소스코드를 확장하면서 위아래로 자주 이동하는 것이 번거로우므로, 템플릿 코드를 새 파일에 복사해 두고 원본 파일과 새 파일을 번갈아가며 작업해주세요.</p></li>
+<li><p>메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: <strong>Ex_ch5_source.ipynb</strong> -&gt; 저장 경로 설정한 후 엔터</p></li>
+</ul>
+</div></div>
+<div class="section" id="id1">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>기본 코드 파헤치기</strong></div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>pygame 초기화</strong>: <code class="docutils literal notranslate"><span class="pre">pygame.init()</span></code>을 통해 pygame을 초기화 한다.</p></li>
+<li><p>Pygame을 사용할 때 가장 먼저 실행해야 하는 함수이다.</p></li>
+<li><p>pygame 라이브러리의 내부 모듈들을 초기화하는 역할을 한다.</p></li>
+<li><p>pygame 라이브러리에는 pygame.display, pygame.event와 같이 게임 개발에 사용되는 다양한 내부 모듈을 가지고 있다.</p></li>
+<li><p>pygame의 주요 모듈은 아래와 같다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>모듈</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.display</span></code></p></td>
+<td><p>창 생성, 화면 업데이트</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.image</span></code></p></td>
+<td><p>이미지 불러오기, 변환</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw</span></code></p></td>
+<td><p>선, 사각형, 원 등 그리기</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.font</span></code></p></td>
+<td><p>텍스트 출력</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.mixer</span></code></p></td>
+<td><p>사운드 효과 및 음악 재생</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.time</span></code></p></td>
+<td><p>시간 관련 함수 (프레임 조절 등)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.event</span></code></p></td>
+<td><p>키보드, 마우스 등의 이벤트 처리</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.sprite</span></code></p></td>
+<td><p>충돌 처리, 그룹 관리 등에 유용한 스프라이트 기능</p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>윈도우 크기 조절</strong>: <code class="docutils literal notranslate"><span class="pre">pygame.display.set_mode()</span></code>는 게임의 화면 크기와 조절가능한 윈도우를 설정한다.</p></li>
+<li><p>width와 height를 0으로 설정하고 pygame.FULLSCREEN 옵션을 주면, 현재 화면 해상도에 맞는 전체화면 모드로 창이 열린다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">screen_width</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">screen_height</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">screen_width</span><span class="p">,</span> <span class="n">screen_height</span><span class="p">),</span> <span class="n">pygame</span><span class="o">.</span><span class="n">RESIZABLE</span><span class="p">)</span>
+
+<span class="c1">#screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>윈도우 이름 설정</strong>: 윈도우 이름 설정은 <code class="docutils literal notranslate"><span class="pre">pygame.display.set_caption()</span></code>을 통해 설정할 수 있다.</p></li>
+<li><p>또한 윈도우 이름을 변수에 저장하여 게임 상태나 기타 매개변수에 따라 창 제목을 동적으로 변경할 수도 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s1">&#39;통통볼 게임&#39;</span><span class="p">)</span>
+
+<span class="n">game_title</span> <span class="o">=</span> <span class="s2">&quot;Level 1: The Beginning&quot;</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="n">game_title</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>게임 루프</strong>: 게임을 실행시키는 지속적인 사이클로, 이벤트 처리, 게임 상태 업데이트, 그래픽 렌더링 등을 담당한다.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>이벤트 처리: 키보드 입력, 마우스 클릭 및 기타 이벤트와 같은 사용자 입력을 지속적으로 확인하여 사용자와 실시간으로 상호작용한다.</p></li>
+<li><p>게임 로직 업데이트: 이벤트를 기반으로 게임 상태를 업데이트한다. 키보드 입력에 따라 캐릭터를 이동시키거나, 충돌 여부를 확인하거나, 점수를 갱신하는 작업 등을 수행한다.</p></li>
+<li><p>렌더링: 게임 상태가 업데이트된 후, 업데이트된 상태를 화면에 나타낸다. 여기에는 스프라이트, 배경, UI 요소를 그리는 작업이 포함될 수 있다.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="c1"># 1. 이벤트 처리</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># 2. 게임 로직 업데이트</span>
+
+
+    <span class="c1"># 3. 렌더링</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>  <span class="c1"># 배경 흰색</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>  <span class="c1"># 화면에 전체 디스플레이 Surface 업데이트</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>이벤트 처리 및 화면 업데이트</strong></div><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>게임 루프 내에서 이벤트를 처리하고 화면을 업데이트하는 과정을 좀 더 자세히 살펴보자.</p></li>
+<li><p>이벤트 처리는 게임 종료, 키 입력, 마우스 이동 등 다양한 이벤트를 처리하는 것을 의미한다.</p></li>
+<li><p>키 이벤트는 사용자가 키보드와 상호작용할 때 사용된다.</p></li>
+<li><p>마우스 이벤트는 움직임, 클릭, 스크롤과 같은 마우스 동작에 의해 발생한다.</p></li>
+<li><p>Pygame은 이벤트를 관리하기 위해 이벤트 큐(queue)를 사용한다.</p></li>
+<li><p>큐는 자료 구조의 한 종류로 먼저 들어온 데이터가 먼저 나가는 구조이다. 즉, 선입선출(FIFO: First in First out)방법으로 먼저 들어온 이벤트가 먼저 처리된다.</p></li>
+<li><p>큐는 아래 그림과 같이 후단(rear)으로만 데이터(여기서는 이벤트)가 들어오고, 전단(front)으로만 데이터가 나간다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/adt6.png" width= 400 style="width:400px;"></div><ul class="simple">
+<li><p>키보드와 마우스 이벤트의 종류 및 상수는 다음과 같다.</p></li>
+</ul>
+<div class="section" id="id3">
+<h3>🧩 키보드 이벤트 처리<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<font size=2>
+<ul class="simple">
+<li><p><strong>pygame 키보드 이벤트 종류</strong></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>이벤트 종류</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.KEYDOWN</span></code></p></td>
+<td><p>키가 눌렸을 때 발생</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.KEYUP</span></code></p></td>
+<td><p>키에서 손을 뗐을 때 발생</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>키 상수 (pygame.K_*)</strong></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>키</p></th>
+<th class="head"><p>상수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>방향키 ↑</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_UP</span></code></p></td>
+<td><p>위쪽 방향키</p></td>
+</tr>
+<tr class="row-odd"><td><p>방향키 ↓</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_DOWN</span></code></p></td>
+<td><p>아래쪽 방향키</p></td>
+</tr>
+<tr class="row-even"><td><p>방향키 ←</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_LEFT</span></code></p></td>
+<td><p>왼쪽 방향키</p></td>
+</tr>
+<tr class="row-odd"><td><p>방향키 →</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_RIGHT</span></code></p></td>
+<td><p>오른쪽 방향키</p></td>
+</tr>
+<tr class="row-even"><td><p>스페이스바</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_SPACE</span></code></p></td>
+<td><p>점프/발사 등으로 자주 사용</p></td>
+</tr>
+<tr class="row-odd"><td><p>ESC</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_ESCAPE</span></code></p></td>
+<td><p>게임 종료용으로 자주 사용</p></td>
+</tr>
+<tr class="row-even"><td><p>A 키</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_a</span></code></p></td>
+<td><p>알파벳 키 (소문자 기준)</p></td>
+</tr>
+<tr class="row-odd"><td><p>숫자 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pygame.K_1</span></code></p></td>
+<td><p>숫자 키</p></td>
+</tr>
+</tbody>
+</table>
+</font>  </div>
+<div class="section" id="id4">
+<h3>🧩 마우스 이벤트 처리<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<font size=2>
+<ul class="simple">
+<li><p><strong>pygame 마우스 이벤트 종류</strong></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>이벤트 종류</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.MOUSEMOTION</span></code></p></td>
+<td><p>마우스를 움직일 때 발생</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.MOUSEBUTTONDOWN</span></code></p></td>
+<td><p>마우스 버튼을 눌렀을 때 발생</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.MOUSEBUTTONUP</span></code></p></td>
+<td><p>마우스 버튼에서 손을 뗐을 때 발생</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>마우스 버튼 번호</strong></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>버튼</p></th>
+<th class="head"><p>번호</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>왼쪽 버튼</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>클릭 또는 선택</p></td>
+</tr>
+<tr class="row-odd"><td><p>가운데 버튼</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+<td><p>휠 버튼 클릭</p></td>
+</tr>
+<tr class="row-even"><td><p>오른쪽 버튼</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+<td><p>컨텍스트 메뉴 등</p></td>
+</tr>
+<tr class="row-odd"><td><p>휠 위로</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
+<td><p>스크롤 업</p></td>
+</tr>
+<tr class="row-even"><td><p>휠 아래로</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span></code></p></td>
+<td><p>스크롤 다운</p></td>
+</tr>
+</tbody>
+</table>
+</font></div>
+<div class="section" id="id5">
+<h3>🧩 기본 이벤트 종류<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>이벤트 상수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.QUIT</span></code></p></td>
+<td><p>창 닫기 버튼 클릭 시 발생</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.VIDEORESIZE</span></code></p></td>
+<td><p>창의 크기가 변경되었을 때 발생</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.VIDEOEXPOSE</span></code></p></td>
+<td><p>창이 다시 그려져야 할 때 발생 (다른 창에 가려졌다가 다시 나타날 때 등)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.USEREVENT</span></code></p></td>
+<td><p>사용자 정의 이벤트 발생 시 사용 (개발자가 직접 생성)</p></td>
+</tr>
+</tbody>
+</table>
+</font><ul class="simple">
+<li><p>큐에서 이벤트를 가져올 때에는 <code class="docutils literal notranslate"><span class="pre">pygame.event.get()</span></code>을 사용하여 가져올 수 있다.</p></li>
+</ul>
+<div style="background-color:rgb(239, 245, 247); padding: 10px; border-radius: 5px;">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>다음 코드는 반복문을 통해 큐에서 차례대로 이벤트를 가져와서 이벤트 타입과 키에 따라 처리되는 예를 보여준다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># 게임 종료</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">KEYDOWN</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_ESCAPE</span><span class="p">:</span>
+                <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># ESC 키를 눌러 게임 종료</span>
+            <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">:</span>
+                <span class="c1"># 캐릭터를 왼쪽으로 이동</span>
+                <span class="k">pass</span>
+            <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">:</span>
+                <span class="c1"># 캐릭터를 오른쪽으로 이동</span>
+                <span class="k">pass</span>
+        <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">MOUSEBUTTONDOWN</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># 왼쪽 마우스 버튼 클릭 처리</span>
+                <span class="c1"># 왼쪽 마우스 버튼 클릭 시 동작</span>
+                <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>🧩 화면 업데이트<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이벤트와 게임 로직을 처리한 후 모든 게임 요소를 다시 화면에 나타내야 한다. 일반적으로 화면을 초기화하고, 모든 요소를 그린 후, 디스플레이를 업데이트한다.</p></li>
+<li><p>screen.fill()은 화면의 배경을 칠하는 함수이다. 디폴트는 블랙이다.</p></li>
+<li><p>pygame.display.flip()은 Pygame 화면 전체를 한 번에 업데이트해주는 함수이다.</p></li>
+<li><p>또한, pygame.display.update()를 사용하여 화면의 일부만 업데이트할 수도 있다. 이는 경우에 따라 더 효율적일 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 화면 초기화</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>  <span class="c1"># 배경 흰색</span>
+<span class="c1">#screen.fill((0, 0, 0))  # 배경 검은색</span>
+
+<span class="c1"># 여기에 게임 요소를 그립니다. 예: 스프라이트, 텍스트 등</span>
+
+<span class="c1"># 디스플레이 업데이트</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+<span class="c1">#pygame.display.update([rect1, rect2, rect3])  # 특정 영역(rect1, rect2, rect3)만 업데이트</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h4>🚀<strong>해보기 1: 화면 업데이트</strong><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 화면 업데이트 코드를 추가하세요.
+</div></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 요소 추가하기: 공</strong></div><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>이번에는 게임화면에 공을 만들어 튕겨보도록 하자.</p></li>
+<li><p>다음과 같이 공을 설정해보자.</p></li>
+</ul>
+<div class="section" id="id9">
+<h3>🧩 공 만들기<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pygame.Rect(x,</span> <span class="pre">y,</span> <span class="pre">width,</span> <span class="pre">height)</span></code>는 x, y 위치에 width, height 크기의 사각형을 만드는 함수이다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ball_speed</span> <span class="pre">=</span> <span class="pre">[3,</span> <span class="pre">3]</span></code>은 공이 x축으로 +3, y축으로 +3씩 움직이게 하려는 값이다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ball_color</span> <span class="pre">=</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0)</span></code>는 RGB값으로 공의 색을 표현한 값이다.</p></li>
+<li><p>RGB는 Red(빨강), Green(초록), Blue(파랑)의 약자로, 이 세 가지 색을 조합해 다양한 색을 표현하는 방식이다.</p></li>
+<li><p>각 색(R, G, B)은 0부터 255까지의 정수로 밝기를 나타낸다. 예를들어, (255,255,255)는 흰색이며, (0,0,0)은 검정색이다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.ellipse()</span></code>는 화면에 타원형을 그리는 함수이다. 이 코드는 screen.fill((0, 0, 0))아래 게임의 요소를 그리는 부분에 넣어야 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 공 위치, 속도, 색상 설정</span>
+<span class="n">ball</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">ball_speed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ball_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#RGB 색상값</span>
+
+<span class="c1"># 공 그리기</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">ellipse</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">ball_color</span><span class="p">,</span> <span class="n">ball</span><span class="p">)</span>  <span class="c1"># 공 그리기</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Pygame은 사각형, 원, 선 등과 같은 기본 도형을 그릴 수 있는 여러 함수를 제공한다.</p></li>
+<li><p>이러한 함수들은 pygame.draw 모듈의 일부이다.</p></li>
+</ul>
+</div>
+<div class="section" id="pygame-draw">
+<h3>🎨 pygame.draw 함수 정리<a class="headerlink" href="#pygame-draw" title="Permalink to this headline">#</a></h3>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수명</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>주요 인자</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.line()</span></code></p></td>
+<td><p>선을 그린다.</p></td>
+<td><p>surface, color, start_pos, end_pos, width=1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.lines()</span></code></p></td>
+<td><p>여러 점을 연결한 선을 그린다.</p></td>
+<td><p>surface, color, closed, pointlist, width=1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.aaline()</span></code></p></td>
+<td><p>안티앨리어싱된 선을 그린.</p></td>
+<td><p>surface, color, start_pos, end_pos, blend=1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.aalines()</span></code></p></td>
+<td><p>여러 점을 연결한 안티앨리어싱 선</p></td>
+<td><p>surface, color, closed, pointlist, blend=1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.rect()</span></code></p></td>
+<td><p>사각형을 그린다</p></td>
+<td><p>surface, color, rect, width=0, border_radius=0</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.ellipse()</span></code></p></td>
+<td><p>타원형을 그린다.(rect에 맞춰 그림)</p></td>
+<td><p>surface, color, rect, width=0</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.circle()</span></code></p></td>
+<td><p>원을 그린다.</p></td>
+<td><p>surface, color, center, radius, width=0</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.arc()</span></code></p></td>
+<td><p>호(arc)를 그린다.</p></td>
+<td><p>surface, color, rect, start_angle, stop_angle, width=1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.draw.polygon()</span></code></p></td>
+<td><p>다각형을 그린다.</p></td>
+<td><p>surface, color, pointlist, width=0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Surface: 도형을 그릴 대상 (보통 screen 사용)
+- Color: 도형의 색상 (RGB 튜플)
+</pre></div>
+</div>
+</font>    <div class="section" id="id10">
+<h4>🚀<strong>해보기 2: 공 만들기</strong><a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 공 만들기 코드를 적절한 위치에 추가하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id11">
+<h3>🧩 공 이동 시키기<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>아래는 공을 이동시키는 코드이다.</p></li>
+<li><p>공의 좌,우,위,아래의 위치가 화면의 가장자리와 부딪히면 방향을 전환한다.</p></li>
+<li><p>이 코드를 반복문의 화면 초기화 후 게임요소를 그리는 부분에 넣어준다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">ball_speed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">ball_speed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># 벽에 부딪히면 튕기기</span>
+<span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ball</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="mi">800</span><span class="p">:</span> <span class="c1"># 화면의 좌우 끝에 부딪히면</span>
+    <span class="n">ball_speed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">ball_speed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c1"># 방향 전환</span>
+<span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ball</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="mi">600</span><span class="p">:</span> <span class="c1"># 화면의 위아래 끝에 부딪히면</span>
+    <span class="n">ball_speed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">ball_speed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>      <span class="c1"># 방향 전환</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>🚀<strong>해보기 3: 공 이동 시키기</strong><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 공 이동 시키기 코드를 적절한 위치에 추가하세요.
+이때 들여쓰기에 주의하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id13">
+<h3>🧩 공 이동 속도 조절<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>위 코드로 공을 이동시키면 엄청 빠른 속도로 움직일 것이다. 그 이유는 프레임 속도를 제한하지 않았기 때문이다.</p></li>
+<li><p>while running: 루프가 빠르게 계속 실행되고 있고 그로 인해, 공 또한 빠르게 이동한다.</p></li>
+<li><p>clock.tick(60)함수로 프레임 속도를 초당 60프레임(FPS) 으로 제한하는 함수를 추가해보자.</p></li>
+<li><p>너무 느리거나 빠르면 프레임의 수를 조절하면 된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>🚀<strong>해보기 4: 공 이동 속도 조절</strong><a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 공 이동 속도 조절 코드를 적절한 위치에 추가하세요.
+</div></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id15">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 요소 추가하기: 패들</strong></div><a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>패들(공을 튕기기 위한 바)을 만들어보자.</p></li>
+<li><p>패들은 윈도우 가장 아래에서 좌우로만 움직일 수 있게 한다.</p></li>
+<li><p>패들을 움직이게 하기 위해 마우스 이벤트와 연동시켜보자.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image17.png" width=300>  </div><div class="section" id="id16">
+<h3>🧩 패들 만들고 마우스와 연동시키기<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>패들은 공만들기 했던 것처럼 <code class="docutils literal notranslate"><span class="pre">pygame.Rect()</span></code>를 이용하여 사각형 패들을 만들 수 있다.</p></li>
+<li><p>패들의 색은 블루의 값만 255로 설정하여 파란색으로 만든다.</p></li>
+<li><p>이 패들을 사용자가 마우스를 통해 이동시키기 위해 <code class="docutils literal notranslate"><span class="pre">pygame.mouse.get_pos()</span></code>을 통해 마우스 커서의 현재 (x, y) 좌표를 가져온다.</p></li>
+<li><p>이때 패들은 좌우로만 움직일 수 있도록 하기 위해 x 좌표만 사용하고 y 좌표는 무시할 것이다.</p></li>
+<li><p>paddle.centerx = mouse_x: 패들의 중심 x 좌표를 마우스의 x 위치로 맞춘다. 즉, 마우스를 좌우로 움직이면 패들도 마우스를 따라 좌우로 이동하게 된다.</p></li>
+<li><p>paddle.clamp_ip(screen.get_rect()): paddle이 화면 바깥으로 나가지 않도록 제한한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 패들</span>
+<span class="n">paddle</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span> <span class="mi">580</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">paddle_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span> <span class="c1">#RGB 색상값</span>
+
+<span class="c1"># 마우스로 패들 이동</span>
+<span class="n">mouse_x</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mouse</span><span class="o">.</span><span class="n">get_pos</span><span class="p">()</span>
+<span class="n">paddle</span><span class="o">.</span><span class="n">centerx</span> <span class="o">=</span> <span class="n">mouse_x</span>
+<span class="n">paddle</span><span class="o">.</span><span class="n">clamp_ip</span><span class="p">(</span><span class="n">screen</span><span class="o">.</span><span class="n">get_rect</span><span class="p">())</span>
+
+<span class="c1"># 그리기</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">paddle_color</span><span class="p">,</span> <span class="n">paddle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h4>🚀<strong>해보기 5: 패들 만들고 마우스와 연동시키기</strong><a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 패들 만들고 마우스와 연동시키기 코드를 적절한 위치에 추가하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id18">
+<h3>🧩 공과의 충돌 이벤트 처리<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ball.colliderect(paddle)</span></code>: 두 사각형(Rect 객체)이 충돌(겹침)했는지 확인하는 함수이다. ball과 paddle이 모두 pygame.rect 객체여야 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 패들에 닿으면 튕김</span>
+<span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">paddle</span><span class="p">):</span>
+    <span class="n">ball_speed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">ball_speed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#충돌하면 방향 바꿈</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id19">
+<h4>🚀<strong>해보기 6: 충돌 이벤트 처리</strong><a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 공과의 충돌 이벤트 처리 코드를 적절한 위치에 추가하세요.
+</div></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 규칙 넣기</strong></div><a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id21">
+<h3>🧩 게임 실패 넣기<a class="headerlink" href="#id21" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>패들이 공을 튕기지 못했을 때 즉, 공이 윈도우의 아래단을 터치하면 게임종료 메시지창을 띄우고 게임이 종료되도록 한다.</p></li>
+<li><p>아쉽게도 Pygame은 messagebox를 직접 생성하는 기능을 제공하지 않는다.</p></li>
+<li><p>그래서 이전에 배웠던 tkinter 모듈의 messagebox를 활용해보자.</p></li>
+<li><p>messagebox는 tkinter로 만든 윈도우에서 동작하므로 <a class="reference external" href="http://tk.Tk">tk.Tk</a>() 모듈의 윈도우를 생성해야 한다.</p></li>
+<li><p>이때 tk 윈도우와 pygame 윈도우가 동시에 보이면 안되므로 tk 윈도우는 <code class="docutils literal notranslate"><span class="pre">window.withdraw()</span></code>를 통해 숨김처리한다.</p></li>
+<li><p>이후 게임에 실패했을 때에는 윈도우도 종료시켜줘야 한다. 그렇지 않으면 보이지 않지만 프로그램은 여전히 실행 중이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<span class="kn">import</span> <span class="nn">tkinter.messagebox</span>  <span class="c1"># 메시지창을 위한 모듈 추가</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">withdraw</span><span class="p">()</span>  <span class="c1"># 메인 윈도우 숨김</span>
+
+<span class="c1"># 바닥에 닿으면 게임 오버</span>
+<span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="mi">600</span><span class="p">:</span>
+    <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Game Over&quot;</span><span class="p">,</span> <span class="s2">&quot;공을 놓쳤어요!</span><span class="se">\n</span><span class="s2">게임을 종료합니다.&quot;</span><span class="p">)</span>
+    <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h4>🚀<strong>해보기 7: 게임 실패 넣기</strong><a class="headerlink" href="#id22" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 게임 실패 코드를 적절한 위치에 추가하세요.
+</div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id23">
+<h3>🧩 점수 추가<a class="headerlink" href="#id23" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>점수를 추가하면 더 재미있는 게임을 만들 수 있다.</p></li>
+<li><p>공이 패들에 닿을 때마다 점수가 올라가도록 하고, 이를 화면에 표시해보자.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pygame.font.SysFont()</span></code>를 통해 기본 폰트와 크기를 설정할 수 있다.</p></li>
+<li><p>나타낼 텍스트는 <code class="docutils literal notranslate"><span class="pre">font.render()</span></code>를 사용하여 작성해준다.</p></li>
+<li><p>게임화면에 텍스트를 나타낼 때에는 <code class="docutils literal notranslate"><span class="pre">윈도우객체.blit()</span></code>를 사용한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 점수</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>  <span class="c1"># 기본 폰트와 크기 설정</span>
+
+<span class="c1"># 볼이 패들에 닿을 때 점수 증가 코드 추가</span>
+<span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># 점수 증가</span>
+
+<span class="n">score_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>  <span class="c1"># 스크린이 검정이면 흰색으로 할것</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">score_text</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># 좌측 상단에 표시</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id24">
+<h4>🚀<strong>해보기 8: 점수 시스템 추가</strong><a class="headerlink" href="#id24" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+Ex_ch5_source.ipynb에 점수 시스템 추가 코드를 적절한 위치에 추가하세요.
+</div></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div><a class="headerlink" href="#id25" title="Permalink to this headline">#</a></h2>
+<p>오늘 수업에서는 Pygame 라이브러리의 기본 구조를 살펴보고 통통볼 게임을 직접 구현해 보았다.
+이 과정에서 키보드와 마우스 이벤트를 활용하여 사용자와 상호작용하는 방법을 익혔다.
+또한 게임 요소의 위치, 속도, 방향을 다루며 간단한 물리적 움직임을 표현하는 경험을 쌓았다.
+이를 통해 Pygame의 다양한 API를 실제 게임 제작에 어떻게 적용할 수 있는지 이해할 수 있었다.
+다음 시간에는 배운 내용을 확장하여 많은 게임요소들을 체계적으로 관리하여 더 완성도 높은 게임을 설계하고 개발하는 방법을 익혀보자.</p>
 <hr class="docutils" />
 <font color='Blue' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,6 +1197,71 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-pygame-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>pygame 설치 및 버전 확인</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>기본 코드 파헤치기</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>이벤트 처리 및 화면 업데이트</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🧩 키보드 이벤트 처리</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">🧩 마우스 이벤트 처리</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">🧩 기본 이벤트 종류</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">🧩 화면 업데이트</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">🚀<strong>해보기 1: 화면 업데이트</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 요소 추가하기: 공</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🧩 공 만들기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame-draw">🎨 pygame.draw 함수 정리</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">🚀<strong>해보기 2: 공 만들기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🧩 공 이동 시키기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 3: 공 이동 시키기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">🧩 공 이동 속도 조절</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🚀<strong>해보기 4: 공 이동 속도 조절</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 요소 추가하기: 패들</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">🧩 패들 만들고 마우스와 연동시키기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">🚀<strong>해보기 5: 패들 만들고 마우스와 연동시키기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">🧩 공과의 충돌 이벤트 처리</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>해보기 6: 충돌 이벤트 처리</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>게임 규칙 넣기</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">🧩 게임 실패 넣기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">🚀<strong>해보기 7: 게임 실패 넣기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">🧩 점수 추가</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">🚀<strong>해보기 8: 점수 시스템 추가</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
