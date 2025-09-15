@@ -85,6 +85,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -360,8 +361,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>위젯</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>템플릿 소스 코드</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>위젯</strong></mark></div></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">✅ 컨테이너 위젯</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🚀<strong>해보기 1: 프레임 추가</strong></a></li>
 </ul>
@@ -385,7 +386,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>메시지 박스</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>메시지 박스</strong></mark></div></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">✅ 메시지 박스 띄우기</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">✅ 사용자 입력 오류 처리</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">🚀<strong>해보기 7: 사용자 입력 처리</strong></a></li>
@@ -393,7 +394,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>프로그램 확장</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>프로그램 확장</strong></mark></div></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">✅ 간식 리스트 변경 함수 정의하기</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>해보기 8: 간식 리스트 변경 함수 정의</strong></a></li>
 </ul>
@@ -409,7 +410,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
 </ul>
             </nav>
         </div>
@@ -428,23 +429,16 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-3">
 <h1>Chapter 3. 다양한 위젯과 사용자 입력 처리<a class="headerlink" href="#chapter-3" title="Permalink to this headline">#</a></h1>
 <div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<ul class="simple">
-<li><p>학습목표</p>
-<ul>
-<li><p>라디오 버튼, 체크박스, 프레임, 리스트박스, 콤보박스, 이미지 위젯을 활용하여 나만의 간식 추천기 프로그램을 만들어보자.</p></li>
-<li><p>레이아웃 관리와 사용자 입력 처리에 대한 정보, 경고, 에러 메시지 박스 생성 방법을 익힌다.</p></li>
-</ul>
-</li>
-<li><p>기대효과</p>
-<ul>
-<li><p>사용자 인터페이스 구성 요소를 적절히 활용하여 실생활과 연계된 GUI 프로그램을 스스로 설계하고 구현할 수 있다.</p></li>
-<li><p>레이아웃과 입력 처리 방식에 대한 이해를 바탕으로 직관적이고 안정적인 사용자 경험을 제공하는 애플리케이션을 만들 수 있다.</p></li>
-</ul>
-</li>
-</ul>
-</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div" title="Permalink to this headline">#</a></h2>
+<font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font>
+<mark style="background-color: #f5fff5;"><br>
+🔹 학습목표
+  <ul><li> 라디오 버튼, 체크박스, 프레임, 리스트박스, 콤보박스, 이미지 위젯을 활용하여 나만의 간식 추천기 프로그램을 만들어보자.</li>
+  <li> 레이아웃 관리와 사용자 입력 처리에 대한 정보, 경고, 에러 메시지 박스 생성 방법을 익힌다.</li></ul>
+🔹 기대효과
+  <ul><li> 사용자 인터페이스 구성 요소를 적절히 활용하여 실생활과 연계된 GUI 프로그램을 스스로 설계하고 구현할 수 있다.</li>
+  <li> 레이아웃과 입력 처리 방식에 대한 이해를 바탕으로 직관적이고 안정적인 사용자 경험을 제공하는 애플리케이션을 만들 수 있다.</li></ul></mark>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>템플릿 소스 코드</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
 <p>이번에 만들어볼 프로그램은 아래와 같은 인터페이스를 갖는 간식추천 프로그램이다.</p>
 <div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image13.png" width=300>  </div><ul class="simple">
 <li><p>아래 템플릿 소스 코드를 실행시키면 간단한 윈도우가 열릴 것이다.</p></li>
@@ -474,14 +468,13 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </div>
 </div>
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
 📢 안내
-<ul class="simple">
-<li><p>템플릿 소스코드를 확장하면서 위아래로 자주 이동해야 하므로, 코드를 새 파일에 복사해 두고 강의자료와 번갈아 보며 작업해주세요.</p></li>
-<li><p>메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: <strong>Ex_ch3_source.ipynb</strong> -&gt; 저장 경로 지정 후 엔터</p></li>
-</ul>
-</div></div>
+- 템플릿 소스코드를 확장하면서 위아래로 자주 이동해야 하므로, 코드를 새 파일에 복사해 두고 강의자료와 번갈아 보며 작업해주세요.
+- 메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: **Ex_ch3_source.ipynb** -> 저장 경로 지정 후 엔터
+</mark></div></div>
 <div class="section" id="id1">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>위젯</strong></div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>위젯</strong></mark></div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <div class="section" id="id2">
 <h3>✅ 컨테이너 위젯<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
@@ -506,9 +499,9 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </div>
 <div class="section" id="id3">
 <h4>🚀<strong>해보기 1: 프레임 추가</strong><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
 Ex_ch3_source.ipynb에 프레임을 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.
-</div>
+</mark></div>
 <ul class="simple">
 <li><p>프레임을 배치했더라도 현재는 그 프레임안에 어떠한 위젯도 들어있지 않으므로 눈에 보이는 변화는 없을 것이다.</p></li>
 </ul>
@@ -532,7 +525,7 @@ Ex_ch3_source.ipynb에 프레임을 추가하세요. 위젯들은 window.mainloo
 <span class="c1">#라디오 버튼을 만든다.</span>
 <span class="n">tk</span><span class="o">.</span><span class="n">Radiobutton</span><span class="p">(</span><span class="n">frame_mood</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;달콤한 간식&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;달콤한&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">snack_type</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">tk</span><span class="o">.</span><span class="n">Radiobutton</span><span class="p">(</span><span class="n">frame_mood</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;짭짤한 간식&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;짭짤한&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">snack_type</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">tk</span><span class="o">.</span><span class="n">Radiobutton</span><span class="p">(</span><span class="n">frame_mood</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;건강한 간식&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;건강한&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">snack_type</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1">#건강한 간식 라이디오 버튼은 직접 코드를 작성하세요.</span>
 </pre></div>
 </div>
 </div>
@@ -600,8 +593,8 @@ Ex_ch3_source.ipynb에 프레임을 추가하세요. 위젯들은 window.mainloo
 </table>
 </font><div class="section" id="id5">
 <h4>🚀<strong>해보기 2: 라디오 버튼 추가</strong><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 라디오 버튼을 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 라디오 버튼을 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.</mark>
 </div></div>
 </div>
 <hr class="docutils" />
@@ -685,8 +678,8 @@ Ex_ch3_source.ipynb에 라디오 버튼을 추가하세요. 위젯들은 window.
 </div>
 <div class="section" id="id7">
 <h4>🚀<strong>해보기 3: 체크박스 추가</strong><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 <strong>레이블, 프레임, 체크박스</strong>를 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 <strong>레이블, 프레임, 체크박스</strong>를 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.</mark>
 </div></div>
 </div>
 <hr class="docutils" />
@@ -697,7 +690,7 @@ Ex_ch3_source.ipynb에 <strong>레이블, 프레임, 체크박스</strong>를 �
 <li><p>항목은 insert() 메서드로 추가하며, 선택한 값은 curselection()이나 get()으로 가져올 수 있다.</p>
 <ul>
 <li><p>curselection(): 선택된 항목의 <strong>인덱스</strong>(위치)를 튜플 형태로 반환, 예: (0, 2) → 0번과 2번 항목이 선택됨</p></li>
-<li><p>get(): 주어진 인덱스에 해당하는 실제 <strong>값</strong>(문자열)을 반환</p></li>
+<li><p>get(index): 주어진 인덱스에 해당하는 실제 <strong>값</strong>(문자열)을 반환</p></li>
 </ul>
 </li>
 </ul>
@@ -718,14 +711,14 @@ Ex_ch3_source.ipynb에 <strong>레이블, 프레임, 체크박스</strong>를 �
 </div>
 <div class="section" id="id9">
 <h4>🚀<strong>해보기 4: 리스트박스 추가</strong><a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 <strong>리스트박스</strong>를 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 <strong>리스트박스</strong>를 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.</mark>
 </div></div>
 <hr class="docutils" />
 <div class="section" id="id10">
 <h4>🚀<strong>해보기 5: 추천받기 버튼 추가</strong><a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 <strong>추천받기 버튼</strong>을 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 <strong>추천받기 버튼</strong>을 추가하세요. 위젯들은 window.mainloop() 안에 있어야 합니다.</mark>
 </div></div>
 </div>
 <hr class="docutils" />
@@ -770,14 +763,14 @@ Ex_ch3_source.ipynb에 <strong>추천받기 버튼</strong>을 추가하세요. 
 </div>
 <div class="section" id="id12">
 <h4>🚀<strong>해보기 6: 간식 추천 함수</strong><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 <strong>간식 추천 함수</strong>를 추가하세요. 함수 정의 위치는 import 아래에 넣어줍니다.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 <strong>간식 추천 함수</strong>를 추가하세요. 함수 정의 위치는 import 아래에 넣어줍니다.</mark>
 </div></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="id13">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>메시지 박스</strong></div><a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>메시지 박스</strong></mark></div><a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>메시지 박스(message box)는 프로그램에서 사용자에게 정보를 전달하거나, 확인을 요청하거나, 경고/오류를 알릴 때 사용하는 팝업 창을 말한다.</p></li>
 </ul>
@@ -786,6 +779,7 @@ Ex_ch3_source.ipynb에 <strong>간식 추천 함수</strong>를 추가하세요.
 <ul class="simple">
 <li><p>메시지 박스를 띄우기 위해서는 먼저 messagebox 모듈을 불러와야 한다.</p></li>
 <li><p>messagebox 모듈은 tkinter에 들어있다.</p></li>
+<li><p>from tkinter import *를 쓰더라도 messagebox는 자동으로 안 들어온다. 반드시 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">tkinter</span> <span class="pre">import</span> <span class="pre">messagebox</span></code>가 필요하다.</p></li>
 <li><p>메시지 박스의 종류와 예시는 다음과 같다.</p></li>
 </ul>
 <font size=2>
@@ -872,18 +866,19 @@ Ex_ch3_source.ipynb에 <strong>간식 추천 함수</strong>를 추가하세요.
 </div>
 <div class="section" id="id16">
 <h4>🚀<strong>해보기 7: 사용자 입력 처리</strong><a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 <strong>사용자 입력 처리</strong>를 추가하세요.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 <strong>사용자 입력 처리</strong>를 추가하세요.</mark>
 </div></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="id17">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>프로그램 확장</strong></div><a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>프로그램 확장</strong></mark></div><a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
 <div class="section" id="id18">
 <h3>✅ 간식 리스트 변경 함수 정의하기<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>간식 취향 라디오버튼의 선택값에 따라 리스트박스에 다른 간식 목록이 나타나도록 해보자.</p></li>
+<li><p>새로운 간식 목록으로 나타내려면 먼저 이전 간식 목록을 지워야 한다.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -920,8 +915,8 @@ Ex_ch3_source.ipynb에 <strong>사용자 입력 처리</strong>를 추가하세�
 </div>
 <div class="section" id="id19">
 <h4>🚀<strong>해보기 8: 간식 리스트 변경 함수 정의</strong><a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h4>
-<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 <strong>간식 리스트 변경 함수 정의</strong>를 추가하세요.
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 <strong>간식 리스트 변경 함수 정의</strong>를 추가하세요.</mark>
 </div></div>
 </div>
 <hr class="docutils" />
@@ -937,7 +932,9 @@ Ex_ch3_source.ipynb에 <strong>간식 리스트 변경 함수 정의</strong>를
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combo</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Combobox</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;건강한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;달콤한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;고단백 간식&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">ttk</span>
+
+<span class="n">combo</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Combobox</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;건강한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;달콤한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;고단백 간식&quot;</span><span class="p">])</span>
 <span class="n">combo</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;</span><span class="p">,</span> <span class="n">update_snack_list</span><span class="p">)</span>
 <span class="n">combo</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -947,11 +944,12 @@ Ex_ch3_source.ipynb에 <strong>간식 리스트 변경 함수 정의</strong>를
 <div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image14.png?v=1234" width=300></div><div class="section" id="id21">
 <h4>🚀<strong>해보기 9: 콤보 박스로 변경</strong><a class="headerlink" href="#id21" title="Permalink to this headline">#</a></h4>
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
 Ex_ch3_source.ipynb에 라디오 버튼을 콤보 박스로 변경하고 관련되는 코드를 수정하시오.
 <ol class="arabic simple">
 <li><p>현재는 옵션박스로 되어 있는 간식 타입을 콤보박스로 바꿔보자.(화면 레이아웃 변경)</p></li>
 <li><p>옵션박스 대신 콤보박스 선택값이 적용되도록 recommend_snack() 함수도 변경해보자.</p></li>
-<li><p>콤보박스에서 선택할 때마다 간식 리스트가 달라지도록 update_snack_list()함수를 변경해보자. 이때 <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">update_snack_list(event=None):</span></code>와 같이 event 매개변수를 넣어야 한다.</p></li>
+<li><p>콤보박스에서 선택할 때마다 간식 리스트가 달라지도록 update_snack_list()함수를 변경해보자. 이때 <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">update_snack_list(event=None):</span></code>와 같이 event 매개변수를 넣어야 한다.</mark></p></li>
 </ol>
 </div>
 </div>
@@ -1011,14 +1009,14 @@ Ex_ch3_source.ipynb에 라디오 버튼을 콤보 박스로 변경하고 관련�
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">show_snack_image</span><span class="p">(</span><span class="n">snack_name</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">snack_name</span> <span class="ow">in</span> <span class="n">snack_images</span><span class="p">:</span>
         <span class="n">img_label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">snack_images</span><span class="p">[</span><span class="n">snack_name</span><span class="p">])</span>
-        <span class="n">img_label</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">snack_images</span><span class="p">[</span><span class="n">snack_name</span><span class="p">]</span>
+        <span class="n">img_label</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">snack_images</span><span class="p">[</span><span class="n">snack_name</span><span class="p">]</span>  <span class="c1"># 이미지가 계속 보이도록 설정하는 코드</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">img_label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># 선택한 이미지가 없으면 초기화</span>
 
 <span class="k">def</span> <span class="nf">on_select_snack</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Listbox에서 간식을 선택하면 자동으로 이미지 변경&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">listbox_snacks</span><span class="o">.</span><span class="n">curselection</span><span class="p">():</span>
-        <span class="n">show_snack_image</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">show_snack_image</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># 선택을 해제했을 때 이미지를 사라지게 하기 위함</span>
         <span class="k">return</span>
     <span class="c1"># 복수 선택 가능이므로 첫 번째 선택만 사용</span>
     <span class="n">idx</span> <span class="o">=</span> <span class="n">listbox_snacks</span><span class="o">.</span><span class="n">curselection</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
@@ -1031,13 +1029,14 @@ Ex_ch3_source.ipynb에 라디오 버튼을 콤보 박스로 변경하고 관련�
 <div class="section" id="id24">
 <h4>🚀<strong>해보기 10: 간식 이미지 넣고 필요 함수 정의/호출하기</strong><a class="headerlink" href="#id24" title="Permalink to this headline">#</a></h4>
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
-Ex_ch3_source.ipynb에 간식 이미지 넣고 필요 함수 정의/호출하시오.
+<mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch3_source.ipynb에 간식 이미지 넣고 필요 함수 정의/호출하시오.</mark>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="id25">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div><a class="headerlink" href="#id25" title="Permalink to this headline">#</a></h2>
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#id25" title="Permalink to this headline">#</a></h2>
 <p>오늘 수업에서는 라디오 버튼, 체크박스, 리스트박스, 콤보박스 등 다양한 위젯과 레이아웃 관리, 메시지 박스 생성 방법을 배웠다. 이를 통해 실생활과 연계된 GUI 프로그램을 직접 설계하고 구현하며, 직관적이고 안정적인 사용자 경험을 제공하는 애플리케이션을 완성할 수 있다.</p>
 <hr class="docutils" />
 <font color='Blue' size="4">
@@ -1108,8 +1107,8 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>템플릿 소스 코드</strong></div></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>위젯</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>템플릿 소스 코드</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>위젯</strong></mark></div></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">✅ 컨테이너 위젯</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🚀<strong>해보기 1: 프레임 추가</strong></a></li>
 </ul>
@@ -1133,7 +1132,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>메시지 박스</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>메시지 박스</strong></mark></div></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">✅ 메시지 박스 띄우기</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">✅ 사용자 입력 오류 처리</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">🚀<strong>해보기 7: 사용자 입력 처리</strong></a></li>
@@ -1141,7 +1140,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>프로그램 확장</strong></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>프로그램 확장</strong></mark></div></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">✅ 간식 리스트 변경 함수 정의하기</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>해보기 8: 간식 리스트 변경 함수 정의</strong></a></li>
 </ul>
@@ -1157,7 +1156,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><strong>마무리</strong></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
 </ul>
   </nav></div>
 
