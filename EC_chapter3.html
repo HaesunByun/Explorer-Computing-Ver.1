@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter3.ipynb" download
+      <li><a href="_sources/EC_chapter3.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -428,13 +428,14 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-3">
 <h1>Chapter 3. 다양한 위젯과 사용자 입력 처리<a class="headerlink" href="#chapter-3" title="Permalink to this headline">#</a></h1>
-<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font>
-<mark style="background-color: #f5fff5;"><br>
-🔹 학습목표
+<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px; color: #000000;">
+<p><font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font></p>
+<mark style="background-color: #f5fff5;">
+🔹 학습목표<br>
   <ul><li> 라디오 버튼, 체크박스, 프레임, 리스트박스, 콤보박스, 이미지 위젯을 활용하여 나만의 간식 추천기 프로그램을 만들어보자.</li>
   <li> 레이아웃 관리와 사용자 입력 처리에 대한 정보, 경고, 에러 메시지 박스 생성 방법을 익힌다.</li></ul>
-🔹 기대효과
+<br>
+🔹 기대효과<br>
   <ul><li> 사용자 인터페이스 구성 요소를 적절히 활용하여 실생활과 연계된 GUI 프로그램을 스스로 설계하고 구현할 수 있다.</li>
   <li> 레이아웃과 입력 처리 방식에 대한 이해를 바탕으로 직관적이고 안정적인 사용자 경험을 제공하는 애플리케이션을 만들 수 있다.</li></ul></mark>
 </div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
@@ -659,10 +660,12 @@ Ex_ch3_source.ipynb에 라디오 버튼을 추가하세요. 위젯들은 window.
 </ul>
 <div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image14-2.png" width=300></div><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 체크박스를 만들 프레임을 변수 frame_check로 만들어주세요.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 간식 조건 레이블 &quot;간식 조건을 선택하세요:&quot;를 만들어주세요.</span>
 
 
-<span class="c1"># 간식 조건 레이블 &quot;간식 조건을 선택하세요:&quot;를 만들어주세요.</span>
+<span class="c1"># 체크박스를 만들 프레임을 변수 frame_check로 만들어주세요.</span>
+
+
 
 
 <span class="c1"># 체크박스용 변수</span>
@@ -705,6 +708,7 @@ Ex_ch3_source.ipynb에 <strong>레이블, 프레임, 체크박스</strong>를 �
 <span class="n">snack_items</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;초콜릿&quot;</span><span class="p">,</span> <span class="s2">&quot;감자칩&quot;</span><span class="p">,</span> <span class="s2">&quot;견과류&quot;</span><span class="p">,</span> <span class="s2">&quot;요거트&quot;</span><span class="p">,</span> <span class="s2">&quot;쿠키&quot;</span><span class="p">,</span> <span class="s2">&quot;과일&quot;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">snack_items</span><span class="p">:</span>
     <span class="n">listbox_snacks</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+<span class="n">listbox_snacks</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>    
 </pre></div>
 </div>
 </div>
@@ -890,10 +894,11 @@ Ex_ch3_source.ipynb에 <strong>사용자 입력 처리</strong>를 추가하세�
     <span class="c1"># 조건에 따라 다른 목록 제공</span>
     <span class="k">if</span> <span class="n">mood</span> <span class="o">==</span> <span class="s2">&quot;달콤한&quot;</span><span class="p">:</span>
         <span class="n">snacks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;초콜릿&quot;</span><span class="p">,</span> <span class="s2">&quot;마카롱&quot;</span><span class="p">,</span> <span class="s2">&quot;젤리&quot;</span><span class="p">,</span> <span class="s2">&quot;조각케익&quot;</span><span class="p">]</span>
-    <span class="k">elif</span> <span class="n">mood</span> <span class="o">==</span> <span class="s2">&quot;건강한&quot;</span><span class="p">:</span>
-        <span class="n">snacks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;견과류&quot;</span><span class="p">,</span> <span class="s2">&quot;과일바&quot;</span><span class="p">,</span> <span class="s2">&quot;샐러드&quot;</span><span class="p">,</span> <span class="s2">&quot;오이&quot;</span><span class="p">,</span> <span class="s2">&quot;방울토마토&quot;</span><span class="p">,</span> <span class="s2">&quot;삶은 달걀&quot;</span><span class="p">]</span>
     <span class="k">elif</span> <span class="n">mood</span> <span class="o">==</span> <span class="s2">&quot;짭짤한&quot;</span><span class="p">:</span>
         <span class="n">snacks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;치즈스틱&quot;</span><span class="p">,</span> <span class="s2">&quot;프레첼&quot;</span><span class="p">,</span> <span class="s2">&quot;감자칩&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">mood</span> <span class="o">==</span> <span class="s2">&quot;건강한&quot;</span><span class="p">:</span>
+        <span class="n">snacks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;견과류&quot;</span><span class="p">,</span> <span class="s2">&quot;과일바&quot;</span><span class="p">,</span> <span class="s2">&quot;샐러드&quot;</span><span class="p">,</span> <span class="s2">&quot;오이&quot;</span><span class="p">,</span> <span class="s2">&quot;방울토마토&quot;</span><span class="p">,</span> <span class="s2">&quot;삶은 달걀&quot;</span><span class="p">]</span>
+
 
 
     <span class="c1"># TODO: 리스트박스에 추가</span>
@@ -934,7 +939,7 @@ Ex_ch3_source.ipynb에 <strong>간식 리스트 변경 함수 정의</strong>를
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">ttk</span>
 
-<span class="n">combo</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Combobox</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;건강한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;달콤한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;고단백 간식&quot;</span><span class="p">])</span>
+<span class="n">combo</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Combobox</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;달콤한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;짭짤한 간식&quot;</span><span class="p">,</span> <span class="s2">&quot;건강한 간식&quot;</span><span class="p">])</span>
 <span class="n">combo</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;</span><span class="p">,</span> <span class="n">update_snack_list</span><span class="p">)</span>
 <span class="n">combo</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -945,12 +950,10 @@ Ex_ch3_source.ipynb에 <strong>간식 리스트 변경 함수 정의</strong>를
 <h4>🚀<strong>해보기 9: 콤보 박스로 변경</strong><a class="headerlink" href="#id21" title="Permalink to this headline">#</a></h4>
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
 <mark style="background-color: rgba(247, 239, 246, 1);">
-Ex_ch3_source.ipynb에 라디오 버튼을 콤보 박스로 변경하고 관련되는 코드를 수정하시오.
-<ol class="arabic simple">
-<li><p>현재는 옵션박스로 되어 있는 간식 타입을 콤보박스로 바꿔보자.(화면 레이아웃 변경)</p></li>
-<li><p>옵션박스 대신 콤보박스 선택값이 적용되도록 recommend_snack() 함수도 변경해보자.</p></li>
-<li><p>콤보박스에서 선택할 때마다 간식 리스트가 달라지도록 update_snack_list()함수를 변경해보자. 이때 <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">update_snack_list(event=None):</span></code>와 같이 event 매개변수를 넣어야 한다.</mark></p></li>
-</ol>
+Ex_ch3_source.ipynb에 라디오 버튼을 콤보 박스로 변경하고 관련되는 코드를 수정하시오.<br>
+1. 현재는 옵션박스로 되어 있는 간식 타입을 콤보박스로 바꿔보자.(화면 레이아웃 변경)<br>
+2. 옵션박스 대신 콤보박스 선택값이 적용되도록 recommend_snack() 함수도 변경해보자.<br>
+3. 콤보박스에서 선택할 때마다 간식 리스트가 달라지도록 update_snack_list()함수를 변경해보자. 이때 `def update_snack_list(event=None):`와 같이 event 매개변수를 넣어야 한다.</mark>
 </div>
 </div>
 </div>
@@ -1210,6 +1213,4 @@ By hs Byun
   <footer class="bd-footer">
   </footer>
   </body>
-
 </html>
-
