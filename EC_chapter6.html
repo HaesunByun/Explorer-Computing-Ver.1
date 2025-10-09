@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter6.ipynb" download
+      <li><a href="_sources/EC_chapter6.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -486,7 +486,7 @@ Hello from the pygame community. https://www.pygame.org/contribute.html
 <li><p>이미지를 준비한다. 이미지는 아래 링크를 클릭하여 그림이 나오면 마우스 오른쪽 버튼 눌러 다운로드 한후, images 폴더에 저장한다.</p>
 <ul>
 <li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/comps/player.jpg">https://haesunbyun.github.io/common/images/comps/player.jpg</a></p></li>
-<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/comps/balloon.png">https://haesunbyun.github.io/common/images/comps/balloon.png</a></p></li>
+<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/comps/balloon.jpg">https://haesunbyun.github.io/common/images/comps/balloon.jpg</a></p></li>
 </ul>
 </li>
 <li><p>이미지를 로드하려면 <code class="docutils literal notranslate"><span class="pre">pygame.image.load(파일명)</span></code> 함수를 사용한다.</p></li>
@@ -980,12 +980,12 @@ Ex_ch6_source.ipynb에 캐릭터 이동 코드를 추가하세요.
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span>
 
-        <span class="c1"># 아래 화면으로 벋어나는 것을 방지   </span>
+        <span class="c1"># 아래 화면으로 벗어나는 것을 방지   </span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;=</span> <span class="mi">600</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="o">=</span> <span class="mi">600</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
             
-        <span class="c1"># 좌우 화면으로 벋어나는 것을 방지    </span>
+        <span class="c1"># 좌우 화면으로 벗어나는 것을 방지    </span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="mi">800</span><span class="p">:</span>
@@ -999,7 +999,7 @@ Ex_ch6_source.ipynb에 캐릭터 이동 코드를 추가하세요.
 <h3>🚀<strong>해보기 5: 중력 적용 이동</strong><a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h3>
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
 <mark style="background-color: rgba(247, 239, 246, 1);">
-Ex_ch6_source.ipynb에 중력 적용 코드로 변경하시오.
+Ex_ch6_source.ipynb에 중력 적용 코드로 변경하세요.
 </mark></div></div>
 </div>
 <hr class="docutils" />
@@ -1034,7 +1034,6 @@ Ex_ch6_source.ipynb에 중력 적용 코드로 변경하시오.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="c1">################################################## 풍선이 아래로 내려오는 상황</span>
 <span class="k">class</span> <span class="nc">Enemy</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1268,5 +1267,4 @@ By hs Byun
   <footer class="bd-footer">
   </footer>
   </body>
-
 </html>
