@@ -486,7 +486,7 @@ Hello from the pygame community. https://www.pygame.org/contribute.html
 <li><p>이미지를 준비한다. 이미지는 아래 링크를 클릭하여 그림이 나오면 마우스 오른쪽 버튼 눌러 다운로드 한후, images 폴더에 저장한다.</p>
 <ul>
 <li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/comps/player.jpg">https://haesunbyun.github.io/common/images/comps/player.jpg</a></p></li>
-<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/comps/balloon.jpg">https://haesunbyun.github.io/common/images/comps/balloon.jpg</a></p></li>
+<li><p><a class="reference external" href="https://haesunbyun.github.io/common/images/comps/balloon.png">https://haesunbyun.github.io/common/images/comps/balloon.png</a></p></li>
 </ul>
 </li>
 <li><p>이미지를 로드하려면 <code class="docutils literal notranslate"><span class="pre">pygame.image.load(파일명)</span></code> 함수를 사용한다.</p></li>
@@ -1037,7 +1037,7 @@ Ex_ch6_source.ipynb에 중력 적용 코드로 변경하세요.
 <span class="k">class</span> <span class="nc">Enemy</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./images/balloon.jpg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./images/balloon.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">750</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">))</span>  <span class="c1"># 화면 보이지 않는 위쪽에서 만들어져서 아래로 내려오게 함</span>
@@ -1269,3 +1269,4 @@ By hs Byun
   </body>
 
 </html>
+
