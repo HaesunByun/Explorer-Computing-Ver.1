@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter7.ipynb" download
+      <li><a href="_sources/EC_chapter7.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -414,20 +414,13 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
   <li> 다양한 게임 장르에 활용 가능한 기초 제작 기술을 습득하게 된다. </li></ul> 
 </div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
 <h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>템플릿 소스 코드</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
-<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image21.png?v=1234" width=400>  </div><ul class="simple">
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image20.png?v=1234" width=400>  </div><ul class="simple">
 <li><p>아래 코드는 지난주까지 배운 소스코드이다.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
 <span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-
-<span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;풍선을 잡아라!&quot;</span><span class="p">)</span>
-<span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
-
 
 <span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -439,7 +432,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 매 프레임 좌우 속도 초기화</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mf">0.5</span> <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mf">0.25</span> <span class="c1">#</span>
 
         <span class="n">keys</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">]:</span>
@@ -456,13 +449,12 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="o">=</span> <span class="mi">600</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
 
-        <span class="c1"># 화면을 벋어나는 것을 방지    </span>
+        <span class="c1"># 화면을 벗어나는 것을 방지    </span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;=</span> <span class="mi">800</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="mi">800</span>  
 
-<span class="c1">################################################## 풍선이 아래로 내려오는 상황</span>
 <span class="k">class</span> <span class="nc">Enemy</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -471,12 +463,17 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">750</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">))</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>  <span class="c1"># 풍선 낙하 속도</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">from_surface</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">top</span> <span class="o">&gt;</span> <span class="mi">600</span><span class="p">:</span>  <span class="c1"># 화면 아래로 나가면 제거</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;풍선을 잡아라!&quot;</span><span class="p">)</span>
+<span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
 
 <span class="n">all_sprites</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">()</span>
 <span class="n">player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">()</span>
@@ -630,7 +627,7 @@ Ex_ch7_source.ipynb에 사운드 효과 넣기 코드를 추가하세요.
 <ul class="simple">
 <li><p>음악 정지 및 일시 정지</p>
 <ul>
-<li><p>배경 음악 재생을 제어하려면 <code class="docutils literal notranslate"><span class="pre">stop()</span></code>과 <code class="docutils literal notranslate"><span class="pre">pause()</span></code> 메서드를 사용할 수 있습니다.</p></li>
+<li><p>배경 음악 재생을 제어하려면 <code class="docutils literal notranslate"><span class="pre">stop()</span></code>, <code class="docutils literal notranslate"><span class="pre">pause()</span></code>, <code class="docutils literal notranslate"><span class="pre">unpause()</span></code> 메서드를 사용할 수 있습니다.</p></li>
 <li><p><strong>stop()</strong>: 음악을 즉시 정지</p></li>
 <li><p><strong>pause()</strong>: 음악을 일시 정지</p></li>
 <li><p><strong>unpause()</strong>: 음악을 다시 재개</p></li>
@@ -672,7 +669,7 @@ Ex_ch7_source.ipynb에 사운드 효과 넣기 코드를 추가하세요.
 </div>
 </div>
 <ul class="simple">
-<li><p>pygame에서 윈도우를 닫아도 배경음악이 멈추지 않고 계속 재생될 때에는 음악이 백그라운드에서 계속 실행되어 발생한다.</p></li>
+<li><p>혹시 pygame에서 윈도우를 닫아도 배경음악이 멈추지 않고 계속 재생될 때에는 음악이 백그라운드에서 계속 실행되어 발생한다.</p></li>
 <li><p>그럴 경우 메뉴에서 Kernel → Restart</p></li>
 </ul>
 </div>
@@ -786,7 +783,6 @@ Ex_ch7_source.ipynb에 충돌 감지 및 제거 코드를 추가하세요.
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
 <mark style="background-color: rgba(247, 239, 246, 1);">
 Ex_ch7_source.ipynb에 Enemy_ghost 클래스 설계하고 동작하도록 코드를 넣어주세요.<br>
-<p>
 Enemy_ghost 클래스 설계는 다음과 같다.<br>
 </mark></div>
 <ol class="arabic simple">
@@ -939,6 +935,8 @@ Ex_ch7_source.ipynb에 점수 시스템 코드를 추가하세요.
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 충돌하면 끝나는 게임이라면 </span>
 <span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
 <span class="kn">import</span> <span class="nn">tkinter.messagebox</span>  <span class="c1"># 메시지창을 위한 모듈 추가</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">withdraw</span><span class="p">()</span>  <span class="c1"># 메인 윈도우 숨김</span>
 
 <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">spritecollideany</span><span class="p">(</span><span class="n">player</span><span class="p">,</span>  <span class="n">ghost_group</span><span class="p">):</span>
     <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Game Over&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;게임이 끝났습니다!&#39;&quot;</span><span class="p">)</span>
@@ -949,11 +947,10 @@ Ex_ch7_source.ipynb에 점수 시스템 코드를 추가하세요.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finish_score</span> <span class="o">=</span> <span class="mi">15</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finish_score</span> <span class="o">=</span> <span class="mi">17</span>
 <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">finish_score</span><span class="p">:</span>
     <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;Win&quot;</span><span class="p">,</span> <span class="s2">&quot;You win&quot;</span><span class="p">)</span>
     <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>  
-    
 </pre></div>
 </div>
 </div>
@@ -1119,6 +1116,4 @@ By hs Byun
   <footer class="bd-footer">
   </footer>
   </body>
-
 </html>
-
