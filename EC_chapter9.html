@@ -85,6 +85,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -337,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +356,45 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>파이썬 기반 웹 서비스</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">웹 서비스를 구성하는 세 가지 기본 구성 요소</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit이란?</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#streamlit">Streamlit 설치하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">간단 예제 테스트 해보기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🚀<strong>해보기 1: 웹 브라우저에 나타내보기</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>개발 환경 설정</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">깃허브 회원가입 및 저장소 생성</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">회원 가입</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repository">저장소(repository) 생성</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">깃허브에 필요 파일 옮기기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">🚀<strong>해보기 2: 깃허브 가입, 저장소 생성, 파일 업로드</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Streamlit 회원가입 및 깃허브 연동</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">회원 가입</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">깃허브 연동</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 3: Streamlit 가입 및 깃허브 연동</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>나만의 웹앱</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -368,14 +410,303 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-9">
 <h1>Chapter 9. 웹 대시보드 이해와 기본 실행<a class="headerlink" href="#chapter-9" title="Permalink to this headline">#</a></h1>
-<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px; color: #000000;">
+<p><font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font></p>
+<mark style="background-color: #f5fff5;">
+🔹 학습목표<br>
+  <ul><li> 웹서비스의 동작 과정을 이해하고  직접 구현하기 위하여 Streamlit을 설치해본다.</li>
+  <li> Streamlit 앱을 웹에 배포하기 위하여 깃허브와 Streamlit Cloud에 가입하고 연동해본다.</li>
+  <li> Streamlit 기본 사용법을 익혀본다.</li></ul>  
+🔹 기대효과<br>
+  <ul><li> 웹서비스를 단순히 사용하는 입장이 아니라 직접 만들어보고 배포해볼 수 있다.</li>
+  <li> 웹서비스 제작과 배포 과정에 대한 실질적인 경험을 쌓아 이후 프로젝트에 응용할 수 있다.</li></ul></mark>
+</div><ul class="simple">
+<li><p>데이터를 어떻게 보여줘야 한눈에 이해할 수 있을까?</p></li>
+<li><p>웹서비스는 어떻게 데이터를 받아오고 처리할까?</p></li>
+<li><p>사용자 인터페이스는 얼마나 직관적이어야 할까?</p></li>
+<li><p>실시간으로 데이터를 갱신하려면 어떻게 해야 할까?</p></li>
+<li><p>위 질문들을 실습하고 이해하기 위해, 오늘 여러분이 만들어볼 프로그램은 Streamlit으로 동작하는 웹 앱이다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image29.png" width=500></div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>파이썬 기반 웹 서비스</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id1">
+<h3>웹 서비스를 구성하는 세 가지 기본 구성 요소<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image22.png" width=600>  </div><ul class="simple">
+<li><p>프런트엔드: 화면 구성을 처리</p></li>
+<li><p>백엔드: 화면에 보여줄 정보를 처리</p></li>
+<li><p>API: 프런트엔드와 백엔드가 정보를 주고받을 수 있도록 일정한 규칙을 정하고, 그 규칙에 따라 동작하도록 설계된 인터페이스</p></li>
+</ul>
+<ul class="simple">
+<li><p>이번 시간에는 Streamlit으로 웹 앱을 구현하고, GitHub + Streamlit Cloud를 통해 웹에서 바로 앱을 확인하고 실행해보자</p>
+<ul>
+<li><p>GitHub: 코드와 파일을 저장하고 버전 관리를 하는 저장소 역할</p></li>
+<li><p>Streamlit Cloud: GitHub에 있는 Streamlit 앱 코드를 가져와서 실제로 웹에서 실행할 수 있도록 호스팅해주는 서비스</p>
+<ul>
+<li><p>내부적으로 간단한 서버 역할은 하지만, 일반적인 백엔드 서버(데이터베이스 연동, API 처리 등)처럼 복잡한 서버 기능까지 제공하는 것은 아님</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit이란?</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Streamlit은 파이썬 기반의 오픈소스 웹 애플리케이션 프레임워크로, 주로 데이터 시각화, 머신러닝 모델 시연, 대시보드 제작에 사용된다.</p></li>
+<li><p>Streamlit은 Python만으로 쉽고 빠르게 데이터 중심 웹 앱을 만들 수 있는 도구이다.</p></li>
+<li><p>핵심 특징</p>
+<ul>
+<li><p>빠른 웹 앱 개발: Python 코드 몇 줄만으로 브라우저에서 동작하는 앱 제작 가능, HTML, CSS, JS를 따로 몰라도 됨</p></li>
+<li><p>실시간 인터랙티브: 슬라이더, 버튼, 체크박스 등 위젯으로 사용자 입력을 받아 실시간 데이터 업데이트 가능</p></li>
+<li><p>데이터 시각화와 친화적: Pandas, Matplotlib, Plotly등과 바로 연동 가능</p></li>
+<li><p>쉬운 배포: Streamlit Cloud, Heroku, Railway 등으로 손쉽게 웹에 배포 가능</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="streamlit">
+<h3>Streamlit 설치하기<a class="headerlink" href="#streamlit" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>VS Code에서 터미널(메뉴 → New Terminal)을 열고 프롬프트에 pip install streamlit를 입력하여 설치한다.</p></li>
+<li><p>코드셀에서는 <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">streamlit</span></code>를 입력하여 설치할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>streamlit
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>설치가 잘 되었는지 확인을 위해 프롬프트에서 streamlit hello를 입력한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">streamlit</span> <span class="n">hello</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>브라우저가 열리면서 샘플 앱 화면이 나타나면, Streamlit이 정상적으로 설치된 것이다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image23.png" width=600>  </div></div>
+<div class="section" id="id2">
+<h3>간단 예제 테스트 해보기<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이제 streamlit 코드를 작성하여 웹에서 결과를 확인해보자.</p></li>
+<li><p>아래 코드는 간단한 Streamlit 예제를 보여주는 코드이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> streamlit_app.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;간단한 Streamlit 예제&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;데이터와 그래프를 보여주는 예제입니다.&quot;</span><span class="p">)</span>
+
+<span class="c1"># 샘플 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>사용자 앱을 실행시키기 위해 새로운 터미널(메뉴 → New Terminal)을 열거나 혹은 기존 터미널의 서버 종료 후(Ctrl + C) 동일한 터미널에서 <code class="docutils literal notranslate"><span class="pre">streamlit</span> <span class="pre">run</span> <span class="pre">파일명</span></code>을 통해 실행시킬 수 있다.</p></li>
+<li><p>그러나 매번 실행 코드만 분리하여 파일로 만든후([파일(File)] → [새 파일(New File)]) 실행하기에는 좀 번거로운 일이다.</p></li>
+</ul>
+<ul class="simple">
+<li><p>첫번째 라인 <code class="docutils literal notranslate"><span class="pre">%%writefile</span> <span class="pre">streamlit_app.py</span></code> 코드는 셀에 적힌 코드 내용을 파일로 저장하라는 명령이다. 실행하면 현재 폴더에 streamlit_app.py 파일이 생긴다.</p></li>
+<li><p>이와 같이 코드를 작성해 놓으면 매번 실행파일을 별도로 만드는 작업을 하지 않아도 되므로 실습과 실행 관리를 쉽게 한다.</p></li>
+</ul>
+<ul class="simple">
+<li><p>이제 <code class="docutils literal notranslate"><span class="pre">streamlit</span> <span class="pre">run</span> <span class="pre">streamlit_app.py</span></code>를 실행시켜보자.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image24.png" width=600>  </div><div class="section" id="id3">
+<h4>🚀<strong>해보기 1: 웹 브라우저에 나타내보기</strong><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+streamlit run streamlit_app.py를 실행시켜 브라우저에 나오는지 확인하세요.</mark>
+</div></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>개발 환경 설정</strong></mark></div><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>방금 Streamlit으로 만든 웹페이지는 로컬 컴퓨터의 브라우저에서 열린 것이므로 진정한 웹 서비스로 볼 수 없다.</p></li>
+<li><p>이제 누구나 볼 수 있도록 웹에 배포해보자.</p></li>
+<li><p>Streamlit 앱을 웹에 배포하려면 몇 가지 요소가 필요하다.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>앱 코드(.py 파일)</p>
+<ul class="simple">
+<li><p>Streamlit으로 작성된 코드</p></li>
+</ul>
+</li>
+<li><p>깃허브(GitHub) 저장소</p>
+<ul class="simple">
+<li><p>코드를 온라인에 올려야 Streamlit Cloud에서 가져올 수 있음</p></li>
+<li><p>계정 필요, 새 리포지토리 생성</p></li>
+</ul>
+</li>
+<li><p>requirements.txt</p>
+<ul class="simple">
+<li><p>앱에서 사용하는 Python 라이브러리 목록</p></li>
+<li><p>Streamlit Cloud가 앱 실행 환경을 구성할 때 필요</p></li>
+</ul>
+</li>
+<li><p>Streamlit Cloud 계정</p>
+<ul class="simple">
+<li><p>깃허브 리포지토리와 연결하여 앱 배포 가능</p></li>
+<li><p>무료/유료 플랜 있음</p></li>
+</ul>
+</li>
+</ol>
+<div class="section" id="id5">
+<h3>깃허브 회원가입 및 저장소 생성<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<div class="section" id="id6">
+<h4>회원 가입<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>깃허브는 코드와 파일을 온라인에 저장하고 버전 관리 및 협업을 할 수 있는 플랫폼이다.</p></li>
+<li><p>무료 계정과 유료 계정이 있으며, Streamlit 앱을 배포하는 목적이라면 대부분 무료 계정만으로 충분하다.</p></li>
+<li><p>무료 계정은 다음과 같이 사용할 수 있다.</p>
+<ul>
+<li><p>공개(공용) 저장소: 무제한 생성 가능</p></li>
+<li><p>개인 저장소: 무료로 최대 제한 없이 생성 가능</p></li>
+<li><p>협업: 공개 저장소에서는 누구나 기여 가능, 개인 저장소에서는 초대된 사람만 접근 가능</p></li>
+<li><p>기본 기능: 버전 관리, 이슈 트래킹, Actions(자동화) 제한적 사용</p></li>
+</ul>
+</li>
+<li><p>유료 계정(GitHub Pro / Team / Enterprise)</p>
+<ul>
+<li><p>개인용 Pro: 개인 저장소와 협업 기능 강화, 더 많은 Actions 사용 가능</p></li>
+<li><p>팀/기업용: 팀 관리, 보안 기능, 대규모 저장소 관리, 전용 지원 제공</p></li>
+</ul>
+</li>
+<li><p>깃허브에 가입하기 위하여 <a class="github reference external" href="https://github.com/"></a> 링크에 접속해보자.</p></li>
+<li><p>화면 오른쪽에 보이는 Sign up 버튼을 클릭하여 회원가입을 진행한다.</p></li>
+<li><p>이메일, 비밀번호, 사용자명 등을 입력한다. 이때 <font color="red"> 사용자명은 차후 생성될 깃허브 홈페이지 주소에 포함되므로 잘 생각하여 결정하기 바란다.</font></p>
+<ul>
+<li><p>예) <a class="reference external" href="https://haesunbyun.github.xn--io-q04jk9m">https://haesunbyun.github.io에서</a> <em>haesunbyun</em></p></li>
+</ul>
+</li>
+<li><p>정보 입력이 끝나면 깃허브 가입에 사용한 이메일로 code가 전송된다.</p></li>
+<li><p>여러분은 학생이니 ‘Apply for your GitHub Student Benefits’를 선택하여 더 많은 혜택을 얻기 바란다.</p></li>
+</ul>
+</div>
+<div class="section" id="repository">
+<h4>저장소(repository) 생성<a class="headerlink" href="#repository" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>깃허브 가입을 완료했다면 이제는 코드를 올려놓기 위한 저장소를 생성해보자.</p></li>
+<li><p>개인 깃허브 우측 상단에 보면 동그라미로 사용자가 누구인지 표시해주는 그림이 있다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image25.png" width=300></div><ul class="simple">
+<li><p>해당 그림을 클릭하여 select bar에서 두 번째에 위치한 Your repositories를 클릭한다. New 버튼을 찾아 새로운 저장소를 만든다.</p></li>
+<li><p>저장소 이름은 <font color="red">Explorer-Computing-여러분의 이니셜</font>로 하고, Public으로 선택한다. 물론 원하는 저장소 이름으로 해도 된다.</p></li>
+<li><p>README 파일 추가 옵션은 체크한다. README 파일은 이 저장소를 방문했을 때 가장 먼저 보게 되는 파일로, 추후에 저장소 사용에 대한 소개, 개요 및 지침등을 작성해 놓을 수 있다.</p></li>
+<li><p>Create repository를 클릭하여 저장소를 만든다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image26.png?v=1234" width=500></div></div>
+</div>
+<div class="section" id="id7">
+<h3>깃허브에 필요 파일 옮기기<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Streamlit Cloud가 필요한 패키지를 자동 설치해주기 위해서는 requirements.txt 파일안에 필요한 모듈들을 명시해 놓아야 한다.</p></li>
+<li><p>메모장을 열어서 아래 모듈명을 입력하고 requirements.txt로 저장한다.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">streamlit</span>
+<span class="n">pandas</span>
+<span class="n">matplotlib</span>
+<span class="n">openpyxl</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>참고로, openpyxl 모듈은 엑셀파일을 읽어올때 필요하다.</p></li>
+<li><p>깃허브 웹사이트에서 배포하고자 하는 앱의 소스코드 파일(streamlit_app.py)과 requirements.txt 파일을 깃허브 저장소에 업로드 한다.</p></li>
+</ul>
+<div class="section" id="id8">
+<h4>🚀<strong>해보기 2: 깃허브 가입, 저장소 생성, 파일 업로드</strong><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+깃허브 가입, 저장소 생성, 파일 업로드까지 완료하신 분들은 실습 해보기 완료 체크 해주세요.</mark>
+</div></div>
+</div>
+<div class="section" id="id9">
+<h3>Streamlit 회원가입 및 깃허브 연동<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<div class="section" id="id10">
+<h4>회원 가입<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Streamlit 앱을 웹으로 배포하기 위해서는 Streamlit 회원 가입을 해야 한다.</p></li>
+<li><p><a class="reference external" href="https://share.streamlit.io">https://share.streamlit.io</a> (Streamlit Community Cloud) 사이트로 접속하여 GitHub 계정으로 로그인한다.</p></li>
+<li><p>처음 로그인 시 Streamlit Community Cloud 사용 권한을 요청하는 화면이 나오면 Authorize Streamlit 눌러서 이메일로 온 code로 인증한다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image27.png" width=400></div></div>
+<div class="section" id="id11">
+<h4>깃허브 연동<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>로그인이 되면, 깃허브에서 보았던 프로필 마크가 이 화면에서도 보일 것이다.</p></li>
+<li><p>오른쪽 상단에 Create App을 눌러서 깃허브 저장소와 연동해보자.</p>
+<ul>
+<li><p>Repository 선택: <code class="docutils literal notranslate"><span class="pre">username/저장소</span> <span class="pre">이름</span></code></p></li>
+<li><p>Branch 선택: <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">(또는</span> <span class="pre">master)</span></code></p></li>
+<li><p>File path 입력: <code class="docutils literal notranslate"><span class="pre">streamlit_app.py</span></code> (처음 메인 화면으로 보일 파일 이름)</p></li>
+<li><p>Deploy 버튼 클릭</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image28.png" width=500></div>
+<ul class="simple">
+<li><p>잠시 빌드 후 → <code class="docutils literal notranslate"><span class="pre">https://여러분들의</span> <span class="pre">저장소이름.streamlit.app</span></code> 주소가 생성된다.</p></li>
+<li><p>이때, 만약 저장소 이름이 중복될 경우 뒤에 랜덤 문자열이 붙는다.</p></li>
+<li><p>이제 이 링크를 통해 Streamlit 앱을 전 세계 누구에게나 공유 가능하다.</p></li>
+<li><p>참고로, 깃허브 저장소를 Private로 변경해도 Streamlit 서비스를 지원 가능하다.</p></li>
+<li><p>단, Streamlit 무료 플랜에서는 동시에 1개의 Private 저장소만 가질 수 있다.</p></li>
+<li><p>Private 저장소를 쓰려면 Streamlit이 GitHub의 저장소 권한(OAuth scope)을 받아야 한다.</p></li>
+<li><p>Private로 바꾸는 것은 어렵지 않으니 ChatGPT의 도움으로 변경해보기 바란다.</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h4>🚀<strong>해보기 3: Streamlit 가입 및 깃허브 연동</strong><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+Streamlit 가입 및 깃허브 연동까지 완료하신 분들은 실습문제 해보기3 완료 체크 해주세요.</mark>
+</div></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>나만의 웹앱</strong></mark></div><a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Streamlit 갤러리에는 다른 개발자들이 만든 다양한 앱 샘플을 볼 수 있다.</p></li>
+<li><p><a class="reference external" href="https://streamlit.io/gallery">https://streamlit.io/gallery</a></p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image38.png?v=1234" width=300> 
+<img src="https://haesunbyun.github.io/common/images/comps/image39.png?v=1234" width=300> 
+<img src="https://haesunbyun.github.io/common/images/comps/image40.png?v=1234" width=300> 
+</div>
+<ul class="simple">
+<li><p>나만의 웹앱 기획안을 작성해서 과제로 제출해주세요.(자세한 내용 별도 공지)</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
+<p>오늘은 웹서비스의 기본 개념과 동작 과정을 배우고, Streamlit을 활용하여 간단한 웹앱을 직접 만들어보았다.
+특히, 깃허브와 Streamlit Cloud를 연동함으로써 내가 만든 앱을 실제 인터넷 환경에 배포하는 과정을 경험했다.
+이를 통해 단순히 코드 작성에 머무르지 않고, 다른 사람들과 결과물을 공유할 수 있는 방법을 익혔다.
+앞으로는 이러한 과정을 반복하여 더 완성도 높은 웹서비스를 구현할 수 있을 것이다.
+궁극적으로는 개인 프로젝트나 팀 프로젝트에서 웹 배포 능력을 적극적으로 활용할 수 있을 것이다.</p>
 <hr class="docutils" />
-<font color='Blue' size="4">
+<font color='Grey' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,6 +761,51 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>파이썬 기반 웹 서비스</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">웹 서비스를 구성하는 세 가지 기본 구성 요소</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit이란?</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#streamlit">Streamlit 설치하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">간단 예제 테스트 해보기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🚀<strong>해보기 1: 웹 브라우저에 나타내보기</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>개발 환경 설정</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">깃허브 회원가입 및 저장소 생성</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">회원 가입</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repository">저장소(repository) 생성</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">깃허브에 필요 파일 옮기기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">🚀<strong>해보기 2: 깃허브 가입, 저장소 생성, 파일 업로드</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Streamlit 회원가입 및 깃허브 연동</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">회원 가입</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">깃허브 연동</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 3: Streamlit 가입 및 깃허브 연동</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>나만의 웹앱</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

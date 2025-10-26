@@ -85,6 +85,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -337,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +356,50 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>웹 대시보드</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">웹 대시보드 개발 기본 원칙</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>공공데이터 수집 절차</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">공공데이터포털 회원가입과 인증키 발급</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>대시보드 실전: 자동차 연비 대시보드</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main">메인 화면: main()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cars-home">홈 화면: cars_home()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cars-eda">탐색적 분석: cars_EDA()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">기본 내용 및 파일 불러오기</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">🌏 대륙별 평균 연비</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">🚀해보기 1: cars_EDA()에 대륙별 평균 연비 추가하기</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hp-mpg">⚡ 마력(hp)과 연비(mpg) 관계</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#weightlbs">⚖️ 차량 무게(weightlbs)와 연비 관계</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">📆 연도별 평균 연비 변화</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🚀해보기 2: cars_EDA()에 추가하기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cars-predict">예측 화면: cars_predict()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">머신러닝</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">머신러닝 용어</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">머신러닝 분류</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">머신러닝을 위한 패키지</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scikit-learn">scikit-learn 주요 모듈</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><strong>회귀(Regression)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#train-set-test-set">train set과 test set으로 분리</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -368,14 +415,892 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-11">
 <h1>Chapter 11. 대시보드 완성 및 웹 앱 배포<a class="headerlink" href="#chapter-11" title="Permalink to this headline">#</a></h1>
-<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px; color: #000000;">
+<p><font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font></p>
+<mark style="background-color: #f5fff5;">
+🔹 학습목표<br>
+  <ul><li>웹 대시보드의 개념과 개발 기본 원칙을 알아보자.  </li>
+  <li>API의 개념과 인증키 발급 절차를 알아본다. </li>
+  <li>자동차 연비 대시보드를 만들어본다.</li></ul> 
+🔹 기대효과<br>
+  <ul><li>API를 통한 자료 수집과 웹 대시보드 서비스 제작을 직접 경험해볼 수 있다. </li>
+  <li> 웹서비스 제작</li></ul></mark>
+</div><div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image57.png" width=400>  </div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>웹 대시보드</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>웹 대시보드는 웹 기술과 시각화 도구를 활용해 실시간 데이터 모니터링, 분석, 의사결정을 지원하는 시각적 정보 관리 도구이다.</p></li>
+<li><p>다양한 데이터와 지표를 한 화면에 통합하여 보여주며 실시간으로 정보를 수집·분석하고 이를 시각적으로 표현한다.</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>웹 대시보드 개발 기본 원칙<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>웹 대시보드를 만들 때는 단순히 데이터를 보여주는 것보다, 사용자가 빠르고 정확하게 의미를 파악하고 활용할 수 있도록 설계하는 것이 중요하다.</p></li>
+<li><p>웹 대시보드 개발의 7가지 원칙을 지켜 설계하기 바란다.(참고: Streamlit으로 프로젝트 한방에 끝내기 With 파이썬, BOOKK)</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>목적 중심 설계</p>
+<ul class="simple">
+<li><p>대시보드는 보고용, 분석용, 모니터링용 등 목적이 명확해야 한다.</p></li>
+</ul>
+</li>
+<li><p>핵심 데이터 우선</p>
+<ul class="simple">
+<li><p>한눈에 핵심 지표를 파악할 수 있도록 구성한다. 불필요한 요소는 최소화하여 집중도를 높인다.</p></li>
+</ul>
+</li>
+<li><p>직관적인 시각화</p>
+<ul class="simple">
+<li><p>데이터의 성격에 맞는 그래프를 사용한다. (추이 → 선 그래프, 비교 → 막대 그래프, 비율 → 파이/도넛 차트)</p></li>
+</ul>
+</li>
+<li><p>일관성과 단순성</p>
+<ul class="simple">
+<li><p>디자인 요소(색, 폰트, 레이아웃)는 일관성을 유지한다. 복잡한 인터페이스보다 간단한 구조가 이해하기 쉽다.</p></li>
+</ul>
+</li>
+<li><p>최신성과 정확성</p>
+<ul class="simple">
+<li><p>데이터는 정확하고 신뢰성 있게 제공해야 한다. API 또는 데이터 갱신 주기를 고려해 최신 상태를 유지한다.</p></li>
+</ul>
+</li>
+<li><p>사용자 경험(UX) 고려</p>
+<ul class="simple">
+<li><p>사용자가 원하는 정보를 최소한의 조작으로 얻을 수 있어야 한다. 검색, 필터, 정렬 기능을 제공하면 활용도가 높아진다.</p></li>
+</ul>
+</li>
+<li><p>성능과 보안</p>
+<ul class="simple">
+<li><p>대용량 데이터 처리 시 속도를 최적화한다. API 키, 개인정보 등은 보안 규칙을 준수한다.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>공공데이터 수집 절차</strong></mark></div><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<div class="section" id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>API란 Application programming Interface로 응용 프로그램(애플리케이션)과 다른 소프트웨어가 서로 상호작용하도록 정의된 인터페이스를 의미한다.</p></li>
+<li><p>데이터 출처와 목표에 따라 필요에 따라 공공 API를 사용해야 하는 경우 인증키가 필요하다.</p></li>
+<li><p>예를 들어, 서울 열린데이터 광장, 공공데이터 포털, 기상청, 부동산 실거래가 등은 사용자 인증을 통해 호출량 제한 관리, 데이터 제공자가 API 사용을 추적, 통계 작성에 활용하기 위해 인증키를 발급해준다.</p></li>
+<li><p>공공 API를 사용하기 위해서는 데이터 출처와 목표에 따라 다음에서 인증키를 발급받아야 한다.</p></li>
+</ul>
+<p>1️⃣ 서울 열린데이터 광장 API 인증키</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://data.seoul.go.kr">https://data.seoul.go.kr</a></p></li>
+<li><p>운영 주체: 서울시</p></li>
+<li><p>주요 특징: 서울시에서 제공하는 공공/행정/교통/환경/생활 관련 데이터 API</p></li>
+<li><p>활용 예시:</p>
+<ul>
+<li><p>서울시 CCTV 위치, 공원 위치, 교통량, 버스/지하철 실시간 정보</p></li>
+<li><p>데이터 시각화 웹앱 만들기 → Streamlit에서 지도, 차트 표시 가능</p></li>
+<li><p>예: 지도 위 공원 위치 표시, CCTV 수량 비교, 교통 혼잡 시각화</p></li>
+</ul>
+</li>
+</ul>
+<p>2️⃣ 서울시 부동산 실거래가 인증키</p>
+<ul class="simple">
+<li><p>서울시 부동산 정보 / 국토교통부 실거래가</p></li>
+<li><p>주요 특징: 서울시 아파트, 오피스텔, 단독주택 등 거래 실거래 데이터 제공</p></li>
+<li><p>활용 예시:</p>
+<ul>
+<li><p>특정 지역/기간 부동산 거래 데이터 조회</p></li>
+<li><p>거래가 추이 시각화 (Line Chart, Heatmap 등)</p></li>
+<li><p>가격 비교 웹앱 만들기 (ex: 강남 vs 마포)</p></li>
+</ul>
+</li>
+</ul>
+<p>3️⃣ 공공데이터 포털 인증키</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.data.go.kr">www.data.go.kr</a></p></li>
+<li><p>운영 주체: 행정안전부 (국가 차원)</p></li>
+<li><p>주요 특징: 전국 단위 다양한 공공 데이터 제공 (경제, 교육, 환경, 건강 등)</p></li>
+<li><p>활용 예시:</p>
+<ul>
+<li><p>교통, 건강, 인구, 기상, 범죄 등 다양한 데이터를 가져와 분석</p></li>
+<li><p>Streamlit 앱에서 차트, 지도, 테이블로 시각화</p></li>
+<li><p>예: 인구 대비 CCTV 수, 범죄 통계 지도, 코로나 확진자 추이</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>공공데이터포털 회원가입과 인증키 발급<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>우리 수업에서는 공공데이터포털 사이트에 회원가입하여 인증키를 발급받아 사용해보자.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image44.png" width=500></div>
+<p>✅ 회원가입 &amp; 로그인</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.data.go.kr">www.data.go.kr</a> 사이트 주소에 들어가 오른쪽 상단 회원가입한 후 로그인한다.</p></li>
+</ul>
+<p>✅ 데이터셋 검색</p>
+<ul class="simple">
+<li><p>원하는 데이터셋 검색한다.</p></li>
+<li><p>예: 국토교통부 아파트 실거래 자료</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image46.png" width=500></div>
+<ul class="simple">
+<li><p>공공데이터포털 데이터 제공 형태는 파일 다운로드 제공과 오픈 API 제공 형태가 있다.</p>
+<ul>
+<li><p>파일 다운로드 제공</p>
+<ul>
+<li><p>CSV, Excel, XML, JSON, HWP, PDF 등 정적 파일로 제공</p></li>
+<li><p>이용자가 직접 다운로드해서 로컬에서 분석 가능</p></li>
+<li><p>예: 인구통계, 행정구역별 자료, 과거 통계</p></li>
+</ul>
+</li>
+<li><p>오픈 API 제공</p>
+<ul>
+<li><p>API 인증키를 발급받아 실시간/최신 데이터 조회 가능</p></li>
+<li><p>URL + 인증키를 통해 데이터(JSON, XML 등) 요청 후 활용</p></li>
+<li><p>예: 기상청 단기예보, 실시간 버스 도착정보, 부동산 실거래가</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>✅ 활용신청</p>
+<ul class="simple">
+<li><p>데이터셋 상세 페이지에서 활용신청한다. 신청 시 서비스 목적 등을 간단히 작성해야 한다.</p></li>
+</ul>
+<p>✅ 승인 후 API 인증키 발급</p>
+<ul class="simple">
+<li><p>활용신청이 승인되면 마이페이지 → 오픈 API → 개발계정 메뉴에서 확인 가능하다.</p></li>
+<li><p>이제 발급된 일반키/보안키(API Key)를 복사해 사용하면 된다.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>대시보드 실전: 자동차 연비 대시보드</strong></mark></div><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>이번 시간에는 자동차 연비 데이터를 활용하여 대시보드를 만들어보자.</p></li>
+<li><p>메뉴는 “홈”, “탐색적 자료분석(EDA)”, “연비 예측”으로 구성하자.</p></li>
+<li><p>모든 내용을 하나의 파일에 담으면 복잡해지므로, 기능별로 함수를 구분하여 구성한다.</p>
+<ul>
+<li><p>main() : 사이드바 메뉴를 구성하고, 각 메뉴에 해당하는 함수를 실행한다.</p></li>
+<li><p>cars_home(): 자동차 연비 대시보드의 주요 목적과 활용 포인트를 소개한다.</p></li>
+<li><p>cars_EDA(): 연비(mpg)와 주요 변수 간의 관계, 대륙별 특성, 연도별 변화 등을 시각적으로 분석한다.</p>
+<ul>
+<li><p>EDA(Exploratory Data Analysis, 탐색적 자료 분석)는 데이터를 시각화하고 통계적으로 탐색하여 숨겨진 패턴이나 이상치를 발견하는 과정이다.</p></li>
+<li><p>이를 통해 모델링 이전에 데이터의 구조와 특성을 이해하고, 향후 분석 방향을 설정할 수 있다.</p></li>
+</ul>
+</li>
+<li><p>car_predict(): 머신러닝 모델을 활용하여 자동차의 연비를 예측하는 기능을 구현한다.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="main">
+<h3>메인 화면: main()<a class="headerlink" href="#main" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>아래 코드를 살펴보자.</p></li>
+<li><p>st.set_page_config()함수는 앱의 페이지를 설정하는 함수이다. 이쯤되면 코드만 봐도 알겠지만 page_title 옵션은 제목표시줄에 나타낼 제목, layout 옵션은 넓은 화면(와이드) 형태로 표시하라는 옵션이다.</p></li>
+<li><p>왼쪽에는 사이드바를 라디오버튼으로 만들어주고 세 개의 리스트를 넣어주었다.</p></li>
+<li><p>각 사이드바 메뉴를 클릭할때 해당 함수가 동작한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch11_cars.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">cars_home</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">cars_EDA</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">cars_predict</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">set_page_config</span><span class="p">(</span><span class="n">page_title</span><span class="o">=</span><span class="s2">&quot;자동차 연비 대시보드&quot;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="s2">&quot;wide&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># --- 사이드바 메뉴 ---</span>
+    <span class="n">menu</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span>
+        <span class="s2">&quot;대시보드 메뉴&quot;</span><span class="p">,</span>
+        <span class="p">[</span><span class="s2">&quot;홈&quot;</span><span class="p">,</span> <span class="s2">&quot;탐색적 자료분석(EDA)&quot;</span><span class="p">,</span> <span class="s2">&quot;연비 예측&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># --- 홈 화면 ---</span>
+    <span class="k">if</span> <span class="n">menu</span> <span class="o">==</span> <span class="s2">&quot;홈&quot;</span><span class="p">:</span>
+        <span class="n">cars_home</span><span class="p">()</span>
+
+    <span class="c1"># --- 탐색적 자료분석 화면 ---</span>
+    <span class="k">elif</span> <span class="n">menu</span> <span class="o">==</span> <span class="s2">&quot;탐색적 자료분석(EDA)&quot;</span><span class="p">:</span>
+        <span class="n">cars_EDA</span><span class="p">()</span>
+
+    <span class="c1"># --- 연비 예측 화면 ---</span>
+    <span class="k">elif</span> <span class="n">menu</span> <span class="o">==</span> <span class="s2">&quot;연비 예측&quot;</span><span class="p">:</span>
+        <span class="n">cars_predict</span><span class="p">()</span> 
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>마지막에 있는 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code> 구문은 현재 파일이 직접 실행된 경우에만 main() 함수를 실행하라는 의미이다.</p></li>
+<li><p>이 코드를 조금 더 자세히 살펴보자.</p></li>
+<li><p>예를 들어, <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">Ex_ch11_cars.py</span></code>와 같이 파일을 직접 실행하면 main() 함수가 호출되어 프로그램이 실행된다.</p></li>
+<li><p>반면, 다른 파일에서 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">Ex_ch11_cars</span></code>로 이 파일을 불러온다면 상황이 다르다.</p></li>
+<li><p>만약 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code> 구문이 없다면, import만으로도 main() 함수가 실행되어 버린다.</p></li>
+<li><p>따라서 이 구문은 파일이 직접 실행될 때만 main() 함수가 실행되도록 하는 안전장치라고 생각하면 된다.</p></li>
+</ul>
+<ul class="simple">
+<li><p>이제 자동차 연비 및 성능 데이터(Auto MPG 데이터셋)를 활용하여 어떠한 대시보드를 만들 것인지 데이터를 분석해보자.</p></li>
+<li><p>먼저 링크를 클릭하여 자동차 연비 데이터를 다운로드하여 <code class="docutils literal notranslate"><span class="pre">data</span></code> 폴더에 넣어놓자. <a class="reference external" href="https://haesunbyun.github.io/common/data/cars.csv">데이터 다운로드 링크 cars.csv</a></p></li>
+<li><p>데이터 파일을 불러와서 무엇을 분석할 지, 무엇을 보여줄 것인지 파악해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">():</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/cars.csv&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>main() 함수에서 load_data()함수를 불러오는 코드를 추가한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>  <span class="c1"># main()함수에 추가</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>cars.csv 파일에는 1970년대부터 1980년대까지 생산된 다양한 자동차 모델의 기본 성능 및 특징 데이터가 담겨 있다.</p></li>
+<li><p>주요 컬럼으로는 mpg(연비), cylinders(실린더 수), cubicinches(배기량), hp(마력), weightlbs(차량 무게), time-to-60(0→60마일 가속 시간), year(제조 연도), continent(제조 대륙) 등이 있다.</p></li>
+<li><p>제조 대륙은 미국(USA), 유럽(Europe), 일본(Japan) 등으로 구분되며, 이를 활용하면 대륙별 차량 특성이나 연도별 성능 추세를 비교할 수 있다.</p></li>
+<li><p>이 데이터는 연비와 출력, 무게, 실린더 수 간의 관계를 분석하거나 연비 예측, 탐색적 자료 분석(EDA), 시각화 실습, 머신러닝 모델 학습용으로 활용하기 적합한 실용적인 자동차 성능 데이터셋이다.</p></li>
+</ul>
+<p>🚗 각 컬럼의 의미</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>컬럼명</p></th>
+<th class="text-left head"><p>의미</p></th>
+<th class="text-left head"><p>단위 / 예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>mpg</strong></p></td>
+<td class="text-left"><p>연비 (Miles Per Gallon)</p></td>
+<td class="text-left"><p>갤런당 주행거리 → 숫자가 높을수록 연비가 좋음</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>cylinders</strong></p></td>
+<td class="text-left"><p>실린더 수</p></td>
+<td class="text-left"><p>4, 6, 8 등 엔진의 구조적 특성</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>cubicinches</strong></p></td>
+<td class="text-left"><p>엔진 배기량 (입방인치 단위)</p></td>
+<td class="text-left"><p>엔진 크기를 나타냄 (예: 97, 140, 302)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>hp</strong></p></td>
+<td class="text-left"><p>마력 (Horsepower)</p></td>
+<td class="text-left"><p>엔진의 출력 성능</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>weightlbs</strong></p></td>
+<td class="text-left"><p>차량 무게 (파운드 단위)</p></td>
+<td class="text-left"><p>2000~4000 lb 정도</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>time-to-60</strong></p></td>
+<td class="text-left"><p>0 → 60마일(약 96km/h) 도달까지 걸리는 시간</p></td>
+<td class="text-left"><p>초(sec) 단위</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>year</strong></p></td>
+<td class="text-left"><p>출시 연도</p></td>
+<td class="text-left"><p>70~82 (즉, 1970~1982년대 모델)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>continent</strong></p></td>
+<td class="text-left"><p>제조 지역</p></td>
+<td class="text-left"><p>“US”, “Europe”, “Japan” 등</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>위 데이터를 보고 어떤 분석 그래프를 이끌어 낼 수 있을지 생각해보자.</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>분석 항목</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>대륙별 평균 연비 분석</strong></p></td>
+<td><p>자동차 연비(mpg)는 차량의 효율성을 나타내는 중요한 지표로, 대륙별로 평균 연비를 비교하면 지역별 차량 특성과 설계 경향을 파악할 수 있다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>마력(hp)과 연비 관계</strong></p></td>
+<td><p>차량의 마력(hp)과 연비(mpg)를 비교하면, 출력이 높은 차량일수록 연비가 낮아지는 경향을 확인할 수 있으며, 출력과 효율 간의 상관관계를 이해할 수 있다.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>차량 무게와 연비 관계</strong></p></td>
+<td><p>차량의 무게(weightlbs)와 연비(mpg)를 분석하면, 무거운 차량일수록 연비가 낮아지는 패턴을 관찰할 수 있으며, 차량 설계 시 무게 최적화의 중요성을 알 수 있다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>연도별 평균 연비 변화</strong></p></td>
+<td><p>연도(year)별 평균 연비를 확인하면, 자동차 산업의 기술 발전과 연비 개선 추세를 파악할 수 있으며, 시대별 설계 전략 변화를 이해할 수 있다.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cars-home">
+<h3>홈 화면: cars_home()<a class="headerlink" href="#cars-home" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이번에는 홈 메뉴를 클릭했을때 나타낼 내용을 만들어보자.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image57.png" width=400>  </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cars_home</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🚗 자동차 연비 분석 대시보드&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    이 대시보드는 자동차 성능 데이터를 기반으로  </span>
+<span class="s2">    **대륙별 평균 연비, 마력(hp)과 연비(mpg) 관계, 차량 무게와 연비 관계, 연도별 평균 연비 변화**등을 시각화합니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;📊 주요 기능&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    1. **탐색적 자료분석 (EDA)**  </span>
+<span class="s2">       - 제조 대륙별 평균 연비 비교, 마력과 차량 무게 대비 연비 분포, 연도별 연비 변화 등을 시각화합니다.  </span>
+<span class="s2">       - 그래프를 통해 데이터를 직관적으로 확인할 수 있습니다.  </span>
+
+<span class="s2">    2. **연비 예측**  </span>
+<span class="s2">       - 차량의 제원(`hp`, `weightlbs`, `cubicinches`, `cylinders`)을 입력하면  </span>
+<span class="s2">         머신러닝 모델이 예상 연비를 예측합니다.  </span>
+
+<span class="s2">    3. **실시간 인터랙티브 시각화**  </span>
+<span class="s2">       - 슬라이더, 드롭다운 등 Streamlit 위젯을 활용하여  </span>
+<span class="s2">         조건을 바꾸면 그래프가 **즉시 업데이트**됩니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;💡 활용 포인트&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    - 데이터를 시각화하며 **연비에 영향을 주는 변수**를 탐색할 수 있습니다.  </span>
+<span class="s2">    - 사용자가 직접 조건을 조정하면서 **예상 연비 모델의 반응**을 실시간으로 확인할 수 있습니다.  </span>
+<span class="s2">    - Streamlit을 활용해 **웹 기반 데이터 분석 대시보드** 제작을 체험할 수 있습니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">caption</span><span class="p">(</span><span class="s2">&quot;📁 데이터 출처: Kaggle - Auto MPG Dataset&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cars-eda">
+<h3>탐색적 분석: cars_EDA()<a class="headerlink" href="#cars-eda" title="Permalink to this headline">#</a></h3>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image58.png" width=400>  </div><div class="section" id="id5">
+<h4>기본 내용 및 파일 불러오기<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cars_EDA</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🔍 자동차 연비 분석 (EDA)&quot;</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    이 탭에서는 자동차 성능 데이터를 활용하여  </span>
+<span class="s2">    **연비(mpg)와 주요 변수들 간의 관계, 대륙별 특성, 연도별 변화** 등을 탐색합니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 데이터 미리보기</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;📄 데이터 미리보기&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>main()함수 안에서 각 함수 불러올때 데이터프레임 df를 전달인자로 전달해줘야 한다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cars_EDA(df)</span></code></p></li>
+<li><p>또한 함수 정의 부분에서도 매개변수로 받아야 한다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">cars_EDA(df):</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h4>🌏 대륙별 평균 연비<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>자동차 연비(mpg)는 차량의 효율성을 나타내는 중요한 지표로, 대륙별로 평균 연비를 비교하면 지역별 차량 특성과 설계 경향을 파악할 수 있다.</p></li>
+<li><p>먼저 어떠한 대륙이 들어있는지, 데이터는 몇 개의 개수가 있는지 확인해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 지역별 데이터 개수 확인</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;continent&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="c1">#df.groupby(&#39;continent&#39;).size()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>대륙별 연비의 평균도 구해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 대륙별 연비의 평균</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;continent&quot;</span><span class="p">)[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1">#df.groupby(&quot;continent&quot;)[&quot;mpg&quot;].mean().reset_index()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>그래프를 그리기 전에 한글 폰트 깨짐을 방지하기 위해 폰트 설정을 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+
+<span class="c1"># 예: 맑은 고딕으로 설정</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Malgun Gothic&#39;</span>
+
+<span class="c1"># 음수 표시 깨짐 방지</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>그래프를 그려 확인해 본다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image52.png?v=1234" width=400>  </div>
+<ul class="simple">
+<li><p>Matplotlib과 Seaborn은 정적 그래프(static plot) 중심이라서 Streamlit에서는 단순히 그림으로만 표시된다.</p></li>
+<li><p>반면 plotly.express를 사용하면 인터랙티브 그래프를 쉽게 만들 수 있고, Streamlit과 호환성이 좋다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="c1">#st.subheader(&quot;🌏 대륙별 평균 연비&quot;)</span>
+<span class="n">continent_mpg</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;continent&quot;</span><span class="p">)[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">continent_mpg</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mpg&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;mpg&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;대륙별 평균 연비&quot;</span><span class="p">,</span>
+    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="s2">&quot;Greens&quot;</span>
+<span class="p">)</span>
+<span class="n">fig1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># vs code에서 확인용</span>
+<span class="c1">#st.plotly_chart(fig1, use_container_width=True) # streamlit 확인용</span>
+
+<span class="c1">#st.markdown(&quot;---&quot;)</span>
+
+<span class="c1"># st.info(&quot;&quot;&quot;</span>
+<span class="c1"># 💡 **분석 포인트**</span>
+<span class="c1"># - 대륙별로 차량 특성이 다르며, 미국 차량은 비교적 연비가 낮고 일본 차량은 연비가 높은 편입니다.  </span>
+<span class="c1"># &quot;&quot;&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h4>🚀해보기 1: cars_EDA()에 대륙별 평균 연비 추가하기<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch11_cars.py에 코드를 추가하세요.
+</mark>
+</div></div>
+<div class="section" id="hp-mpg">
+<h4>⚡ 마력(hp)과 연비(mpg) 관계<a class="headerlink" href="#hp-mpg" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>마력과 연비의 관계를 파악하기 위해 산점도 그래프를 그려보자.</p></li>
+<li><p>차량의 마력(hp)과 연비(mpg)를 비교하면, 출력이 높은 차량일수록 연비가 낮아지는 경향을 확인할 수 있으며, 출력과 효율 간의 상관관계를 이해할 수 있다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image53.png?v=1234" width=400>  </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 마력(hp)과 연비(mpg) 관계</span>
+<span class="c1"># st.subheader(&quot;⚡ 마력(hp)과 연비(mpg) 관계&quot;)</span>
+<span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mpg&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;weightlbs&quot;</span><span class="p">,</span>
+    <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;마력 대비 연비 산점도&quot;</span>
+<span class="p">)</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># st.plotly_chart(fig2, use_container_width=True)</span>
+
+<span class="c1">#st.markdown(&quot;---&quot;)</span>
+
+<span class="c1"># st.info(&quot;&quot;&quot;</span>
+<span class="c1"># 💡 **분석 포인트**</span>
+<span class="c1"># - 마력이 높거울수록 연비가 낮아지는 경향이 있습니다.  </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="weightlbs">
+<h4>⚖️ 차량 무게(weightlbs)와 연비 관계<a class="headerlink" href="#weightlbs" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>차량의 무게(weightlbs)와 연비(mpg)를 분석하면, 무거운 차량일수록 연비가 낮아지는 패턴을 관찰할 수 있으며, 차량 설계 시 무게 최적화의 중요성을 알 수 있다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image54.png?v=1234" width=400>  </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 차량 무게와 연비 관계</span>
+<span class="c1">#st.subheader(&quot;⚖️ 차량 무게(weightlbs)와 연비 관계&quot;)</span>
+<span class="n">fig3</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;weightlbs&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mpg&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span>
+    <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;차량 무게 대비 연비 산점도&quot;</span>
+<span class="p">)</span>
+<span class="n">fig3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#st.plotly_chart(fig3, use_container_width=True)</span>
+
+<span class="c1">#st.markdown(&quot;---&quot;)</span>
+
+<span class="c1"># st.info(&quot;&quot;&quot;</span>
+<span class="c1"># 💡 **분석 포인트**</span>
+<span class="c1"># - 차량 무게가 무거울수록 연비가 낮아지는 경향이 있습니다. </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h4>📆 연도별 평균 연비 변화<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>연도(year)별 평균 연비를 확인하면, 자동차 산업의 기술 발전과 연비 개선 추세를 파악할 수 있으며, 시대별 설계 전략 변화를 이해할 수 있다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image55.png?v=1234" width=400>  </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 연도별 평균 연비 변화</span>
+<span class="c1"># st.subheader(&quot;📆 연도별 평균 연비 변화&quot;)</span>
+<span class="n">year_mpg</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">fig4</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
+    <span class="n">year_mpg</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mpg&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;연도별 평균 연비 추이&quot;</span><span class="p">,</span>
+    <span class="n">markers</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">fig4</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#st.plotly_chart(fig4, use_container_width=True)</span>
+
+<span class="c1">#st.markdown(&quot;---&quot;)</span>
+
+<span class="c1"># st.info(&quot;&quot;&quot;</span>
+<span class="c1"># 💡 **분석 포인트**</span>
+<span class="c1"># - 연도별 평균 연비가 점차 개선되는 추세를 확인할 수 있습니다.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>🚀해보기 2: cars_EDA()에 추가하기<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h4>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+Ex_ch11_cars.py에 코드를 추가하세요.
+</mark>
+</div></div>
+</div>
+<div class="section" id="cars-predict">
+<h3>예측 화면: cars_predict()<a class="headerlink" href="#cars-predict" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이번에는 머신러닝 모형 가운데 선형회귀 모델을 활용하여 예측을 해보자.</p></li>
+<li><p>머신러닝의 다양한 모형은 ‘컴퓨팅 응용’교과목에서 학습하기 바란다.</p></li>
+<li><p>여기에서는 머신러닝의 간단한 용어와 사용할 모듈 소개 및 간단한 머신러닝 절차를 소개한다.</p></li>
+</ul>
+<div class="section" id="id10">
+<h4>머신러닝<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p><strong>머신러닝</strong>이란 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발하는 분야이다.</p></li>
+<li><p>머신러닝 기술은 광학적 문자인식, 보안 시스템, 안면인식 시스템, 자율주행 시스템, 광고 시스템, 개인 보조 시스템, 상품 추천 시스템 등 다양한 분야에 적용할 수 있다.</p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h4>머신러닝 용어<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>머신러닝은 항상 입력을 받아서 출력하는 함수 y=f(x)를 학습한다고 생각할 수 있다.</p>
+<ul>
+<li><p>features(특징): 학습모델에게 제공하는 입력값으로 y = f(x)에서 x에 해당한다.</p></li>
+<li><p>labels(레이블): y = f(X)에서 y에 해당한다. 농작물의 향후 가격, 사진에 표시되는 동물의 종류, 동영상의 의미 등 무엇이든지 레이블이 될 수 있다.</p></li>
+<li><p>samples(샘플) 또는 examples(예제): 샘플은 머신러닝에 주어지는 특정한 예이다. 레이블이 있는 샘플은 (x,y)와 같이 x,y가 모두 주어지며, 레이블이 없는 샘플은 (x, ?)와 같이 x만 준 후 레이블이 있는 예를 통해 y를 예측한다.</p></li>
+<li><p>model(모델): 특징과 레이블의 관계를 정의하는 것을 의미한다.</p></li>
+<li><p>학습(training) : 모델을 만들거나 배우는 것을 의미한다.</p></li>
+<li><p>예측(prediction), Inference(추론) : 학습된 모델을 레이블이 없는 샘플에 적용하는 것을 의미한다. 즉 학습된 모델을 사용하여 유용한 예측(y’)을 해내는 것을 말한다.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h4>머신러닝 분류<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
+<p>머신러닝의 분류는 학습하는 동안의 감독 형태나 정보량에 따라 다음과 같이 세가지로 나뉜다.</p>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/AI11.png" width=600></div>
+<ul class="simple">
+<li><p>지도 학습(Supervised learning): 트레이닝 데이터에 답(레이블)이 포함되어 있는 것이다.</p>
+<ul>
+<li><p>분류</p>
+<ul>
+<li><p>kNN</p></li>
+<li><p>Trees</p></li>
+<li><p>Logistic Regression</p></li>
+<li><p>Naive-Bayes</p></li>
+<li><p>SVM</p></li>
+</ul>
+</li>
+<li><p>회귀</p>
+<ul>
+<li><p>Linear</p></li>
+<li><p>Polynomial</p></li>
+</ul>
+</li>
+<li><p>의사결정트리</p></li>
+<li><p>랜덤 포레스트</p></li>
+<li><p>추천시스템</p></li>
+<li><p>시각/음성 감지/인지</p></li>
+<li><p>텍스트 분석, NLP</p></li>
+</ul>
+</li>
+<li><p>비지도 학습(Unsupervised learning): 트레이닝 데이터에 답이 없는 것이다.</p>
+<ul>
+<li><p>클러스터링</p>
+<ul>
+<li><p>SVD</p></li>
+<li><p>PCA</p></li>
+<li><p>K-means</p></li>
+</ul>
+</li>
+<li><p>차원 축소</p></li>
+</ul>
+</li>
+<li><p>강화학습(Reinforcement learning): 현재의 상태(State)에서 어떤 행동(Action)을 취하는 것이 최적인지를 경험을 통해 학습하는 것이다.</p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h4>머신러닝을 위한 패키지<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Scikit-Learn(사이킷 런): 2007년 구글에 개발한 라이브러리로, 현재 파이썬으로 구현된 라이브러리 중에서 머신러닝 교육 및 실무용으로 가장 많이 사용되고 있는 오픈소스 라이브러리이다. 회귀, 분류, 군집 등 실무에서 적용하는 대부분의 머신러닝 모형을 제공한다. <a class="reference external" href="https://pypi.org/project/scikit-learn/">https://pypi.org/project/scikit-learn/</a></p></li>
+</ul>
+</div>
+<div class="section" id="scikit-learn">
+<h4>scikit-learn 주요 모듈<a class="headerlink" href="#scikit-learn" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>예제 데이터</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.datasets</span></code>: scikit-learn에 내장되어 제공되는 예제 데이터 셋</p></li>
+</ul>
+</li>
+<li><p>feature processing</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.preprocessing</span></code>: 데이터 전처리에 필요한 다양한 기능을 제공하는 모듈(인코딩, 정규화, 스케일링 등)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.feature_selection</span></code>: 알고리즘에 영향을 미치는 특징을 우선순위대로 선택작업을 수행하는 다양한 기능을 제공하는 모듈</p></li>
+</ul>
+</li>
+<li><p>데이터 분리, 검증/파리미터 튜닝</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code>: 교차 검증을 위한 학습용/테스트용 데이터 분리 등의 API 제공</p></li>
+</ul>
+</li>
+<li><p>평가</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.metrics</span></code>: 분류, 회귀, 클러스터링, 페어와이즈에 대한 다양한 성능 측정 방법 제공</p></li>
+</ul>
+</li>
+<li><p>머신러닝 알고리즘</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code>: 앙상블 알고리즘 제공(랜덤포레스트, 에이다 부스트, 그래디언트 부스팅 등)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.linear_model</span></code>: 선형 회귀, 릿지(Ridge), 라쏘(Lasso) 및 로지스틱 회귀 등의 회귀 알고리즘 제공</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.navie_bayes</span></code>: 나이브 베이즈 알고리즘 제공</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.neighbors</span></code>: 최근접 이웃 알고리즘 제공</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.svm</span></code>: 서포트 벡터 머신 알고리즘 제공</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.tree</span></code>: 의사 결정 트리 알고리즘 제공</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.cluster</span></code>: 비지도 클러스터링 알고리즘 제공</p></li>
+</ul>
+</li>
+<li><p>유틸리티</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.pipeline</span></code>: 피처 처리 등의 변환과 머신러닝 알고리즘 학습, 예측 등을 묶어서 실행할 수 있는 유틸리티 제공</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="regression">
+<h4><strong>회귀(Regression)</strong><a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>입력(x)과 출력(y)이 주어질 때, 입력에서 출력으로의 매핑 함수를 학습하는 것이다.</p></li>
+</ul>
+<div class="section" id="train-set-test-set">
+<h5>train set과 test set으로 분리<a class="headerlink" href="#train-set-test-set" title="Permalink to this headline">#</a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code>은 학습용/테스트용 데이터 분리 등의 API를 제공하는 라이브러리로, 학습 데이터와 테스트 데이터를 분리하는 train_test_split 함수가 있다.</p></li>
+<li><p>지도학습에서는 트레이닝 데이터 즉, 학습을 위한 특징(feature)와 결정값인 레이블(label)데이터로 모델을 학습 한 뒤, 별도의 테스트 데이터에서 미지의 레이블을 예측한다.</p></li>
+<li><p>즉, 명확한 정답이 주어진 데이터를 먼저 학습하고 미지의 정답을 예측하는 방식이다.</p></li>
+<li><p>그래서 자동차 데이터를 train_test_split()을 사용하여 트레이닝 데이터와 테스트 데이터로 나눈다.</p></li>
+<li><p>train_test_split()함수는 별도의 옵션을 설정하지 않으면 트레이닝:테스트의 비율을 75:25로 분리한다.</p></li>
+<li><p>보통 독립변수(입력 데이터, feature)는 여러 개이며 대문자 X를 사용하고, target 데이터는 1차원 배열의 벡터이므로 소문자 y를 사용한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># 1. 데이터 준비</span>
+
+<span class="c1"># 입력 변수(X)와 목표 변수(y) 설정</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;cubicinches&quot;</span><span class="p">,</span> <span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;weightlbs&quot;</span><span class="p">,</span> <span class="s2">&quot;time-to-60&quot;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span>
+
+<span class="c1"># 학습 데이터와 테스트 데이터 분리</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1">#print(X_test[:5])</span>
+<span class="c1">#print(y_train[:5])</span>
+<span class="c1">#print(y_test[:5])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>선형회귀모델은 <strong>sklearn.linear_model</strong>의 LinearRegression을 통해 구현할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">help</span><span class="p">(</span><span class="n">LinearRegression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>학습 데이터를 줘서 모델을 학습시킨다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 모델 학습</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>학습된 모델에 .predict() 함수를 통해 테스트 데이터를 줘서 예측한다.</p></li>
+<li><p>r2_score() 함수를 통해 실제 정답과 예측값에 대해 어느 정도의 예측이 성공했는지 성능을 확인한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 예측 성능 표시</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image56.png" width=400>  </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+
+<span class="k">def</span> <span class="nf">cars_predict</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;🤖 자동차 연비 예측&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;선형회귀(Linear Regression) 모델을 활용하여 자동차의 연비(mpg)를 예측합니다.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 입력 변수(X)와 목표 변수(y) 설정</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;cubicinches&quot;</span><span class="p">,</span> <span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;weightlbs&quot;</span><span class="p">,</span> <span class="s2">&quot;time-to-60&quot;</span><span class="p">]]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span>
+
+    <span class="c1"># 학습 데이터와 테스트 데이터 분리</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1"># 모델 학습</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="c1"># 예측 성능 표시</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📊 모델 성능 (R²): **</span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 사용자 입력</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;🚗 자동차 정보 입력&quot;</span><span class="p">)</span>
+    <span class="n">cylinders</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;실린더 수 (cylinders)&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="n">cubicinches</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;배기량 (cubicinches)&quot;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">hp</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;마력 (horsepower)&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+    <span class="n">weightlbs</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;무게 (weightlbs)&quot;</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
+    <span class="n">time_to_60</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;시속 60마일 도달 시간 (초)&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
+
+    <span class="c1"># 입력값으로 예측 수행</span>
+    <span class="n">input_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;cylinders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">cylinders</span><span class="p">],</span>
+        <span class="s2">&quot;cubicinches&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">cubicinches</span><span class="p">],</span>
+        <span class="s2">&quot;hp&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">hp</span><span class="p">],</span>
+        <span class="s2">&quot;weightlbs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">weightlbs</span><span class="p">],</span>
+        <span class="s2">&quot;time-to-60&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">time_to_60</span><span class="p">]</span>
+    <span class="p">})</span>
+
+    <span class="n">mpg_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;예상 연비: **</span><span class="si">{</span><span class="n">mpg_pred</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mpg** 🚘&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
+<p>이번 주차에서는 공공데이터를 활용하기 위한 회원가입 및 API 인증키 획득 방법을 살펴보았다. 또한 자동차 연비 데이터를 활용해 Streamlit 기반의 웹 대시보드를 직접 구현하며, 데이터 분석 결과를 시각적으로 표현하는 과정을 경험했다. 이를 통해분석, 시각화, 서비스화까지의 전 과정을 이해할 수 있었다. 이제 앞서 배운 웹에 배포 방법을 활용하여 웹에 배포해보기 바란다.</p>
 <hr class="docutils" />
-<font color='Blue' size="4">
+<font color='Grey' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,6 +1355,56 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>웹 대시보드</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">웹 대시보드 개발 기본 원칙</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>공공데이터 수집 절차</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">공공데이터포털 회원가입과 인증키 발급</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>대시보드 실전: 자동차 연비 대시보드</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main">메인 화면: main()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cars-home">홈 화면: cars_home()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cars-eda">탐색적 분석: cars_EDA()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">기본 내용 및 파일 불러오기</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">🌏 대륙별 평균 연비</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">🚀해보기 1: cars_EDA()에 대륙별 평균 연비 추가하기</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hp-mpg">⚡ 마력(hp)과 연비(mpg) 관계</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#weightlbs">⚖️ 차량 무게(weightlbs)와 연비 관계</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">📆 연도별 평균 연비 변화</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🚀해보기 2: cars_EDA()에 추가하기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cars-predict">예측 화면: cars_predict()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">머신러닝</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">머신러닝 용어</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">머신러닝 분류</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">머신러닝을 위한 패키지</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scikit-learn">scikit-learn 주요 모듈</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regression"><strong>회귀(Regression)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#train-set-test-set">train set과 test set으로 분리</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

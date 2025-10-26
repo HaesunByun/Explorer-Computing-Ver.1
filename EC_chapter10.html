@@ -85,6 +85,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -337,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,6 +356,37 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit 기본 사용법</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">텍스트 표시 관련 메서드</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🚀해보기 1: 자기소개서 만들기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">데이터 표시 관련 메서드</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">🚀해보기 2: 수업시간표 만들기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic-commands">Magic Commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">레이아웃과 컨테이너</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebar">사이드바(Sidebar)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column">컬럼(Column)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tab">탭(Tab)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#container">컨테이너(Container)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expander">Expander (접을 수 있는 영역)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">차트 관련 메서드</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">주요 위젯 메서드</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">미디어 요소</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -368,14 +402,957 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-10-streamlit-ui">
 <h1>Chapter 10. Streamlit 기초와 UI 구성<a class="headerlink" href="#chapter-10-streamlit-ui" title="Permalink to this headline">#</a></h1>
-<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px; color: #000000;">
+<p><font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font></p>
+<mark style="background-color: #f5fff5;">
+🔹 학습목표<br>
+  <ul><li>Streamlit을 활용하여 텍스트,데이터 시각화,미디어 요소를 표시하는 다양한 방법을 실습한다. </li>
+  <li>레이아웃 구성과 주요 위젯 사용법을 익혀 간단한 웹 인터페이스 형태의 데이터 앱을 제작해본다.</li></ul>  
+🔹 기대효과<br>
+  <ul><li>Streamlit의 핵심 기능을 습득함으로써 데이터 분석 결과를 손쉽게 시각화하고, 사용자와 상호작용할 수 있는 웹 애플리케이션을 직접 구현할 수 있게 된다.</li></ul></mark>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit 기본 사용법</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div" title="Permalink to this headline">#</a></h2>
+<p>웹 앱 배포를 위한 기본 환경을 만들어 놓았으니, 본격적으로 streamlit을 배워보면서 멋지게 웹 앱을 만들어보자.</p>
+<div class="section" id="id1">
+<h3>텍스트 표시 관련 메서드<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>streamlit은 텍스트를 화면에 출력하기 위해 다양한 방법을 제공한다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메서드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.text()</span></code></p></td>
+<td><p>단순 텍스트 출력 (스타일 없음)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.text(&quot;Hello</span> <span class="pre">Streamlit&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.markdown()</span></code></p></td>
+<td><p>마크다운 문법 지원 텍스트 출력</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.markdown(&quot;**굵게**</span> <span class="pre">*기울임*&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.write()</span></code></p></td>
+<td><p>자동 형식 인식(문자열, 숫자, 객체 등)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.write(&quot;문자열&quot;,</span> <span class="pre">123,</span> <span class="pre">df)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.title()</span></code></p></td>
+<td><p>페이지 제목 스타일 출력 (큰 글씨)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.title(&quot;대제목&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.header()</span></code></p></td>
+<td><p>섹션 제목 스타일 출력 (중간 크기)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.header(&quot;중제목&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.subheader()</span></code></p></td>
+<td><p>작은 제목 스타일 출력</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.subheader(&quot;소제목&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.caption()</span></code></p></td>
+<td><p>캡션(작은 설명글) 출력</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.caption(&quot;설명</span> <span class="pre">텍스트&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.code()</span></code></p></td>
+<td><p>코드 블록 출력 (문법 강조 가능)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.code(&quot;print('Hello')&quot;,</span> <span class="pre">language=&quot;python&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.latex()</span></code></p></td>
+<td><p>LaTeX 문법 수식 출력</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.latex(r&quot;E</span> <span class="pre">=</span> <span class="pre">mc^2&quot;)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_text.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># 단순한 텍스트를 표시</span>
+<span class="n">st</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Hello, Streamlit!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Markdown 문법을 지원하여 헤더, 볼드, 이탤릭, 하이퍼링크 등 다양한 텍스트 스타일 가능</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;# 헤더 1&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;## 헤더 2&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;**굵은 텍스트**&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;_기울임 텍스트_&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;[링크로 이동](https://streamlit.io)&quot;</span><span class="p">)</span>
+
+<span class="c1"># write()함수는 다목적 함수로 텍스트, 마크다운, 데이터, 객체 등 다양한 요소를 자동으로 감지하여 인식함</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, Streamlit!&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;**굵은 텍스트**와 *기울임 텍스트*를 함께 사용할 수 있습니다.&quot;</span><span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;대제목&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;중제목&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;소제목&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">caption</span><span class="p">(</span><span class="s2">&quot;설명 텍스트&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s2">&quot;print(&#39;Hello&#39;)&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;E = mc^2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing Ex_ch10_text.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h4>🚀해보기 1: 자기소개서 만들기<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<p>아래와 같이 보여지는 자기소개 페이지를 만들어보세요. 내용은 본인에 맞게 수정하세요.</p>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image30.png" width=500></div>
+텍스트 관련 메서드 실습문제를 해보신 분들은 해보기 완료 체크 해주세요.</mark>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_p1.py
+<span class="c1"># 아래에 코드를 작성해주세요.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>데이터 표시 관련 메서드<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>streamlit은 데이터를 테이블, 배열, 또는 데이터 프레임 형태로 쉽게 표시할 수 있는 다양한 방법을 제공한다.</p></li>
+<li><p>이를 활용하면 데이터 시각화와 탐색이 간단해진다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메서드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.table()</span></code></p></td>
+<td><p>정적 테이블로 표시 (단순 출력)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.table(df.head())</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.dataframe()</span></code></p></td>
+<td><p>데이터프레임을 인터랙티브하게 표시 (스크롤/정렬 가능)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.dataframe(df)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.json()</span></code></p></td>
+<td><p>JSON 데이터 구조 보기 좋게 표시</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.json({&quot;name&quot;:</span> <span class="pre">&quot;Alice&quot;,</span> <span class="pre">&quot;age&quot;:</span> <span class="pre">25})</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.metric()</span></code></p></td>
+<td><p>지표(숫자+증감률) 표시</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.metric(label=&quot;매출&quot;,</span> <span class="pre">value=&quot;1000&quot;,</span> <span class="pre">delta=&quot;+10%&quot;)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_data.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># 샘플 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;교과목&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;컴퓨팅기초&quot;</span><span class="p">,</span> <span class="s2">&quot;컴퓨팅탐색&quot;</span><span class="p">,</span> <span class="s2">&quot;컴퓨팅핵심&quot;</span><span class="p">],</span> <span class="s2">&quot;강좌수&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+<span class="n">list_data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;컴퓨팅기초&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;컴퓨팅탐색&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;컴퓨팅핵심&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### 간단히 표시&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># st.table(): 정적인 테이블을 표시. 간단한 데이터 프레임이나 배열을 깔끔하게 표시할 때 유용.</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### 데이터프레임 정적 테이블&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### 리스트 정적 테이블&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">list_data</span><span class="p">)</span>
+
+<span class="c1"># st.dataframe(): 대화형 데이터 테이블을 표시. 정렬, 검색 등 기본적인 테이블 조작 및 너비와 높이 조정 가능.</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### 데이터프레임 대화형 테이블&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Numpy 배열</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### Numpy 배열&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+
+<span class="c1"># st.json(): JSON 데이터 구조를 트리 형태로 표시. 펼치기, 접기가 가능</span>
+<span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Reading&quot;</span><span class="p">,</span> <span class="s2">&quot;Traveling&quot;</span><span class="p">]}</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### JSON 데이터&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
+
+<span class="c1">#지표(숫자+증감률) 표시 </span>
+<span class="n">st</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;매출&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;1000&quot;</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="s2">&quot;+10%&quot;</span><span class="p">)</span>
+
+<span class="c1"># HTML을 직접 사용하여 커스텀 테이블을 표시</span>
+<span class="c1"># HTML로 테이블 생성</span>
+<span class="n">html_table</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;table style=&quot;border: 1px solid black;&quot;&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;th&gt;Name&lt;/th&gt;</span>
+<span class="s2">    &lt;th&gt;Age&lt;/th&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;td&gt;Alice&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;25&lt;/td&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">  &lt;tr&gt;</span>
+<span class="s2">    &lt;td&gt;Bob&lt;/td&gt;</span>
+<span class="s2">    &lt;td&gt;30&lt;/td&gt;</span>
+<span class="s2">  &lt;/tr&gt;</span>
+<span class="s2">&lt;/table&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### HTML 테이블&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="n">html_table</span><span class="p">,</span> <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h4>🚀해보기 2: 수업시간표 만들기<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<p>아래와 같이 보여지는 수업시간표를 만들어보세요. 내용은 본인에 맞게 수정하세요.</p>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image32.png" width=500></div>
+실습문제를 해보신 분들은 해보기 완료 체크 해주세요.</mark>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_p2.py
+<span class="c1"># 여기에 코드를 작성해주세요.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="magic-commands">
+<h3>Magic Commands<a class="headerlink" href="#magic-commands" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>streamlit은 명시적으로 st.write()를 호출하지 않아도, 특정 조건에서 python의 문자열이나 데이터 객체를 화면에 바로 출력한다. 그래서 매직 명령어라고 부른다.</p></li>
+<li><p>명령어 없이도 사용 가능하므로 코드가 간결해지며 매우 직관적이다.</p></li>
+<li><p>또한 데이터를 자동으로 렌더링하므로 개발 속도가 빨라진다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_magic.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># st.text(), st.write() 명령어 없이 바로 출력</span>
+<span class="s2">&quot;### 간단한 매직 명령어 예제&quot;</span>
+<span class="s2">&quot;Hello, this is magic!&quot;</span>
+
+<span class="c1"># 데이터프레임 (명령어 없이 바로 출력)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Column 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Column 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Column 3&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">df</span>
+
+<span class="c1"># 마크다운</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"># 마크다운 제목</span>
+<span class="sd">- 매직 커맨드는 파이썬 표현식 자동 출력 기능</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image33.png" width=300></div></div>
+<div class="section" id="id5">
+<h3>레이아웃과 컨테이너<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>streamlit에서는 앱의 <strong>레이아웃</strong>(layout)과 <strong>컨테이너</strong>(container)를 통해 UI 구성 요소들을 정리하고, 동적인 배치 및 스타일링을 쉽게 조정할 수 있다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메서드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.sidebar</span></code></p></td>
+<td><p>사이드바 영역에 UI 배치</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.sidebar.button(&quot;사이드</span> <span class="pre">버튼&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.columns()</span></code></p></td>
+<td><p>여러 컬럼 레이아웃 생성</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">col1,</span> <span class="pre">col2</span> <span class="pre">=</span> <span class="pre">st.columns(2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.tabs()</span></code></p></td>
+<td><p>탭 레이아웃 생성</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tab1,</span> <span class="pre">tab2</span> <span class="pre">=</span> <span class="pre">st.tabs([&quot;탭1&quot;,</span> <span class="pre">&quot;탭2&quot;])</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.expander()</span></code></p></td>
+<td><p>접었다 펼 수 있는 영역</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">st.expander(&quot;자세히&quot;):</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.empty()</span></code></p></td>
+<td><p>임시 공간 확보 (나중에 업데이트 가능)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">placeholder</span> <span class="pre">=</span> <span class="pre">st.empty()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.stop()</span></code></p></td>
+<td><p>코드 실행 중단</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.stop()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font>
+<div class="section" id="sidebar">
+<h4>사이드바(Sidebar)<a class="headerlink" href="#sidebar" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>사이드바를 통해 주요 내비게이션 요소를 별도의 영역에 배치할 수 있다.</p></li>
+<li><p>사이드바는 화면 왼쪽에 고정된 공간을 사용하여 앱의 전반적인 구조를 더욱 직관적으로 만들 수 있다.</p></li>
+<li><p>아래는 streamlit의 사이드바를 활용한 웹페이지의 예이다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image38.png" width=500> 
+<img src="https://haesunbyun.github.io/common/images/comps/image39.png?v=1234" width=500> 
+<img src="https://haesunbyun.github.io/common/images/comps/image40.png?v=1234" width=500> 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_sidebar1.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># 사이드바 생성</span>
+<span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;Sidebar Menu&quot;</span><span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;컴퓨팅 탐색&quot;</span><span class="p">)</span>
+
+<span class="c1"># 라디오 버튼 메뉴</span>
+<span class="n">menu</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s2">&quot;메뉴 선택&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;홈&quot;</span><span class="p">,</span> <span class="s2">&quot;분석&quot;</span><span class="p">,</span> <span class="s2">&quot;설정&quot;</span><span class="p">])</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;선택한 메뉴: </span><span class="si">{</span><span class="n">menu</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 셀렉트 박스 메뉴</span>
+<span class="n">option</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s2">&quot;Select an option&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Option 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Option 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Option 3&quot;</span><span class="p">])</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You selected </span><span class="si">{</span><span class="n">option</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 체크박스</span>
+<span class="n">agree</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s2">&quot;동의합니다&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">agree</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;체크박스를 선택했습니다!&quot;</span><span class="p">)</span>
+
+<span class="c1"># 슬라이더: .slider(&quot;문장&quot;, 최솟값, 최댓값, 초기값)</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;값을 선택하세요&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;선택한 값: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 텍스트 입력</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;이름 입력&quot;</span><span class="p">,</span> <span class="s2">&quot;홍길동&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;입력한 이름: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>사이드바 안에 라디오박스, 셀렉트박스, 체크박스, 슬라이더, 텍스트 기반의 메뉴를 구성한 예를 보여준다.</p>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image42.png" width=400> </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_sidebar2.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;📖 책 목차 예제&quot;</span><span class="p">)</span>
+
+<span class="c1"># 목차 구성</span>
+<span class="n">toc</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;1장. 들어가기&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;1.1 소개&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;1.2 준비물&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;2장. 본문&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;2.1 데이터 불러오기&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;2.2 분석하기&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;2.3 시각화&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;3장. 마무리&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;3.1 요약&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;3.2 참고자료&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># 상위 챕터 선택</span>
+<span class="n">chapter</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s2">&quot;📂 챕터 선택&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">toc</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+
+<span class="c1"># 하위 섹션 선택</span>
+<span class="n">section</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span><span class="s2">&quot;📑 섹션 선택&quot;</span><span class="p">,</span> <span class="n">toc</span><span class="p">[</span><span class="n">chapter</span><span class="p">])</span>
+
+<span class="c1"># 본문 출력</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="n">section</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">section</span> <span class="o">==</span> <span class="s2">&quot;1.1 소개&quot;</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;이 책은 Streamlit 학습을 위한 예제집입니다.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">section</span> <span class="o">==</span> <span class="s2">&quot;2.2 분석하기&quot;</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;여기서는 데이터 분석 방법을 다룹니다.&quot;</span><span class="p">)</span>
+<span class="c1"># ... 필요에 따라 내용 추가</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image41.png" width=500> </div><ul class="simple">
+<li><p>위의 코드는 하위 섹션의 수가 많아지면 if~elif문이 길어진다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_sidebar3.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;📚 책 목차 예제 &quot;</span><span class="p">)</span>
+
+<span class="c1"># 목차 정의</span>
+<span class="n">toc</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;1장. 들어가기&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.1 소개&quot;</span><span class="p">,</span> <span class="s2">&quot;1.2 준비물&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;2장. 본문&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2.1 데이터 불러오기&quot;</span><span class="p">,</span> <span class="s2">&quot;2.2 분석하기&quot;</span><span class="p">,</span> <span class="s2">&quot;2.3 시각화&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="c1"># ----------------------------</span>
+<span class="c1"># 섹션별 내용 함수</span>
+<span class="c1"># ----------------------------</span>
+<span class="k">def</span> <span class="nf">section_intro</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;1.1 소개&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    이 책은 Streamlit을 학습하기 위한 예제집입니다.  </span>
+<span class="s2">    주요 목표는 데이터 시각화와 대시보드 제작을 빠르게 익히는 것입니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">section_setup</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;1.2 준비물&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Python 3.8 이상과 Streamlit이 설치되어 있어야 합니다.  </span>
+<span class="s2">    설치는 `pip install streamlit` 으로 가능합니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">section_load</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;2.1 데이터 불러오기&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Pandas를 이용한 데이터 분석하기 위해 데이터를 불러옵니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">section_analysis</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;2.2 분석하기&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Pandas를 이용한 데이터 분석 예제를 다룹니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">section_visual</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;2.3 시각화&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    matplot, seaborn를 이용한 데이터를 시각화 합니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+<span class="c1"># ----------------------------</span>
+<span class="c1"># 목차 매핑</span>
+<span class="c1"># ----------------------------</span>
+<span class="n">toc_function</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;1.1 소개&quot;</span><span class="p">:</span> <span class="n">section_intro</span><span class="p">,</span>
+    <span class="s2">&quot;1.2 준비물&quot;</span><span class="p">:</span> <span class="n">section_setup</span><span class="p">,</span>
+    <span class="s2">&quot;2.1 데이터 불러오기&quot;</span><span class="p">:</span> <span class="n">section_load</span><span class="p">,</span>
+    <span class="s2">&quot;2.2 분석하기&quot;</span><span class="p">:</span> <span class="n">section_analysis</span><span class="p">,</span>
+    <span class="s2">&quot;2.3 시각화&quot;</span><span class="p">:</span> <span class="n">section_visual</span><span class="p">,</span>    
+<span class="p">}</span>
+
+<span class="c1"># 선택 저장용 변수 초기값</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="s2">&quot;1.1 소개&quot;</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;📖 목차&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">chapter</span><span class="p">,</span> <span class="n">sections</span> <span class="ow">in</span> <span class="n">toc</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;### </span><span class="si">{</span><span class="n">chapter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 챕터 제목</span>
+    <span class="k">for</span> <span class="n">sec</span> <span class="ow">in</span> <span class="n">sections</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">sec</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sec</span><span class="p">):</span>  <span class="c1"># 각 섹션을 버튼으로 표시</span>
+            <span class="n">selected</span> <span class="o">=</span> <span class="n">sec</span>
+
+
+<span class="c1"># ----------------------------</span>
+<span class="c1"># 본문 표시</span>
+<span class="c1"># ----------------------------</span>
+<span class="n">toc_function</span><span class="p">[</span><span class="n">selected</span><span class="p">]()</span>   <span class="c1"># 선택된 함수 실행</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image43.png" width=500></div></div>
+<div class="section" id="column">
+<h4>컬럼(Column)<a class="headerlink" href="#column" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>컬럼을 사용하여 UI 요소들을 단을 나누어 배치할 수 있다</p></li>
+<li><p>각 컬럼은 1부터 12까지의 비율을 설정하여 크기를 나눌 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_columns.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># 두 개의 컬럼을 생성</span>
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#col1, col2 = st.columns([2, 1])  # 첫 번째 컬럼은 두 배 크기</span>
+
+<span class="k">with</span> <span class="n">col1</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;Column 1&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is the first column.&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">col2</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;Column 2&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is the second column.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image47.png" width=300></div></div>
+<div class="section" id="tab">
+<h4>탭(Tab)<a class="headerlink" href="#tab" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>탭을 사용하면 여러 개의 탭 페이지를 만들어 사용자에게 선택할 수 있는 인터페이스를 제공한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_tabs.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># 탭 생성</span>
+<span class="n">tab1</span><span class="p">,</span> <span class="n">tab2</span><span class="p">,</span> <span class="n">tab3</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">tabs</span><span class="p">([</span><span class="s2">&quot;Tab 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Tab 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Tab 3&quot;</span><span class="p">])</span>
+
+<span class="k">with</span> <span class="n">tab1</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is tab 1&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tab2</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is tab 2&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tab3</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is tab 3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image48.png" width=300></div></div>
+<div class="section" id="container">
+<h4>컨테이너(Container)<a class="headerlink" href="#container" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>컨테이너는 여러 위젯이나 요소들을 하나의 그룹으로 묶어준다.</p></li>
+<li><p>반복적으로 같은 레이아웃을 적용하거나, 특정 부분을 별도로 다루고 싶을 때 유용하다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_container.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># 컨테이너를 사용하여 그룹화</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">():</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;컨테이너 안에 헤더&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;컨테이너 안에 텍스트&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># 반복적으로 컨테이너에 내용 추가</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">():</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;컨테이너 안에 반복적으로 텍스트 추가 </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image49.png" width=300></div></div>
+<div class="section" id="expander">
+<h4>Expander (접을 수 있는 영역)<a class="headerlink" href="#expander" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>expander는 사용자가 필요할 때 펼쳐서 내용을 볼 수 있도록 하는 접을 수 있는 영역이다.</p></li>
+<li><p>이 기능은 긴 내용을 숨기거나, 옵션을 설정할 때 유용하다.</p></li>
+<li><p>리스트박스와는 다름. 리스트박스는 하위 항목을 선택할 수 있지만, Expander는 내용을 펼치거나 숨길 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_expander.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># Expander 영역</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">expander</span><span class="p">(</span><span class="s2">&quot;더 많은 정보를 보려면 클릭&quot;</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is the hidden content that appears when expanded.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image50.png" width=500></div></div>
+</div>
+<div class="section" id="id6">
+<h3>차트 관련 메서드<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>streamlit에서 차트 메서드는 데이터를 시각적으로 표현하기 위한 다양한 방법을 제공한다.</p></li>
+<li><p>차트 메서드는 내장 함수와 외부 라이브러리와의 연동을 통해 손쉽게 추가할 수 있다.</p>
+<ul>
+<li><p>간단한 차트: st.line_chart, st.bar_chart 등</p></li>
+<li><p>복잡한 커스텀 차트: Matplotlib, Seaborn</p></li>
+<li><p>대화형 차트: Plotly, Bokeh</p></li>
+<li><p>지도 기반 시각화: Pydeck</p></li>
+</ul>
+</li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메서드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.line_chart()</span></code></p></td>
+<td><p>선형 차트(line chart)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.line_chart(df)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.area_chart()</span></code></p></td>
+<td><p>영역 차트(area chart)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.area_chart(df)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.bar_chart()</span></code></p></td>
+<td><p>막대 차트(bar chart)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.bar_chart(df)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.scatter_chart()</span></code></p></td>
+<td><p>산점도(scatter plot)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.scatter_chart(df)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.map()</span></code></p></td>
+<td><p>위도/경도 데이터가 있을 때 지도에 점을 표시</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.map(df)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.pydeck_chart()</span></code></p></td>
+<td><p>PyDeck 기반의 인터랙티브 지도 시각화</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.pydeck_chart(deck_obj)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.pyplot()</span></code></p></td>
+<td><p>Matplotlib 차트를 표시</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.pyplot(fig)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_chart1.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">line_chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">area_chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">bar_chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image34.png" width=500></div><ul class="simple">
+<li><p>PyDeck은 Streamlit에서 지도 기반 시각화를 쉽게 구현할 수 있도록 도와주는 파이썬용 데이터 시각화 라이브러리이다.</p></li>
+<li><p>위도(latitude)와 경도(longitude) 데이터를 이용하여 지도 위에 표현할 수 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_chart2.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pydeck</span> <span class="k">as</span> <span class="nn">pdk</span>
+
+<span class="c1"># 위도, 경도 데이터 준비</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Seoul&#39;</span><span class="p">,</span> <span class="s1">&#39;Daejeon&#39;</span><span class="p">,</span> <span class="s1">&#39;Gwangju&#39;</span><span class="p">,</span> <span class="s1">&#39;Mokpo&#39;</span><span class="p">,</span> <span class="s1">&#39;Busan&#39;</span><span class="p">,</span> <span class="s1">&#39;Daegu&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">37.5665</span><span class="p">,</span> <span class="mf">36.3504</span><span class="p">,</span> <span class="mf">35.1595</span><span class="p">,</span> <span class="mf">34.8110</span><span class="p">,</span> <span class="mf">35.1796</span><span class="p">,</span> <span class="mf">35.8714</span><span class="p">],</span>
+    <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">126.9780</span><span class="p">,</span> <span class="mf">127.3845</span><span class="p">,</span> <span class="mf">126.8526</span><span class="p">,</span> <span class="mf">126.3925</span><span class="p">,</span> <span class="mf">129.0756</span><span class="p">,</span> <span class="mf">128.6014</span><span class="p">],</span>
+    <span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">9700000</span><span class="p">,</span> <span class="mi">1500000</span><span class="p">,</span> <span class="mi">1500000</span><span class="p">,</span> <span class="mi">240000</span><span class="p">,</span> <span class="mi">3400000</span><span class="p">,</span> <span class="mi">2400000</span><span class="p">]</span>    
+<span class="p">})</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;📍 한국 주요 도시 위치&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> 
+
+<span class="c1"># 3. Pydeck Chart</span>
+<span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;PyDeck Chart (st.pydeck_chart)&quot;</span><span class="p">)</span>
+<span class="n">layer</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span>
+    <span class="s2">&quot;ScatterplotLayer&quot;</span><span class="p">,</span>  <span class="c1">#점(원형 마커)을 표시</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">get_position</span><span class="o">=</span><span class="s2">&quot;[lon, lat]&quot;</span><span class="p">,</span>
+    <span class="n">get_radius</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span>  <span class="c1">#점(원의 반지름)을 미터 단위로 지정. 5000이면 지상에서 약 5km 반경의 원으로 보임</span>
+    <span class="n">get_color</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="n">pickable</span><span class="o">=</span><span class="kc">True</span>  <span class="c1">#마우스로 점을 클릭했을 때 툴팁(정보창) 을 표시</span>
+<span class="p">)</span>
+
+<span class="c1"># 툴팁 설정</span>
+<span class="n">tooltip</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;b&gt;도시:&lt;/b&gt; </span><span class="si">{city}</span><span class="s2"> &lt;br&gt; &lt;b&gt;인구:&lt;/b&gt; </span><span class="si">{population}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># 대한민국 전체가 보이는 위치로 설정</span>
+<span class="n">view_state</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">ViewState</span><span class="p">(</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">36.5</span><span class="p">,</span>  <span class="c1">#지도의 중심 위도(lat), 36.5는 한반도의 대략적인 중앙 위도</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">127.8</span><span class="p">,</span> <span class="c1">#지도의 중심 경도(lon), 127.8은 한국의 대략적인 중앙 경도</span>
+    <span class="n">zoom</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+    <span class="n">pitch</span><span class="o">=</span><span class="mi">0</span>  <span class="c1"># 지도를 기울이는 각도 0은 정면</span>
+<span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">pydeck_chart</span><span class="p">(</span><span class="n">pdk</span><span class="o">.</span><span class="n">Deck</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="n">layer</span><span class="p">],</span> <span class="n">initial_view_state</span><span class="o">=</span><span class="n">view_state</span><span class="p">,</span> <span class="n">tooltip</span><span class="o">=</span><span class="n">tooltip</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image35.png?v=1234" width=500></div></div>
+<div class="section" id="id7">
+<h3>주요 위젯 메서드<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메서드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.button()</span></code></p></td>
+<td><p>버튼 생성</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.button(&quot;클릭&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.checkbox()</span></code></p></td>
+<td><p>체크박스 생성</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.checkbox(&quot;동의&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.radio()</span></code></p></td>
+<td><p>라디오 버튼 생성</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.radio(&quot;선택&quot;,</span> <span class="pre">[&quot;A&quot;,</span> <span class="pre">&quot;B&quot;])</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.selectbox()</span></code></p></td>
+<td><p>드롭다운 선택 박스</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.selectbox(&quot;옵션&quot;,</span> <span class="pre">[&quot;1&quot;,</span> <span class="pre">&quot;2&quot;,</span> <span class="pre">&quot;3&quot;])</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.slider()</span></code></p></td>
+<td><p>슬라이더(숫자 범위 선택)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.slider(&quot;범위&quot;,</span> <span class="pre">0,</span> <span class="pre">100,</span> <span class="pre">50)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.text_input()</span></code></p></td>
+<td><p>텍스트 입력 상자</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.text_input(&quot;이름</span> <span class="pre">입력&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.number_input()</span></code></p></td>
+<td><p>숫자 입력 상자</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.number_input(&quot;나이</span> <span class="pre">입력&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.date_input()</span></code></p></td>
+<td><p>날짜 입력</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.date_input(&quot;날짜</span> <span class="pre">선택&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.file_uploader()</span></code></p></td>
+<td><p>파일 업로드</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.file_uploader(&quot;파일</span> <span class="pre">선택&quot;)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_basic1.py
+
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;교과목&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;컴퓨팅기초&quot;</span><span class="p">,</span> <span class="s2">&quot;컴퓨팅탐색&quot;</span><span class="p">,</span> <span class="s2">&quot;컴퓨팅핵심&quot;</span><span class="p">],</span> <span class="s2">&quot;강좌수&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># 데이터 다운로드 버튼 추가</span>
+<span class="nd">@st</span><span class="o">.</span><span class="n">cache_data</span>
+<span class="k">def</span> <span class="nf">convert_df_to_csv</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+<span class="n">csv</span> <span class="o">=</span> <span class="n">convert_df_to_csv</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;📥 데이터 다운로드&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">csv</span><span class="p">,</span>
+    <span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;data.csv&quot;</span><span class="p">,</span>
+    <span class="n">mime</span><span class="o">=</span><span class="s2">&quot;text/csv&quot;</span><span class="p">,</span>  <span class="c1">#파일의 형식(콘텐츠 타입) 을 브라우저에 알려주는 역할</span>
+<span class="p">)</span>
+
+<span class="c1"># 버튼 추가</span>
+<span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Click me!&quot;</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Button clicked!&quot;</span><span class="p">)</span>
+
+<span class="c1"># 체크박스 추가</span>
+<span class="n">agree</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s2">&quot;I agree&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">agree</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Thank you for agreeing!&quot;</span><span class="p">)</span>
+
+<span class="c1"># 라디오 버튼 여러 선택지 중 하나를 선택</span>
+<span class="n">option</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">radio</span><span class="p">(</span>
+    <span class="s2">&quot;Choose your favorite color:&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;You selected:&quot;</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+
+<span class="c1"># 드롭다운 메뉴에서 하나의 선택지를 선택</span>
+<span class="n">option</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span>
+    <span class="s2">&quot;Select your profession:&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">&quot;Engineer&quot;</span><span class="p">,</span> <span class="s2">&quot;Artist&quot;</span><span class="p">,</span> <span class="s2">&quot;Doctor&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;You selected:&quot;</span><span class="p">,</span> <span class="n">option</span><span class="p">)</span>
+
+<span class="c1"># 여러 선택지를 한 번에 선택</span>
+<span class="n">options</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">multiselect</span><span class="p">(</span>
+    <span class="s2">&quot;Select your hobbies:&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">&quot;Reading&quot;</span><span class="p">,</span> <span class="s2">&quot;Traveling&quot;</span><span class="p">,</span> <span class="s2">&quot;Gaming&quot;</span><span class="p">,</span> <span class="s2">&quot;Cooking&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;You selected:&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+
+<span class="c1"># 숫자 범위를 조정할 수 있는 슬라이더</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;Select your age:&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Your age is:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># 숫자를 직접 입력하거나 화살표로 조정</span>
+<span class="n">number</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s2">&quot;Enter a number:&quot;</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Your number is:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image36.png" width=500></div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_basic2.py
+
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="c1"># 한 줄의 텍스트를 입력</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Enter your name:&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># 여러 줄의 텍스트를 입력</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_area</span><span class="p">(</span><span class="s2">&quot;Enter your message:&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Your message is:&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+
+<span class="c1"># 날짜 선택</span>
+<span class="n">date</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">date_input</span><span class="p">(</span><span class="s2">&quot;Pick a date:&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Selected date:&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+
+<span class="c1"># 시간 선택</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">time_input</span><span class="p">(</span><span class="s2">&quot;Pick a time:&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Selected time:&quot;</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+
+<span class="c1"># 파일 업로드</span>
+<span class="n">uploaded_file</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">file_uploader</span><span class="p">(</span><span class="s2">&quot;Choose a file:&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">uploaded_file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;File uploaded:&quot;</span><span class="p">,</span> <span class="n">uploaded_file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># 색 선택</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">color_picker</span><span class="p">(</span><span class="s2">&quot;Pick a color:&quot;</span><span class="p">,</span> <span class="s2">&quot;#00f900&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Selected color:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+
+<span class="c1"># 여러 위젯을 그룹화하여 일괄 처리</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">form</span><span class="p">(</span><span class="s2">&quot;my_form&quot;</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Enter your name&quot;</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s2">&quot;Enter your age&quot;</span><span class="p">)</span>
+    <span class="n">submitted</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">form_submit_button</span><span class="p">(</span><span class="s2">&quot;Submit&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">submitted</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Name:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Age:&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image37.png" width=500></div></div>
+<div class="section" id="id8">
+<h3>미디어 요소<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이미지, 오디오, 비디오 등 다양한 멀티미디어 콘텐츠를 앱에 추가한다.</p></li>
+</ul>
+<font size=2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>메서드</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>예시</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.image()</span></code></p></td>
+<td><p>이미지 표시</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.image(&quot;img.png&quot;,</span> <span class="pre">caption=&quot;예시</span> <span class="pre">이미지&quot;)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">st.audio()</span></code></p></td>
+<td><p>오디오 파일 재생</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.audio(&quot;sound.mp3&quot;)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">st.video()</span></code></p></td>
+<td><p>비디오 파일 재생</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">st.video(&quot;video.mp4&quot;)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</font><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_media.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="c1"># 이미지 파일 경로 사용, use_column_width는 이미지 크기를 자동으로 조정할지 여부</span>
+<span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s2">&quot;./images/balloon.jpg&quot;</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Example Image&quot;</span><span class="p">)</span>
+
+<span class="c1"># URL에서 불러오기</span>
+<span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s2">&quot;https://haesunbyun.github.io/common/images/comps/player.jpg&quot;</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Image from URL&quot;</span><span class="p">)</span>
+
+<span class="c1"># Numpy 배열 사용 (예: Matplotlib로 생성된 이미지)</span>
+<span class="c1"># (100, 100, 3)는 (행, 열, 채널)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Random Image&quot;</span><span class="p">)</span>
+
+<span class="c1"># 오디오 파일 경로 사용</span>
+<span class="c1"># https://haesunbyun.github.io/common/images/background.mp3</span>
+<span class="n">st</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="s2">&quot;./sound/background.mp3&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;audio/mp3&quot;</span><span class="p">)</span>
+
+<span class="c1"># URL에서 오디오 재생</span>
+<span class="n">st</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="s2">&quot;https://haesunbyun.github.io/common/images/background.mp3&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;audio/mp3&quot;</span><span class="p">)</span>
+
+<span class="c1"># 비디오 파일 URL에서 비디오 재생</span>
+<span class="n">st</span><span class="o">.</span><span class="n">video</span><span class="p">(</span><span class="s2">&quot;https://haesunbyun.github.io/common/data/walking.avi&quot;</span><span class="p">)</span>
+
+<span class="c1"># 사용자가 업로드한 파일을 미디어로 표시</span>
+<span class="c1"># 이미지 업로드 후 표시</span>
+<span class="n">uploaded_image</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">file_uploader</span><span class="p">(</span><span class="s2">&quot;Upload an image&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="s2">&quot;jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;jpeg&quot;</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">uploaded_image</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">uploaded_image</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Uploaded Image&quot;</span><span class="p">)</span>
+
+<span class="c1"># 오디오 업로드 후 재생</span>
+<span class="n">uploaded_audio</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">file_uploader</span><span class="p">(</span><span class="s2">&quot;Upload an audio file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mp3&quot;</span><span class="p">,</span> <span class="s2">&quot;wav&quot;</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">uploaded_audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">audio</span><span class="p">(</span><span class="n">uploaded_audio</span><span class="p">)</span>
+
+<span class="c1"># 비디오 업로드 후 재생</span>
+<span class="n">uploaded_video</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">file_uploader</span><span class="p">(</span><span class="s2">&quot;Upload a video file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mp4&quot;</span><span class="p">,</span> <span class="s2">&quot;mov&quot;</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">uploaded_video</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">video</span><span class="p">(</span><span class="n">uploaded_video</span><span class="p">)</span>
+
+<span class="c1"># Markdown으로 유튜브 등 외부 동영상 삽입</span>
+<span class="c1"># streamlit 자체적으로 외부 동영상을 삽입하는 기능은 없지만, Markdown을 활용하면 YouTube 등 외부 비디오를 삽입 가능.</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XKqCO_Er75Y&quot;</span>
+<span class="sd">    frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span>
+<span class="sd">    allowfullscreen&gt;&lt;/iframe&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image51.png" width=500></div></div>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
+<p>오늘은 Streamlit의 핵심 기능을 폭넓게 익혔다. 텍스트와 마크다운으로 정보를 구조화하고, 데이터프레임과 표를 표시하여 데이터를 직관적으로 확인할 수 있음을 경험했다. 또한 차트와 지도 시각화를 활용해 데이터 패턴과 공간적 분포를 이해했고, 슬라이더, 버튼, 체크박스 등 위젯을 사용해 사용자와 상호작용하는 앱을 구현할 수 있음을 확인했다. 이미지, 동영상, 오디오 등 미디어 요소를 포함하여 시각적·청각적 정보 전달이 가능함도 체험했다. 이번 과정을 통해 데이터를 단순히 보여주는 것을 넘어, 사용자 중심의 인터랙티브 웹 애플리케이션 설계 능력을 키울 수 있었을 것으로 기대한다.</p>
 <hr class="docutils" />
-<font color='Blue' size="4">
+<font color='Grey' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,6 +1407,43 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit 기본 사용법</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">텍스트 표시 관련 메서드</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">🚀해보기 1: 자기소개서 만들기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">데이터 표시 관련 메서드</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">🚀해보기 2: 수업시간표 만들기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic-commands">Magic Commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">레이아웃과 컨테이너</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebar">사이드바(Sidebar)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column">컬럼(Column)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tab">탭(Tab)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#container">컨테이너(Container)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expander">Expander (접을 수 있는 영역)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">차트 관련 메서드</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">주요 위젯 메서드</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">미디어 요소</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
