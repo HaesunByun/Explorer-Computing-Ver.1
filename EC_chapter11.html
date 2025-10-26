@@ -1065,45 +1065,43 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <h4>머신러닝 분류<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
 <p>머신러닝의 분류는 학습하는 동안의 감독 형태나 정보량에 따라 다음과 같이 세가지로 나뉜다.</p>
 <div align="center"><img src="https://haesunbyun.github.io/common/images/AI11.png" width=600></div>
+<p>🧠 지도학습(Supervised Learning)
+트레이닝 데이터에 정답(레이블, Label) 이 포함되어 있으며, 입력값과 출력값의 관계를 학습하는 방식이다.</p>
+<p>🔹 분류(Classification)</p>
 <ul class="simple">
-<li><p>지도 학습(Supervised learning): 트레이닝 데이터에 답(레이블)이 포함되어 있는 것이다.</p>
-<ul>
-<li><p>분류</p>
-<ul>
-<li><p>kNN</p></li>
-<li><p>Trees</p></li>
-<li><p>Logistic Regression</p></li>
-<li><p>Naive-Bayes</p></li>
-<li><p>SVM</p></li>
+<li><p>K-최근접 이웃 (k-NN, k-Nearest Neighbors)</p></li>
+<li><p>의사결정트리 (Decision Tree)</p></li>
+<li><p>로지스틱 회귀 (Logistic Regression)</p></li>
+<li><p>나이브 베이즈 (Naive Bayes)</p></li>
+<li><p>서포트 벡터 머신 (SVM, Support Vector Machine)</p></li>
 </ul>
-</li>
-<li><p>회귀</p>
-<ul>
-<li><p>Linear</p></li>
-<li><p>Polynomial</p></li>
+<p>🔹 회귀(Regression)</p>
+<ul class="simple">
+<li><p>선형 회귀 (Linear Regression)</p></li>
+<li><p>다항 회귀 (Polynomial Regression)</p></li>
+<li><p>의사결정트리 회귀 (Decision Tree Regressor)</p></li>
+<li><p>랜덤 포레스트 회귀 (Random Forest Regressor)</p></li>
 </ul>
-</li>
-<li><p>의사결정트리</p></li>
-<li><p>랜덤 포레스트</p></li>
-<li><p>추천시스템</p></li>
-<li><p>시각/음성 감지/인지</p></li>
-<li><p>텍스트 분석, NLP</p></li>
+<p>🔹 주요 활용 분야</p>
+<ul class="simple">
+<li><p>추천 시스템 (Recommendation System)</p></li>
+<li><p>시각·음성 인식 (Vision / Speech Recognition)</p></li>
+<li><p>텍스트 분석 및 자연어 처리 (NLP, Natural Language Processing)</p></li>
 </ul>
-</li>
-<li><p>비지도 학습(Unsupervised learning): 트레이닝 데이터에 답이 없는 것이다.</p>
-<ul>
-<li><p>클러스터링</p>
-<ul>
-<li><p>SVD</p></li>
-<li><p>PCA</p></li>
-<li><p>K-means</p></li>
+<p>🧩 비지도학습(Unsupervised Learning)
+트레이닝 데이터에 정답(레이블) 이 없는 상태에서, 데이터의 구조나 패턴을 스스로 학습하는 방식이다.</p>
+<p>🔹 클러스터링(Clustering)</p>
+<ul class="simple">
+<li><p>K-평균 (K-means)</p></li>
+<li><p>계층적 클러스터링 (Hierarchical Clustering)</p></li>
 </ul>
-</li>
-<li><p>차원 축소</p></li>
+<p>🔹 차원 축소(Dimensionality Reduction)</p>
+<ul class="simple">
+<li><p>PCA (Principal Component Analysis)</p></li>
+<li><p>SVD (Singular Value Decomposition)</p></li>
 </ul>
-</li>
-<li><p>강화학습(Reinforcement learning): 현재의 상태(State)에서 어떤 행동(Action)을 취하는 것이 최적인지를 경험을 통해 학습하는 것이다.</p></li>
-</ul>
+<p>🕹️ 강화학습(Reinforcement Learning)
+에이전트(Agent)가 환경(Environment) 속에서 상태(State) 에 따라 행동(Action) 을 선택하고, 그에 대한 보상(Reward) 을 받아가며 최적의 정책(Policy) 을 학습하는 방식이다.</p>
 </div>
 <div class="section" id="id13">
 <h4>머신러닝을 위한 패키지<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h4>
