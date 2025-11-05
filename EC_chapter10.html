@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter10.ipynb" target="_blank"
+      <li><a href="_sources/EC_chapter10.ipynb" download
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -481,8 +481,12 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;[링크로 이동](https://streamlit.io)&quot;</span><span class="p">)</span>
 
 <span class="c1"># write()함수는 다목적 함수로 텍스트, 마크다운, 데이터, 객체 등 다양한 요소를 자동으로 감지하여 인식함</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# 제목&quot;</span><span class="p">)</span> 
 <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, Streamlit!&quot;</span><span class="p">)</span>
 <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;**굵은 텍스트**와 *기울임 텍스트*를 함께 사용할 수 있습니다.&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>                        <span class="c1"># 숫자</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">({</span><span class="s2">&quot;이름&quot;</span><span class="p">:</span> <span class="s2">&quot;홍길동&quot;</span><span class="p">,</span> <span class="s2">&quot;나이&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">})</span>   <span class="c1"># 딕셔너리</span>
+<span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]}))</span> <span class="c1"># 데이터프레임</span>
 
 <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;대제목&quot;</span><span class="p">)</span>
 <span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;중제목&quot;</span><span class="p">)</span>
@@ -505,7 +509,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
 <mark style="background-color: rgba(247, 239, 246, 1);">
 <div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image30.png" width=500></div>
-텍스트 관련 메서드 실습문제를 해보신 분들은 해보기 완료 체크 해주세요.</mark>
+</mark>
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_p1.py
@@ -581,6 +585,8 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
 
 <span class="c1"># st.json(): JSON 데이터 구조를 트리 형태로 표시. 펼치기, 접기가 가능</span>
+<span class="c1"># JSON (JavaScript Object Notation), 자바스크립트 객체 표기법</span>
+<span class="c1"># 사람이 읽고 쓰기 쉽고, 컴퓨터가 분석하기도 쉬운 텍스트 기반 데이터 형식</span>
 <span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Hobbies&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Reading&quot;</span><span class="p">,</span> <span class="s2">&quot;Traveling&quot;</span><span class="p">]}</span>
 <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;### JSON 데이터&quot;</span><span class="p">)</span>
 <span class="n">st</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
@@ -712,8 +718,9 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <li><p>사이드바는 화면 왼쪽에 고정된 공간을 사용하여 앱의 전반적인 구조를 더욱 직관적으로 만들 수 있다.</p></li>
 <li><p>아래는 streamlit의 사이드바를 활용한 웹페이지의 예이다.</p></li>
 </ul>
-<div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image38.png" width=500> 
-<img src="https://haesunbyun.github.io/common/images/comps/image39.png?v=1234" width=500> 
+<div align="center">
+<img src="https://haesunbyun.github.io/common/images/comps/image38.png" width=500><br><br>
+<img src="https://haesunbyun.github.io/common/images/comps/image39.png?v=1234" width=500> <br><br>
 <img src="https://haesunbyun.github.io/common/images/comps/image40.png?v=1234" width=500> 
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -944,11 +951,37 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
     <span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;컨테이너 안에 헤더&quot;</span><span class="p">)</span>
     <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;컨테이너 안에 텍스트&quot;</span><span class="p">)</span>
 
+<span class="c1"># 3개의 컨테이너를 미리 만들고 변수에 저장</span>
+<span class="n">containers</span> <span class="o">=</span> <span class="p">[</span><span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
 
-<span class="c1"># 반복적으로 컨테이너에 내용 추가</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">container</span><span class="p">():</span>
-        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;컨테이너 안에 반복적으로 텍스트 추가 </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># 각각 다른 내용 출력</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">containers</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">c</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;컨테이너 </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 두 번째 컨테이너만 업데이트</span>
+<span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;2번째 블록 갱신&quot;</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">containers</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;🟢 2번째 컨테이너 내용이 갱신됨!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting Ex_ch10_container.py
+</pre></div>
+</div>
+</div>
+</div>
+<p>참고</p>
+<ul class="simple">
+<li><p>enumerate(): 리스트나 튜플을 반복하면서, 동시에 “인덱스 번호”와 “값”을 한꺼번에 꺼내주는 함수</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;사과&quot;</span><span class="p">,</span> <span class="s2">&quot;배&quot;</span><span class="p">,</span> <span class="s2">&quot;바나나&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fruits</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fruit</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -959,7 +992,6 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <ul class="simple">
 <li><p>expander는 사용자가 필요할 때 펼쳐서 내용을 볼 수 있도록 하는 접을 수 있는 영역이다.</p></li>
 <li><p>이 기능은 긴 내용을 숨기거나, 옵션을 설정할 때 유용하다.</p></li>
-<li><p>리스트박스와는 다름. 리스트박스는 하위 항목을 선택할 수 있지만, Expander는 내용을 펼치거나 숨길 수 있다.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -969,6 +1001,28 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <span class="c1"># Expander 영역</span>
 <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">expander</span><span class="p">(</span><span class="s2">&quot;더 많은 정보를 보려면 클릭&quot;</span><span class="p">):</span>
     <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is the hidden content that appears when expanded.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 클릭 가능한 버튼</span>
+    <span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;버튼 클릭&quot;</span><span class="p">):</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&quot;버튼이 눌렸어요!&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 체크박스</span>
+    <span class="n">agree</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s2">&quot;이용 약관에 동의합니다.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">agree</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;동의해주셔서 감사합니다 🙌&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 드롭다운(리스트박스)</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s2">&quot;테마를 선택하세요&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;라이트&quot;</span><span class="p">,</span> <span class="s2">&quot;다크&quot;</span><span class="p">,</span> <span class="s2">&quot;시스템 기본&quot;</span><span class="p">])</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;선택한 테마: </span><span class="si">{</span><span class="n">option</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 슬라이더</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;볼륨 설정&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;현재 볼륨: </span><span class="si">{</span><span class="n">volume</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting Ex_ch10_expander.py
 </pre></div>
 </div>
 </div>
@@ -1289,6 +1343,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch10_media.py
 <span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># 이미지 파일 경로 사용, use_column_width는 이미지 크기를 자동으로 조정할지 여부</span>
 <span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="s2">&quot;./images/balloon.jpg&quot;</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Example Image&quot;</span><span class="p">)</span>
@@ -1298,7 +1353,6 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 
 <span class="c1"># Numpy 배열 사용 (예: Matplotlib로 생성된 이미지)</span>
 <span class="c1"># (100, 100, 3)는 (행, 열, 채널)</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">st</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Random Image&quot;</span><span class="p">)</span>
 
@@ -1338,6 +1392,11 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <span class="sd">    &quot;&quot;&quot;</span><span class="p">,</span>
     <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting Ex_ch10_media.py
 </pre></div>
 </div>
 </div>
