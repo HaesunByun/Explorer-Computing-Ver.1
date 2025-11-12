@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter11.ipynb" target="_blank"
+      <li><a href="_sources/EC_chapter11.ipynb" download
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -423,19 +423,18 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
   <li>API의 개념과 인증키 발급 절차를 알아본다. </li>
   <li>자동차 연비 대시보드를 만들어본다.</li></ul> 
 🔹 기대효과<br>
-  <ul><li>API를 통한 자료 수집과 웹 대시보드 서비스 제작을 직접 경험해볼 수 있다. </li>
-  <li> 웹서비스 제작</li></ul></mark>
+  <ul><li>API를 통한 자료 수집과 웹 대시보드 서비스 제작을 직접 경험해볼 수 있다. </li></ul></mark>
 </div><div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image57.png" width=400>  </div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
 <h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>웹 대시보드</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>웹 대시보드는 웹 기술과 시각화 도구를 활용해 실시간 데이터 모니터링, 분석, 의사결정을 지원하는 시각적 정보 관리 도구이다.</p></li>
-<li><p>다양한 데이터와 지표를 한 화면에 통합하여 보여주며 실시간으로 정보를 수집·분석하고 이를 시각적으로 표현한다.</p></li>
+<li><p>웹 대시보드를 통해 다양한 데이터와 지표를 한 화면에 통합하여 보여줄 수있으며 실시간으로 정보를 수집·분석하고 이를 시각적으로 표현할 수 있다.</p></li>
 </ul>
 <div class="section" id="id1">
 <h3>웹 대시보드 개발 기본 원칙<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>웹 대시보드를 만들 때는 단순히 데이터를 보여주는 것보다, 사용자가 빠르고 정확하게 의미를 파악하고 활용할 수 있도록 설계하는 것이 중요하다.</p></li>
-<li><p>웹 대시보드 개발의 7가지 원칙을 지켜 설계하기 바란다.(참고: Streamlit으로 프로젝트 한방에 끝내기 With 파이썬, BOOKK)</p></li>
+<li><p>웹 대시보드 개발의 7가지 설계 원칙은 다음과 같다.(Streamlit으로 프로젝트 한방에 끝내기 With 파이썬, BOOKK)</p></li>
 </ul>
 <ol class="arabic simple">
 <li><p>목적 중심 설계</p>
@@ -482,7 +481,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <h3>API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>API란 Application programming Interface로 응용 프로그램(애플리케이션)과 다른 소프트웨어가 서로 상호작용하도록 정의된 인터페이스를 의미한다.</p></li>
-<li><p>데이터 출처와 목표에 따라 필요에 따라 공공 API를 사용해야 하는 경우 인증키가 필요하다.</p></li>
+<li><p>데이터 출처와 목표에 따라 필요 시 공공 API를 사용해야 하는 경우 인증키가 필요하다.</p></li>
 <li><p>예를 들어, 서울 열린데이터 광장, 공공데이터 포털, 기상청, 부동산 실거래가 등은 사용자 인증을 통해 호출량 제한 관리, 데이터 제공자가 API 사용을 추적, 통계 작성에 활용하기 위해 인증키를 발급해준다.</p></li>
 <li><p>공공 API를 사용하기 위해서는 데이터 출처와 목표에 따라 다음에서 인증키를 발급받아야 한다.</p></li>
 </ul>
@@ -501,6 +500,9 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </ul>
 <p>2️⃣ 서울시 부동산 실거래가 인증키</p>
 <ul class="simple">
+<li><p><a class="reference external" href="https://data.seoul.go.kr">https://data.seoul.go.kr</a>,</p></li>
+<li><p><a class="reference external" href="https://www.data.go.kr">https://www.data.go.kr</a></p></li>
+<li><p>서울열린데이터광장(혹은 서울시 공공데이터 포털) 회원가입 및 로그인</p></li>
 <li><p>서울시 부동산 정보 / 국토교통부 실거래가</p></li>
 <li><p>주요 특징: 서울시 아파트, 오피스텔, 단독주택 등 거래 실거래 데이터 제공</p></li>
 <li><p>활용 예시:</p>
@@ -513,7 +515,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </ul>
 <p>3️⃣ 공공데이터 포털 인증키</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.data.go.kr">www.data.go.kr</a></p></li>
+<li><p><a class="reference external" href="https://www.data.go.kr">https://www.data.go.kr</a></p></li>
 <li><p>운영 주체: 행정안전부 (국가 차원)</p></li>
 <li><p>주요 특징: 전국 단위 다양한 공공 데이터 제공 (경제, 교육, 환경, 건강 등)</p></li>
 <li><p>활용 예시:</p>
@@ -528,7 +530,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div class="section" id="id3">
 <h3>공공데이터포털 회원가입과 인증키 발급<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>우리 수업에서는 공공데이터포털 사이트에 회원가입하여 인증키를 발급받아 사용해보자.</p></li>
+<li><p>여기서는 공공데이터포털 사이트에 회원가입하여 인증키를 발급받는 방법을 설명한다.</p></li>
 </ul>
 <div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image44.png" width=500></div>
 <p>✅ 회원가입 &amp; 로그인</p>
@@ -564,6 +566,12 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <p>✅ 활용신청</p>
 <ul class="simple">
 <li><p>데이터셋 상세 페이지에서 활용신청한다. 신청 시 서비스 목적 등을 간단히 작성해야 한다.</p></li>
+<li><p>승인 소요 시간:</p>
+<ul>
+<li><p>서울열린데이터광장: 즉시 또는 10분 이내 자동 승인되는 경우가 대부분</p></li>
+<li><p>공공데이터포털: 대부분 1시간 이내</p></li>
+</ul>
+</li>
 </ul>
 <p>✅ 승인 후 API 인증키 발급</p>
 <ul class="simple">
@@ -607,12 +615,15 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="k">def</span> <span class="nf">cars_home</span><span class="p">():</span>
+    <span class="c1">#자동차 연비 대시보드의 주요 목적과 활용 포인트를 소개한다.</span>
     <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">cars_EDA</span><span class="p">():</span>
+    <span class="c1">#연비(mpg)와 주요 변수 간의 관계, 대륙별 특성, 연도별 변화 등을 시각적으로 분석한다.</span>
     <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">cars_predict</span><span class="p">():</span>
+    <span class="c1">#머신러닝 모델을 활용하여 자동차의 연비를 예측하는 기능을 구현한다. </span>
     <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -643,7 +654,12 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </div>
 </div>
 </div>
-<ul class="simple">
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+📢 안내<br> 
+- 템플릿 소스 코드를 확장하면서 위아래로 자주 이동해야 하므로, 템플릿 코드를 새 파일에 복사해 두고 원본 파일과 번갈아 보며 작업해주세요.<br>
+- 메뉴에서 [파일(File)] → [새 파일(New File)] → 파일이름: **Ex_ch11_cars.py** -> 저장위치 지정후 엔터
+</mark></div><ul class="simple">
 <li><p>마지막에 있는 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code> 구문은 현재 파일이 직접 실행된 경우에만 main() 함수를 실행하라는 의미이다.</p></li>
 <li><p>이 코드를 조금 더 자세히 살펴보자.</p></li>
 <li><p>예를 들어, <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">Ex_ch11_cars.py</span></code>와 같이 파일을 직접 실행하면 main() 함수가 호출되어 프로그램이 실행된다.</p></li>
@@ -680,6 +696,13 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -820,7 +843,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <h4>기본 내용 및 파일 불러오기<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cars_EDA</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cars_EDA</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🔍 자동차 연비 분석 (EDA)&quot;</span><span class="p">)</span>
 
     <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -864,7 +887,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 대륙별 연비의 평균</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 지역별 연비의 평균</span>
 <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;continent&quot;</span><span class="p">)[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="c1">#df.groupby(&quot;continent&quot;)[&quot;mpg&quot;].mean().reset_index()</span>
 </pre></div>
@@ -911,7 +934,9 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
     <span class="n">color_continuous_scale</span><span class="o">=</span><span class="s2">&quot;Greens&quot;</span>
 <span class="p">)</span>
 <span class="n">fig1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># vs code에서 확인용</span>
-<span class="c1">#st.plotly_chart(fig1, use_container_width=True) # streamlit 확인용</span>
+
+<span class="c1">#st.plotly_chart(fig1, use_container_width=True) </span>
+<span class="c1">#use_container_width :Streamlit 페이지의 가로 폭(컨테이너 너비)에 자동으로 맞춰지게 할지 여부를 설정하는 옵션</span>
 
 <span class="c1">#st.markdown(&quot;---&quot;)</span>
 
@@ -923,6 +948,9 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p>streamlit에서 확인하기 위해서는 위 코드에서 streamlit 코드 주석을 해제하세요.</p></li>
+</ul>
 </div>
 <div class="section" id="id7">
 <h4>🚀해보기 1: cars_EDA()에 대륙별 평균 연비 추가하기<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
@@ -940,7 +968,8 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <div align="center"><img src="https://haesunbyun.github.io/common/images/comps/image53.png?v=1234" width=400>  </div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 마력(hp)과 연비(mpg) 관계</span>
-<span class="c1"># st.subheader(&quot;⚡ 마력(hp)과 연비(mpg) 관계&quot;)</span>
+
+<span class="c1">#st.subheader(&quot;⚡ 마력(hp)과 연비(mpg) 관계&quot;)</span>
 <span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
     <span class="n">df</span><span class="p">,</span>
     <span class="n">x</span><span class="o">=</span><span class="s2">&quot;hp&quot;</span><span class="p">,</span>
@@ -962,6 +991,9 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p>streamlit에서 확인하기 위해서는 위 코드에서 streamlit 코드 주석을 해제하세요.</p></li>
+</ul>
 </div>
 <div class="section" id="weightlbs">
 <h4>⚖️ 차량 무게(weightlbs)와 연비 관계<a class="headerlink" href="#weightlbs" title="Permalink to this headline">#</a></h4>
@@ -1035,7 +1067,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <div class="section" id="cars-predict">
 <h3>예측 화면: cars_predict()<a class="headerlink" href="#cars-predict" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>이번에는 머신러닝 모형 가운데 선형회귀 모델을 활용하여 예측을 해보자.</p></li>
+<li><p>이번에는 머신러닝 모형 가운데 선형회귀 모델을 활용하여 자동차의 연비(mpg)를 예측을 해보자.</p></li>
 <li><p>머신러닝의 다양한 모형은 ‘컴퓨팅 응용’교과목에서 학습하기 바란다.</p></li>
 <li><p>여기에서는 머신러닝의 간단한 용어와 사용할 모듈 소개 및 간단한 머신러닝 절차를 소개한다.</p></li>
 </ul>
@@ -1052,7 +1084,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <li><p>머신러닝은 항상 입력을 받아서 출력하는 함수 y=f(x)를 학습한다고 생각할 수 있다.</p>
 <ul>
 <li><p>features(특징): 학습모델에게 제공하는 입력값으로 y = f(x)에서 x에 해당한다.</p></li>
-<li><p>labels(레이블): y = f(X)에서 y에 해당한다. 농작물의 향후 가격, 사진에 표시되는 동물의 종류, 동영상의 의미 등 무엇이든지 레이블이 될 수 있다.</p></li>
+<li><p>labels(레이블): y = f(x)에서 y에 해당한다. 농작물의 향후 가격, 사진에 표시되는 동물의 종류, 동영상의 의미 등 무엇이든지 레이블이 될 수 있다.</p></li>
 <li><p>samples(샘플) 또는 examples(예제): 샘플은 머신러닝에 주어지는 특정한 예이다. 레이블이 있는 샘플은 (x,y)와 같이 x,y가 모두 주어지며, 레이블이 없는 샘플은 (x, ?)와 같이 x만 준 후 레이블이 있는 예를 통해 y를 예측한다.</p></li>
 <li><p>model(모델): 특징과 레이블의 관계를 정의하는 것을 의미한다.</p></li>
 <li><p>학습(training) : 모델을 만들거나 배우는 것을 의미한다.</p></li>
@@ -1065,48 +1097,68 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <h4>머신러닝 분류<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
 <p>머신러닝의 분류는 학습하는 동안의 감독 형태나 정보량에 따라 다음과 같이 세가지로 나뉜다.</p>
 <div align="center"><img src="https://haesunbyun.github.io/common/images/AI11.png" width=600></div>
-<p>🧠 지도학습(Supervised Learning)
-트레이닝 데이터에 정답(레이블, Label) 이 포함되어 있으며, 입력값과 출력값의 관계를 학습하는 방식이다.</p>
-<p>🔹 분류(Classification)</p>
 <ul class="simple">
+<li><p>지도학습(Supervised Learning)
+트레이닝 데이터에 정답(레이블, Label) 이 포함되어 있으며, 입력값과 출력값의 관계를 학습하는 방식이다.</p>
+<ul>
+<li><p>분류(Classification)</p>
+<ul>
 <li><p>K-최근접 이웃 (k-NN, k-Nearest Neighbors)</p></li>
 <li><p>의사결정트리 (Decision Tree)</p></li>
 <li><p>로지스틱 회귀 (Logistic Regression)</p></li>
 <li><p>나이브 베이즈 (Naive Bayes)</p></li>
 <li><p>서포트 벡터 머신 (SVM, Support Vector Machine)</p></li>
 </ul>
-<p>🔹 회귀(Regression)</p>
-<ul class="simple">
+</li>
+<li><p>회귀(Regression)</p>
+<ul>
 <li><p>선형 회귀 (Linear Regression)</p></li>
 <li><p>다항 회귀 (Polynomial Regression)</p></li>
 <li><p>의사결정트리 회귀 (Decision Tree Regressor)</p></li>
 <li><p>랜덤 포레스트 회귀 (Random Forest Regressor)</p></li>
 </ul>
-<p>🔹 주요 활용 분야</p>
-<ul class="simple">
+</li>
+<li><p>주요 활용 분야</p>
+<ul>
 <li><p>추천 시스템 (Recommendation System)</p></li>
 <li><p>시각·음성 인식 (Vision / Speech Recognition)</p></li>
 <li><p>텍스트 분석 및 자연어 처리 (NLP, Natural Language Processing)</p></li>
 </ul>
-<p>🧩 비지도학습(Unsupervised Learning)
+</li>
+</ul>
+</li>
+<li><p>비지도학습(Unsupervised Learning)
 트레이닝 데이터에 정답(레이블) 이 없는 상태에서, 데이터의 구조나 패턴을 스스로 학습하는 방식이다.</p>
-<p>🔹 클러스터링(Clustering)</p>
-<ul class="simple">
+<ul>
+<li><p>클러스터링(Clustering)</p>
+<ul>
 <li><p>K-평균 (K-means)</p></li>
 <li><p>계층적 클러스터링 (Hierarchical Clustering)</p></li>
 </ul>
-<p>🔹 차원 축소(Dimensionality Reduction)</p>
-<ul class="simple">
+</li>
+<li><p>차원 축소(Dimensionality Reduction)</p>
+<ul>
 <li><p>PCA (Principal Component Analysis)</p></li>
 <li><p>SVD (Singular Value Decomposition)</p></li>
 </ul>
-<p>🕹️ 강화학습(Reinforcement Learning)
-에이전트(Agent)가 환경(Environment) 속에서 상태(State) 에 따라 행동(Action) 을 선택하고, 그에 대한 보상(Reward) 을 받아가며 최적의 정책(Policy) 을 학습하는 방식이다.</p>
+</li>
+</ul>
+</li>
+<li><p>강화학습(Reinforcement Learning)
+에이전트(Agent)가 환경(Environment) 속에서 상태(State) 에 따라 행동(Action) 을 선택하고, 그에 대한 보상(Reward) 을 받아가며 최적의 정책(Policy) 을 학습하는 방식이다.</p></li>
+</ul>
 </div>
 <div class="section" id="id13">
 <h4>머신러닝을 위한 패키지<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
-<li><p>Scikit-Learn(사이킷 런): 2007년 구글에 개발한 라이브러리로, 현재 파이썬으로 구현된 라이브러리 중에서 머신러닝 교육 및 실무용으로 가장 많이 사용되고 있는 오픈소스 라이브러리이다. 회귀, 분류, 군집 등 실무에서 적용하는 대부분의 머신러닝 모형을 제공한다. <a class="reference external" href="https://pypi.org/project/scikit-learn/">https://pypi.org/project/scikit-learn/</a></p></li>
+<li><p>Scikit-Learn(사이킷 런):</p>
+<ul>
+<li><p>2007년 구글에 개발</p></li>
+<li><p>머신러닝 교육 및 실무용으로 많이 사용되고 있는 오픈소스 라이브러리이다.</p></li>
+<li><p>회귀, 분류, 군집 등 실무에서 적용하는 대부분의 머신러닝 모형을 제공한다.</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/scikit-learn/">https://pypi.org/project/scikit-learn/</a></p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="scikit-learn">
@@ -1155,6 +1207,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <h4><strong>회귀(Regression)</strong><a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>입력(x)과 출력(y)이 주어질 때, 입력에서 출력으로의 매핑 함수를 학습하는 것이다.</p></li>
+<li><p>우리의 목표는 선형회귀 모델을 활용하여 자동차의 연비(mpg)를 예측하는 것이다.</p></li>
 </ul>
 <div class="section" id="train-set-test-set">
 <h5>train set과 test set으로 분리<a class="headerlink" href="#train-set-test-set" title="Permalink to this headline">#</a></h5>
@@ -1172,7 +1225,8 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 
 <span class="c1"># 1. 데이터 준비</span>
 
-<span class="c1"># 입력 변수(X)와 목표 변수(y) 설정</span>
+<span class="c1"># 입력 변수(X)와 목표 변수(y) 설정          </span>
+<span class="c1"># 입력 변수(X): 실린더 수, 엔진 배기량, 마력, 차량 무게, 0 → 60마일(약 96km/h) 도달까지 걸리는 시간</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;cubicinches&quot;</span><span class="p">,</span> <span class="s2">&quot;hp&quot;</span><span class="p">,</span> <span class="s2">&quot;weightlbs&quot;</span><span class="p">,</span> <span class="s2">&quot;time-to-60&quot;</span><span class="p">]]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;mpg&quot;</span><span class="p">]</span>
 
@@ -1182,6 +1236,9 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p>트레이닝 데이터와 테스트 데이터가 분리된 형태에서 5개의 행을 살펴보자.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
@@ -1207,13 +1264,13 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">help</span><span class="p">(</span><span class="n">LinearRegression</span><span class="p">)</span>
+<span class="c1">#help(LinearRegression)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <ul class="simple">
-<li><p>학습 데이터를 줘서 모델을 학습시킨다.</p></li>
+<li><p>학습 데이터를 주고 .fit()함수를 통해 모델을 학습시킨다.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1233,6 +1290,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">score</span>
 </pre></div>
 </div>
 </div>
@@ -1292,7 +1350,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 </div>
 <div class="section" id="id14">
 <h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
-<p>이번 주차에서는 공공데이터를 활용하기 위한 회원가입 및 API 인증키 획득 방법을 살펴보았다. 또한 자동차 연비 데이터를 활용해 Streamlit 기반의 웹 대시보드를 직접 구현하며, 데이터 분석 결과를 시각적으로 표현하는 과정을 경험했다. 이를 통해분석, 시각화, 서비스화까지의 전 과정을 이해할 수 있었다. 이제 앞서 배운 웹에 배포 방법을 활용하여 웹에 배포해보기 바란다.</p>
+<p>이번 주차에서는 공공데이터를 활용하기 위한 회원가입 및 API 인증키 획득 방법을 살펴보았다. 또한 자동차 연비 데이터를 활용해 Streamlit 기반의 웹 대시보드를 직접 구현하며, 데이터 분석 결과를 시각적으로 표현하는 과정을 경험했다. 이를 통해 분석, 시각화, 서비스화까지의 전 과정을 이해할 수 있었다. 이제 앞서 배운 웹에 배포 방법을 활용하여 웹에 배포를 해볼 수 있다.</p>
 <hr class="docutils" />
 <font color='Grey' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
