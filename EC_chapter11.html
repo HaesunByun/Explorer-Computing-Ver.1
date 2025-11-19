@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'EC_chapter11';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Chapter 12. 실시간 정보 수집 자동화" href="EC_chapter12.html" />
+    <link rel="next" title="Chapter 12. 정적 웹 정보수집 자동화" href="EC_chapter12.html" />
     <link rel="prev" title="Chapter 10. Streamlit 기초와 UI 구성" href="EC_chapter10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -209,11 +209,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="EC_chapter10.html">Chapter 10. Streamlit 기초와 UI 구성</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 11. 대시보드 완성 및 웹 앱 배포</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Task Automation Projects</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Collection &amp; Automation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="EC_chapter12.html">Chapter 12. 실시간 정보 수집 자동화</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EC_chapter13.html">Chapter 13. 데이터 자동화 보고 시스템</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EC_chapter14.html">Chapter 14. 기말 프로젝트 워크타임</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EC_chapter12.html">Chapter 12. 정적 웹 정보수집 자동화</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EC_chapter13.html">Chapter 13. 동적 웹 정보수집 자동화</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EC_chapter14.html">Chapter 14. 데이터 기반 보고서 생성 자동화</a></li>
 <li class="toctree-l1"><a class="reference internal" href="EC_chapter15.html">Chapter 15. 기말 프로젝트</a></li>
 </ul>
 
@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter11.ipynb" download
+      <li><a href="_sources/EC_chapter11.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -942,7 +942,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 
 <span class="c1"># st.info(&quot;&quot;&quot;</span>
 <span class="c1"># 💡 **분석 포인트**</span>
-<span class="c1"># - 대륙별로 차량 특성이 다르며, 미국 차량은 비교적 연비가 낮고 일본 차량은 연비가 높은 편입니다.  &quot;&quot;&quot;)</span>
+<span class="c1"># - 대륙별로 차량 특성이 다르며, 미국 차량은 비교적 연비가 낮고 일본 차량은 연비가 높은 편입니다.  </span>
 <span class="c1"># &quot;&quot;&quot;)</span>
 </pre></div>
 </div>
@@ -986,7 +986,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 
 <span class="c1"># st.info(&quot;&quot;&quot;</span>
 <span class="c1"># 💡 **분석 포인트**</span>
-<span class="c1"># - 마력이 높거울수록 연비가 낮아지는 경향이 있습니다.&quot;&quot;&quot;)  </span>
+<span class="c1"># - 마력이 높거울수록 연비가 낮아지는 경향이 있습니다.  </span>
 </pre></div>
 </div>
 </div>
@@ -1020,7 +1020,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 
 <span class="c1"># st.info(&quot;&quot;&quot;</span>
 <span class="c1"># 💡 **분석 포인트**</span>
-<span class="c1"># - 차량 무게가 무거울수록 연비가 낮아지는 경향이 있습니다.&quot;&quot;&quot;) </span>
+<span class="c1"># - 차량 무게가 무거울수록 연비가 낮아지는 경향이 있습니다. </span>
 </pre></div>
 </div>
 </div>
@@ -1050,7 +1050,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 
 <span class="c1"># st.info(&quot;&quot;&quot;</span>
 <span class="c1"># 💡 **분석 포인트**</span>
-<span class="c1"># - 연도별 평균 연비가 점차 개선되는 추세를 확인할 수 있습니다.&quot;&quot;&quot;)</span>
+<span class="c1"># - 연도별 평균 연비가 점차 개선되는 추세를 확인할 수 있습니다.</span>
 </pre></div>
 </div>
 </div>
@@ -1175,7 +1175,7 @@ Ex_ch11_cars.py에 코드를 추가하세요.
 <li><p><code class="docutils literal notranslate"><span class="pre">sklearn.feature_selection</span></code>: 알고리즘에 영향을 미치는 특징을 우선순위대로 선택작업을 수행하는 다양한 기능을 제공하는 모듈</p></li>
 </ul>
 </li>
-<li><p>데이터 분리, 검증/파라미터 튜닝</p>
+<li><p>데이터 분리, 검증/파리미터 튜닝</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code>: 교차 검증을 위한 학습용/테스트용 데이터 분리 등의 API 제공</p></li>
 </ul>
@@ -1401,7 +1401,7 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter 12. 실시간 정보 수집 자동화</p>
+        <p class="prev-next-title">Chapter 12. 정적 웹 정보수집 자동화</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
