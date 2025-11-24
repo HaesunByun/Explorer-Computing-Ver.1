@@ -338,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -354,6 +356,41 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>셀레니움이란?</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>설치 및 환경설정</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">웹브라우저 한글폰트 깨짐 방지</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">셀레니움 설치</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">크롬 드라이버 자동 설치 모듈 설치</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">크롬드라이버 설치 및 테스트</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>네이버 웹크롤링</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1. 네이버 접속하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2. 태그와 속성 확인</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3. 코드로 엘리먼트 검색</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4. 검색버튼 클릭되게 하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🚀<strong>해보기 1: 검색어 입력받아 검색하기</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 2: 네이버 블로그 검색하기</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">5. 웹페이지 컨텐츠 추출하기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#beautifulsoup">5.1 BeautifulSoup으로 추출하기</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">5.2 셀레니움으로 추출하기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">6. 페이지 이동하면서 컨텐츠 추출하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">7. 반복적으로 일시키기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">8. 속성값 추출하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">9. 제어 종료</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>해보기 3: 네이버의 쇼핑 검색하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -369,14 +406,507 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-13">
 <h1>Chapter 13. 동적 웹 정보수집 자동화<a class="headerlink" href="#chapter-13" title="Permalink to this headline">#</a></h1>
-<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px; color: #000000;">
+<p><font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font></p>
+<mark style="background-color: #f5fff5;">
+🔹 학습목표<br>
+  <ul><li> selenium 모듈에 대해서 알아보자.</li>
+  <li> 웹드라이버를 활용하여 웹페이지를 크롤링 해보자.</li>
+  <li> 크롤링을 지원하는 중요한 메서드들을 알아보자.</li></ul> 
+🔹 기대효과<br>
+  <ul><li> 웹 크롤링에 필요한 핵심 모듈과 메서드를 이해하여 원하는 정보를 자동으로 수집할 수 있다.</li>
+  <li>실습을 통해 웹데이터를 활용한 자동화와 데이터 분석의 기초 역량을 향상시킨다.</li></ul></mark>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>셀레니움이란?</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>요즘 대부분의 웹페이지는 HTML안에 자바스크립트가 들어가 있어서 동적으로 사용자와 소통한다. 즉, 웹페이지가 사용자의 키보드 입력, 사용자의 마우스 클릭에 동적으로 반응한다는 의미이다.</p></li>
+<li><p>이와 같이 자바스크립트를 활용한 웹 페이지를 크롤링 하려면 자바스크립트를 해석할 수 있는 크롤러가 필요하다.</p></li>
+<li><p>셀레니움은 자바스크립트가 적용된 웹페이지에서 스크랩핑을 지원하는 모듈로 웹드라이버 기능을 활용하여 다양한 웹브라우저를 자동으로 동작시킨다.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>설치 및 환경설정</strong></mark></div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>셀레니움을 동작시키기 위해서는 한글폰트, 셀레니움, 크롬 드라이버 등의 설치가 필요하다.</p></li>
+</ul>
+<div class="section" id="id2">
+<h3>웹브라우저 한글폰트 깨짐 방지<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>웹브라우저를 구동시켜 웹페이지에 접속했을 때 한글 폰트가 깨져서 네모로 나오는 것을 방지한다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>은 Matplotlib로 그린 그래프를 .ipynb(노트북파일) 안에서 바로 보고자 할때 넣어준다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline  
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">font_manager</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Darwin&#39;</span><span class="p">:</span>  <span class="c1"># Mac OS</span>
+    <span class="c1"># 시스템 폰트 확인</span>
+    <span class="k">for</span> <span class="n">font</span> <span class="ow">in</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">findSystemFonts</span><span class="p">():</span>
+        <span class="k">if</span> <span class="s2">&quot;Nanum&quot;</span> <span class="ow">in</span> <span class="n">font</span> <span class="ow">or</span> <span class="s2">&quot;AppleGothic&quot;</span> <span class="ow">in</span> <span class="n">font</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
+    <span class="c1"># 폰트 지정 (예: AppleGothic)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;AppleGothic&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>  <span class="c1"># Windows</span>
+    <span class="n">font_path</span> <span class="o">=</span> <span class="s2">&quot;C:/Windows/Fonts/NanumGothic.ttf&quot;</span>
+    <span class="n">font_name</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">font_path</span><span class="p">)</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">font_name</span><span class="p">)</span>
+
+<span class="c1"># 테스트 그래프</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;테스트 그래프&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>셀레니움 설치<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>동적 웹크롤링/스크랩핑을 위한 모듈인 셀레니움을 설치한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">selenium</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>크롬 드라이버 자동 설치 모듈 설치<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>크롬 드라이버 자동 설치에 필요한 모듈을 설치한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">chromedriver</span><span class="o">-</span><span class="n">autoinstaller</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chromedriver-autoinstaller in d:\users\anaconda3\lib\site-packages (0.6.4)
+Requirement already satisfied: packaging&gt;=23.1 in d:\users\anaconda3\lib\site-packages (from chromedriver-autoinstaller) (23.2)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 23.0 -&gt; 24.0
+[notice] To update, run: d:\users\anaconda3\python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>크롬드라이버 설치 및 테스트<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>적절한 버전의 크롬드라이버(chromedriver.exe)를 자동 설치 및 실행한다.</p></li>
+<li><p>크롬 브라우저가 잘 동작하는지 테스트해보기 위해서 구글 홈페이지에 접속해본다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">import</span> <span class="nn">chromedriver_autoinstaller</span>
+
+<span class="c1"># 크롬드라이버 자동 설치 및 실행</span>
+<span class="n">chromedriver_autoinstaller</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.google.com&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Google
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>네이버 웹크롤링</strong></mark></div><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id7">
+<h3>1. 네이버 접속하기<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이제 웹드라이버를 통해 네이버에 접속해보자.</p></li>
+<li><p>웹드라이버를 통해 웹페이지에 접속할 때에는 <code class="docutils literal notranslate"><span class="pre">driver.get(url)</span></code> 함수를 사용한다.</p></li>
+<li><p>웹페이지에 접속은 네트워크 상황에 따라 몇 초 정도 소요될 수도 있다. 따라서 로딩되는 시간을 기다려야 한다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driver.implicitly_wait(s)</span></code>은 웹드라이버에게 웹페이지가 로딩되는 시간 또는 엘리먼트를 찾는데 걸리는 최대 대기 시간을 설정하는 함수이다.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">implicitly_wait() vs. time.sleep()</p>
+<ul class="simple">
+<li><p>implicitly_wait(s):</p>
+<ul>
+<li><p>웹드라이버에게 최대 s초 동안 대기하도록 하는 메서드이다.</p></li>
+<li><p>웹페이지가 로딩되는 시간 또는 엘리먼트를 찾는데 걸리는 최대 대기 시간을 설정하는 메서드이다.</p></li>
+<li><p>s초가 지나도 작업을 완료하지 못하면 NoSuchElementException 에러를 발생시킨다. 즉, 웹페이지가 준비도 안되었는데 엘리먼트를 찾으라 하면 NoSuchElementException 에러가 발생한다.</p></li>
+</ul>
+</li>
+<li><p>time.sleep(s):</p>
+<ul>
+<li><p>time 모듈에 포함된 함수로 실행을 s초 동안 일시 중지하였다가 시간이 경과하면 실행이 계속된다.</p></li>
+<li><p>time.sleep(s)은 웹페이지가 로딩되는 시간을 기다리는데 유용하게 사용할 수 있다.</p></li>
+<li><p>이 경우, time.sleep(5)를 호출하면 프로그램 실행이 5초 동안 일시 중지된다.</p></li>
+</ul>
+</li>
+</ul>
+<p>​이 두 코드는 서로 목적이 다르지만, 웹 스크래핑 작업에서 적절한 시점에 기다리는 용도로 사용할 수 있다.</p>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">driver.title</span></code>는 웹페이지 잘 접속 되었는지 확인하기 위해 웹페이지의 제목표시줄의 내용을 출력한다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driver.save_screenshot('파일명')</span></code>은 웹페이지에 잘 접속 되었는지 확인하기 위해 웹페이지의 스크린샷을 찍는다. 스크린샷이 성공적으로 찍히면 True를 반환한다. VS code에서는 크롬 브라우저가 동작하는 모습을 눈으로 확인할 수 있기 때문에 스크린샷을 찍지 않아도 된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://naver.com&quot;</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1">#driver.save_screenshot(&#39;screenshot.png&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>동적 웹페이지에서 웹크롤링을 하려면 <strong>사람이 하는 동작 그대로 코드에게 일을 시켜야 한다.</strong></p></li>
+<li><p>네이버 검색어 입력창에 검색어가 자동으로 입력되도록 해보자. 사람은 눈으로 검색창을 쉽게 찾을 수 있지만, 코드에서는 검색창의 위치를 명시적으로 찾아야 한다.</p></li>
+<li><p>즉, 검색어 입력박스의 엘리먼트(element)를 찾아서 알려줘야 한다.</p></li>
+<li><p>엘리먼트(Element) 는 웹페이지 안의 하나의 HTML 구성요소(태그) 를 의미한다. 웹페이지를 구성하는 버튼, 입력창, 링크, 이미지, 텍스트 박스 같은 모든 개별 객체가 다 엘리먼트이다.</p></li>
+</ul>
+<div align="center"><img src="https://haesunbyun.github.io/common/images/selenium.png" style="width:700px;"></div></div>
+<div class="section" id="id8">
+<h3>2. 태그와 속성 확인<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<ul>
+<li><p>개발자 도구를 활용하여 네이버 검색어 입력박스 엘리먼트의 태그와 속성을 확인한다.</p></li>
+<li><p>태그 구조는 다음과 같다.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;태그 속성명=&quot;속성값&quot; 속성명=&quot;속성값&quot; ...&gt;컨텐츠&lt;/태그&gt;
+</pre></div>
+</div>
+</li>
+<li><p>검색어 입력박스의 태그와 속성은 <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">id=&quot;query&quot;</span> <span class="pre">name=&quot;query&quot;</span> <span class="pre">...&gt;</span></code>이다. 기본적으로 입력박스의 태그는 <input>이다.</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>3. 코드로 엘리먼트 검색<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<ul>
+<li><p>검색어 입력박스의 태그와 속성을 확인했으니 이제 코드로 그 엘리먼트를 찾도록 해야 한다.</p></li>
+<li><p>셀레니움에서 엘리먼트를 찾는 방법은 다음과 같다.</p>
+<ul class="simple">
+<li><p>find_element(): 하나의 엘리먼트를 찾는다.</p></li>
+<li><p>find_elements(): 여러개의 엘리먼트를 찾는다.</p></li>
+</ul>
+</li>
+<li><p>find_element(), find_elements() 함수의 괄호안에는 추출할 옵션을 넣어준다. 옵션의 종류는 다음과 같다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>옵션</p></th>
+<th class="text-left head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.ID</span></code></p></td>
+<td class="text-left"><p>태그의 <code class="docutils literal notranslate"><span class="pre">id</span></code> 값으로 추출</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.NAME</span></code></p></td>
+<td class="text-left"><p>태그의 <code class="docutils literal notranslate"><span class="pre">name</span></code> 값으로 추출</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.XPATH</span></code></p></td>
+<td class="text-left"><p>태그의 경로(<code class="docutils literal notranslate"><span class="pre">XPath</span></code>)로 추출</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.LINK_TEXT</span></code></p></td>
+<td class="text-left"><p>링크의 전체 텍스트 값으로 추출</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.PARTIAL_LINK_TEXT</span></code></p></td>
+<td class="text-left"><p>링크 텍스트의 일부(자식 텍스트) 값으로 추출</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.TAG_NAME</span></code></p></td>
+<td class="text-left"><p>태그명으로 추출</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.CLASS_NAME</span></code></p></td>
+<td class="text-left"><p>태그의 클래스명으로 추출</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">By.CSS_SELECTOR</span></code></p></td>
+<td class="text-left"><p>CSS 선택자로 추출</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>위 옵션을 사용하려면 By 클래스를 먼저 import해야 한다.</p>
+<ul class="simple">
+<li><p><font color="red"><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">selenium.webdriver.common.by</span> <span class="pre">import</span> <span class="pre">By</span></code></font></p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>예를 들어, 검색어 입력박스의 속성가운데 하나인 ID로 찾는다면 find_element(<a class="reference external" href="http://By.ID">By.ID</a>, “query”)로 넣어준다.</p></li>
+<li><p>검색어 입력박스 엘리먼트를 찾았다면 <code class="docutils literal notranslate"><span class="pre">엘리먼트객체.send_keys()</span></code> 괄호안에 검색어를 넣어준다.</p></li>
+<li><p>아래 코드에서는 엘리먼트를 box_elem으로 저장했으므로 box_elem.send_keys(‘공휴일’)과 같이 작성하였다.</p></li>
+<li><p>검색박스의 문자열을 지우려면 엘리먼트.clear()하면 된다. 지금 당장은 지우지 말자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="n">box_elem</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">)</span> <span class="c1">#검색어 입력박스</span>
+<span class="n">box_elem</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;공휴일&#39;</span><span class="p">)</span> <span class="c1">#검색어 입력</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>4. 검색버튼 클릭되게 하기<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>검색어가 입력된 것을 확인했다면 검색버튼이 클릭되게 해보자.</p></li>
+<li><p>이때 버튼과 같이 클릭되는 항목들은 일반적으로 개발자도구에서 xpath를 찾아 넣어주면 편하다.</p></li>
+<li><p>xpath는 XML Path Language로, 웹페이지의 특정 엘리먼트나 속성에 접근하기 위한 경로이다.</p></li>
+</ul>
+<ul class="simple">
+<li><p>검색버튼의 xpath를 찾기 위해 개발자 도구를 활용해보자.</p></li>
+<li><p>개발자도구 &gt; 엘리먼트 선택 버튼 &gt; 네이버의 검색버튼으로 가서 클릭해보자. 오른쪽 개발자도구의 소스코드영역에 해당 검색버튼이 있는 html 코드가 있을 것이다.</p></li>
+<li><p>그 html 코드 위에서 마우스 오른쪽 버튼을 클릭하여 copy &gt; copy xpath를 클릭한다.</p></li>
+<li><p>그러면 xpath 값이 클립보드에 저장된다. 이를 변수 xpath에 붙여넣기 하여 문자열로 저장한다.</p></li>
+<li><p>find_element(By.XPATH, value=xpath)로 검색버튼 엘리먼트를 찾아 click()함수로 클릭되게 한다.</p></li>
+<li><p>검색 버튼이 클릭되면 검색 결과 페이지가 나온다.</p></li>
+<li><p>이전 페이지로 이동하려면 driver.back()한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xpath</span> <span class="o">=</span> <span class="s1">&#39;여러분이 채워주세요.&#39;</span>    <span class="c1">#검색버튼 xpath</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">xpath</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>🚀<strong>해보기 1: 검색어 입력받아 검색하기</strong><a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+검색어를 input() 함수로 입력받아 selenium으로 네이버에서 검색하도록 소스코드를 작성해보세요. 
+</mark></div></div>
+<div class="section" id="id12">
+<h3>🚀<strong>해보기 2: 네이버 블로그 검색하기</strong><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+아래 네이버 블로그 사이트에서 selenium으로 '겨울온천'을 검색하도록 코드를 작성하시오.
+<p><a class="reference external" href="https://section.blog.naver.com/">https://section.blog.naver.com/</a>
+</mark></div></p>
+</div>
+<div class="section" id="id13">
+<h3>5. 웹페이지 컨텐츠 추출하기<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>이제 웹페이지 검색결과에서 필요한 데이터를 추출해보자.</p></li>
+<li><p>이전에 배웠던 BeautifulSoup과 selenium 중 어느것을 사용해도 좋다.</p></li>
+</ul>
+<div class="section" id="beautifulsoup">
+<h4>5.1 BeautifulSoup으로 추출하기<a class="headerlink" href="#beautifulsoup" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>셀레니움으로 접근한 웹페이지를 가져올때에는 <code class="docutils literal notranslate"><span class="pre">driver.page_source</span></code>를 통해 HTML 코드를 가져온다.</p></li>
+<li><p>이후 <code class="docutils literal notranslate"><span class="pre">BeautifulSoup(html,</span> <span class="pre">'html.parser')</span></code>으로 파싱한다.</p></li>
+<li><p>추출하려고 하는 컨텐츠가 어떤 태그와 속성을 가지고 있는지 개발자 도구를 활용하여 알아낸 후, find_all()로 검색한다.</p></li>
+<li><p>검색된 결과에서 필요한 컨텐츠만 추출한다. 아래 예제에서는 검색된 목록의 제목을 추출해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html</span><span class="o">=</span><span class="n">driver</span><span class="o">.</span><span class="n">page_source</span> 
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">subject_list</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;채워주세요.&quot;</span><span class="p">)</span>
+<span class="c1"># 작성해주세요.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>5.2 셀레니움으로 추출하기<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>셀레니움으로 추출하면 페이지를 가져올 필요없이 <code class="docutils literal notranslate"><span class="pre">driver.find_elements()</span></code> 직접 추출이 가능하다.</p></li>
+<li><p>단, 셀리니움으로 찾은 결과는 BeautifulSoup에서와 달리 selenium.webdriver.remote.webelement.WebElement로 나온다.</p></li>
+<li><p>아래 코드에서 print(subject_list)를 해보고 그 결과를 확인하자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subject_list</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;title_post&quot;</span> <span class="p">)</span>
+<span class="n">subject_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">subject_list</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>6. 페이지 이동하면서 컨텐츠 추출하기<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>1페이지의 제목은 추출했으니 2페이지, 3페이지 이동하면서 제목을 추출해보자.</p></li>
+<li><p>사람이 2페이지 검색결과를 보려면 페이지번호 중에 2를 클릭 할 것이다. 이 클릭을 나 대신 코드가 클릭하도록 해줘야 한다.</p></li>
+<li><p>이를 위해 개발자 도구를 활용하여 페이지번호 2의 xpath를 추출한다.</p></li>
+<li><p>xpath를 활용하여 그 엘리먼트가 클릭되게 한 후, 페이지가 로딩되기를 기다리자.</p></li>
+<li><p>로딩되었다면 해당 페이지의 제목을 추출해보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xpath</span> <span class="o">=</span> <span class="s1">&#39;채워주세요.&#39;</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">xpath</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">subject_list</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;title_post&quot;</span> <span class="p">)</span>
+<span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">subject_list</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>7. 반복적으로 일시키기<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>6번에서 했던 절차를 반복하면 된다.</p></li>
+<li><p>개발자 도구를 활용하여 페이지번호 2, 페이지번호 3, 페이지번호 4 등의 xpath를 확인해 보고 어느 부분이 바뀌고 있는지 체크하자.</p></li>
+<li><p>xpath의 값이 거의 비슷할 것인데 span[2], span[3], span[4]와 같이 페이지번호에 따라 span[] 대괄호안의 숫자만 달라지고 있는 것을 볼 수 있을 것이다.</p></li>
+<li><p>반복문으로 실행시키기 딱 좋은 구조이다. 2, 3, 4라는 상수값을 변수로 줘서 반복문으로 실행시킬 수 있다.</p></li>
+<li><p>1페이지부터 5페이지까지 제목만 추출해서 리스트로 만들어보자.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">titleList</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+  <span class="n">xpath</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;채워주세요.&#39;</span>
+  <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">xpath</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+  <span class="n">subject_list</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;title_post&quot;</span> <span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">subject_list</span><span class="p">:</span>
+    <span class="n">titleList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-------</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">/5&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">titleList</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>8. 속성값 추출하기<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>블로그에서 검색어에 대한 제목뿐만 아니라 블로그 링크까지 추출해보자.</p></li>
+<li><p>블로그 링크의 주소는 일반적으로 <a> 태그에 있으나, 단순히 <a> 태그만 검색하면 의도하지 않은 다른 링크들까지 모두 포함될 수 있다.</p></li>
+<li><p>따라서 검색 범위를 더 구체적으로 지정하자. <a> 태그와 필요한 속성값을 함께 조건으로 사용하면 검색 범위를 좁힐 수 있다. 이때 속성명으로는 class가 많이 사용된다.</p></li>
+<li><p>찾은 엘리먼트에서 특정 속성값을 가져올 때는 <code class="docutils literal notranslate"><span class="pre">get_attribute()</span></code> 메서드의 괄호 안에 속성명을 넣어 호출하면 된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_tag_list</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s1">&#39;desc_inner&#39;</span><span class="p">)</span>
+<span class="n">a_tag_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;ng-href&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li><p>반복문으로 제목과 링크를 모두 딕셔너리 리스트로 만들어보자.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dict_lists</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;제목1&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://news.naver.com&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;제목2&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://google.com&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">dict_lists</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+  <span class="n">xpath</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;//*[@id=&quot;content&quot;]/section/div[3]/span[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">]/a&#39;</span>
+  <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">xpath</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+  <span class="n">subject_list</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;title_post&quot;</span> <span class="p">)</span>
+  <span class="n">a_tag_list</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s1">&#39;desc_inner&#39;</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">sub</span><span class="p">,</span> <span class="n">link</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">subject_list</span><span class="p">,</span> <span class="n">a_tag_list</span><span class="p">):</span>
+    <span class="n">link_dict</span><span class="o">=</span><span class="nb">dict</span><span class="p">()</span>
+    <span class="n">link_dict</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">link_dict</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;ng-href&#39;</span><span class="p">)</span>
+    <span class="n">dict_lists</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link_dict</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-------</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">/5&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_lists</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>9. 제어 종료<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>driver.close()를 통해 웹드라이버를 제어 종료한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span> <span class="c1"># 크롬 드라이버를 종료할 때 실행</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>지금까지 셀레니움을 사용해 웹 데이터를 추출하는 방법을 익혀보았다.</p></li>
+<li><p>하지만 아쉽게도 Streamlit 환경에서는 Selenium이 원활하게 동작하지 않는다.</p></li>
+<li><p>이는 Streamlit이 웹 기반 앱으로 실행되며, 서버와 사용자의 브라우저가 분리된 구조를 갖고 있기 때문이다.</p></li>
+<li><p>Selenium은 ChromeDriver(또는 Edge 등)를 실행해 로컬 PC에서 실제 브라우저 창을 띄우는 방식으로 작동한다.</p></li>
+<li><p>반면 Streamlit은 서버에서 실행되고, 사용자는 웹 브라우저를 통해 화면만 확인하기 때문에 서버에서 띄운 브라우저 창이 사용자에게 보이지 않을 뿐 아니라, 환경에 따라 브라우저 자체를 실행할 수 없는 경우도 있다.</p></li>
+<li><p>그렇다면 어떻게 해야 할까? 셀레니움으로 데이터를 수집해 파일로 저장한 뒤, Streamlit에서 그 파일을 불러와 시각화하거나 출력하는 방식으로 해결할 수 있다.</p></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>🚀<strong>해보기 3: 네이버의 쇼핑 검색하기</strong><a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h3>
+<div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;">
+<mark style="background-color: rgba(247, 239, 246, 1);">
+검색어를 입력받아 아래 네이버 쇼핑탭에서 selenium으로 검색어를 검색하고, 1페이지에 검색된 상품 가운데 최고가, 최저가를 출력하시오.
+<p><a class="reference external" href="https://shopping.naver.com/home">https://shopping.naver.com/home</a>
+</mark></div></p>
+<p>네이버의 쇼핑페이지는 마우스로 페이지를 스크롤링하거나 스크롤바를 내리면 상품 목록이 나오도록 되어 있습니다. 스크롤링하는 코드는 다음과 같습니다.
+아래 코드는 윈도우의 최상단으로부터 끝(document.body.scrollHeight)까지 내리는 코드입니다. 숫자로 조정 할 수도 있습니다. (예:3000)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="s2">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sample</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">검색상품명</span><span class="p">:</span> <span class="n">건조기</span>
+<span class="mi">48</span><span class="n">개</span> <span class="n">검색되었습니다</span><span class="o">.</span>
+<span class="n">최고가</span><span class="p">:</span> <span class="mi">1656060</span><span class="n">원</span>
+<span class="n">최저가</span><span class="p">:</span> <span class="mi">29900</span><span class="n">원</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h2>
+<p>오늘은 셀레니움을 활용해 웹에서 필요한 정보를 자동으로 추출하는 방법을 배워보았다. 셀레니움은 실제 브라우저를 제어하며 데이터를 수집할 수 있다는 점에서 매우 강력한 도구이다. 앞으로 더 복잡한 페이지 구조나 동적 데이터도 충분히 다룰 수 있을 것이며, 이를 기반으로 다양한 프로젝트에 응용해볼 수 있을 것이다. 오늘 배운 내용을 잘 정리해두면 이후 데이터 자동화나 크롤링 작업에서 큰 도움이 될 것이다.</p>
 <hr class="docutils" />
-<font color='Blue' size="4">
+<font color='Grey' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -431,6 +961,47 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>셀레니움이란?</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>설치 및 환경설정</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">웹브라우저 한글폰트 깨짐 방지</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">셀레니움 설치</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">크롬 드라이버 자동 설치 모듈 설치</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">크롬드라이버 설치 및 테스트</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>네이버 웹크롤링</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1. 네이버 접속하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2. 태그와 속성 확인</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3. 코드로 엘리먼트 검색</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4. 검색버튼 클릭되게 하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🚀<strong>해보기 1: 검색어 입력받아 검색하기</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">🚀<strong>해보기 2: 네이버 블로그 검색하기</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">5. 웹페이지 컨텐츠 추출하기</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#beautifulsoup">5.1 BeautifulSoup으로 추출하기</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">5.2 셀레니움으로 추출하기</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">6. 페이지 이동하면서 컨텐츠 추출하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">7. 반복적으로 일시키기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">8. 속성값 추출하기</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">9. 제어 종료</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">🚀<strong>해보기 3: 네이버의 쇼핑 검색하기</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
