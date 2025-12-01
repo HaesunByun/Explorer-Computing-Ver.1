@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/EC_chapter14.ipynb" target="_blank"
+      <li><a href="_sources/EC_chapter14.ipynb" download
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +338,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -354,6 +356,26 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>자동화 보고 시스템</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>필요 모듈 설치</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>스마트 주식 분석/보고 프로그램</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. 주식 데이터 수집</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2. 주식 시각화</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">3. Excel 파일로 저장</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4. 보고서 자동 생성</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5. 메일보내기</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>입력 받아 조회하기</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit 활용하여 웹에서 조회하기</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -369,14 +391,704 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="chapter-14">
 <h1>Chapter 14. 데이터 기반 보고서 생성 자동화<a class="headerlink" href="#chapter-14" title="Permalink to this headline">#</a></h1>
-<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px;">
-<font size=5> <strong> ✅ 학습목표와 기대효과 </strong></font>
-<p>준비중입니다.</p>
+<div style="background-color: #f5fff5; padding: 10px; border-radius: 5px; color: #000000;">
+<p><font size=5> <strong> <mark style="background-color: #f5fff5;">✅ 학습목표와 기대효과 </mark></strong></font></p>
+<mark style="background-color: #f5fff5;">
+🔹 학습목표<br>
+  <ul><li>yfinance와 Pandas를 활용하여 주식 데이터를 조회·분석해보자. </li>
+  <li>Matplotlib으로 그래프를 시각화하고 Excel·PDF 형태로 결과물을 생성해보자.</li>
+  <li>Streamlit으로 간단한 데이터 조회 웹앱을 만들고 활용해보자. </li></ul> 
+🔹 기대효과<br>
+  <ul><li>데이터 수집부터 분석·시각화·보고서 생성까지 전체 흐름을 경험함으로써 실무형 데이터 처리 능력이 향상된다.</li>
+  <li>사용자 입력 기반의 데이터 분석 프로그램과 웹 대시보드 제작 역량을 갖출 수 있다. </li></ul></mark>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>자동화 보고 시스템</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>데이터 자동화 보고 시스템은 다양한 데이터 소스를 기반으로 정보를 수집, 처리, 분석하고, 이를 정해진 형식으로 자동 생성하여 보고하는 시스템을 말한다.</p></li>
+<li><p>사용자의 개입 없이 주기적으로 혹은 실시간으로 보고서를 작성할 수 있으며, 반복적이고 수작업이 필요한 보고 업무를 자동화하는 것이 핵심이다.</p></li>
+<li><p>이번 시간에는 관심 있는 주식 정보를 자동으로 수집하고, 시각화와 보고서를 Excel과 PDF로 저장하는 스마트 주식 분석기 프로그램을 만들어보자.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>필요 모듈 설치</strong></mark></div><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>먼저, 스마트 주식 분석기 구현을 위해 필요한 모듈들을 설치해보자.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">yfinance</span></code> : 야후 파이낸스(Yahoo Finance)에서 주식 및 금융 데이터를 쉽게 가져오는 라이브러리</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">openpyxl</span></code> : Excel(.xlsx) 파일을 읽고 쓰고 편집할 수 있는 Python 라이브러리</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reportlab</span></code> : Python에서 PDF 문서를 생성하고 디자인할 수 있는 라이브러리</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>yfinance<span class="w"> </span>openpyxl<span class="w"> </span>reportlab
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>스마트 주식 분석/보고 프로그램</strong></mark></div><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<div class="section" id="id3">
+<h3>1. 주식 데이터 수집<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>필요 모듈의 설치가 완료되면 모듈을 불러온다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">Workbook</span>
+<span class="kn">from</span> <span class="nn">reportlab.lib.pagesizes</span> <span class="kn">import</span> <span class="n">letter</span>
+<span class="kn">from</span> <span class="nn">reportlab.pdfgen</span> <span class="kn">import</span> <span class="n">canvas</span>
+<span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>변수 stocks은 분석하고자 하는 주식들의 심볼(Symbol)을 리스트로 가진다.</p>
+<ul>
+<li><p>심볼: 각 주식을 대표하는 고유 코드</p></li>
+<li><p>예를 들어, 애플(Apple)의 심볼은 AAPL, 테슬라(Tesla)의 심볼은 TSLA, 삼성전자는 005930.KS처럼 표기된다.</p></li>
+</ul>
+</li>
+<li><p>변수 period는 가져올 주식 데이터의 기간을 지정한다.</p>
+<ul>
+<li><p>1d → 최근 1일</p></li>
+<li><p>5d → 최근 5일</p></li>
+<li><p>1mo → 최근 1개월</p></li>
+<li><p>3mo → 최근 3개월</p></li>
+<li><p>6mo → 최근 6개월</p></li>
+<li><p>1y → 최근 1년</p></li>
+<li><p>2y → 최근 2년</p></li>
+<li><p>5y → 최근 5년</p></li>
+<li><p>10y → 최근 10년</p></li>
+<li><p>ytd → 올해 초부터 오늘까지 (Year To Date)</p></li>
+<li><p>max → 가능한 모든 데이터</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AAPL&quot;</span><span class="p">,</span> <span class="s2">&quot;TSLA&quot;</span><span class="p">]</span>  <span class="c1"># 분석할 주식 심볼</span>
+<span class="n">period</span> <span class="o">=</span> <span class="s2">&quot;1mo&quot;</span>  <span class="c1"># 데이터 기간 설정 (최근 1개월)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>주식 데이터는 앞에서 배웠던 BeautifulSoup이나 Selenium을 사용해 웹페이지를 크롤링하는 방식으로 가져오지 않는다.</p></li>
+<li><p>yfinance 모듈의 Ticker().history()는 날짜, 시가·고가·저가·종가, 거래량 등 주요 정보를 이미 정리된 형태의 데이터프레임으로 제공한다. 즉, 웹페이지를 분석하는 것이 아니라 가공된 데이터베이스에서 직접 데이터를 받아오는 방식이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 주식 데이터를 가져오는 중...&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">ticker</span><span class="p">:</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="n">ticker</span><span class="p">)</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="n">period</span><span class="p">)</span> <span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">stocks</span><span class="p">}</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>변수 data는 딕셔너리이다. 그렇지만 그 안에 들어가 있는 value는 데이터프레임이다.</p></li>
+<li><p>따라서 딕셔너리의 키를 넣어줬을때 그 값은 데이터프레임 형태로 출력된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+<span class="c1">#data[&#39;AAPL&#39;]</span>
+<span class="c1">#data[&#39;AAPL&#39;].head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>여러 종목의 주가 데이터를 하나의 데이터프레임으로 합치면서, 각 행이 어떤 주식인지 알 수 있도록 심볼(Symbol) 컬럼을 추가하였다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">ticker</span><span class="p">]</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Symbol</span><span class="o">=</span><span class="n">ticker</span><span class="p">)</span> <span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">stocks</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Dividends</th>
+      <th>Stock Splits</th>
+      <th>Symbol</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-10-29 00:00:00-04:00</th>
+      <td>269.019206</td>
+      <td>271.147148</td>
+      <td>266.851294</td>
+      <td>269.438812</td>
+      <td>51086700</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>AAPL</td>
+    </tr>
+    <tr>
+      <th>2025-10-30 00:00:00-04:00</th>
+      <td>271.726571</td>
+      <td>273.874513</td>
+      <td>268.219991</td>
+      <td>271.137146</td>
+      <td>69886500</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>AAPL</td>
+    </tr>
+    <tr>
+      <th>2025-10-31 00:00:00-04:00</th>
+      <td>276.721738</td>
+      <td>277.051436</td>
+      <td>268.899335</td>
+      <td>270.108154</td>
+      <td>86167100</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>AAPL</td>
+    </tr>
+    <tr>
+      <th>2025-11-03 00:00:00-05:00</th>
+      <td>270.158128</td>
+      <td>270.587704</td>
+      <td>265.992153</td>
+      <td>268.789429</td>
+      <td>50194600</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>AAPL</td>
+    </tr>
+    <tr>
+      <th>2025-11-04 00:00:00-05:00</th>
+      <td>268.070107</td>
+      <td>271.227050</td>
+      <td>267.360803</td>
+      <td>269.778473</td>
+      <td>49274800</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>AAPL</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>DatetimeIndex에서 시간대 정보는 현재 큰 의미가 없기 때문에 시간대(timezone) 정보를 제거하여 날짜 인덱스를 표준 날짜 형식으로 통일시킨다.</p>
+<ul>
+<li><p>2025-12-01 14:00:00+09:00에서 +09:00, UTC인지, KST인지 등의 정보를 제거</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># 2025-12-01 14:00:00+09:00</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>위 코드를 함수로 변환하여 재사용할 수 있도록 구성하였다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_stock_data</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s2">&quot;1mo&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    주식 데이터를 가져와서 하나의 DataFrame으로 합쳐 반환하는 함수.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    - stocks: list, 분석할 주식 심볼 리스트</span>
+<span class="sd">    - period: str, 데이터 기간 (예: &#39;1mo&#39;, &#39;3mo&#39;, &#39;1y&#39;)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    - df: pandas DataFrame, 모든 주식 데이터를 합친 DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 주식 데이터를 가져오는 중...&quot;</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">ticker</span><span class="p">:</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="n">ticker</span><span class="p">)</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="n">period</span><span class="p">)</span> <span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">symbol_list</span><span class="p">}</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">ticker</span><span class="p">]</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Symbol</span><span class="o">=</span><span class="n">ticker</span><span class="p">)</span> <span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">symbol_list</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">):</span> <span class="c1">#일부 티커에는 타임존이 없는 경우도 있음</span>
+        <span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">,</span> <span class="n">data</span>
+<span class="n">symbol_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AAPL&quot;</span><span class="p">,</span> <span class="s2">&quot;TSLA&quot;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s2">&quot;1mo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 주식 데이터를 가져오는 중...
+                           Open        High         Low       Close    Volume  \
+Date                                                                            
+2025-10-29 04:00:00  269.019206  271.147148  266.851294  269.438812  51086700   
+2025-10-30 04:00:00  271.726571  273.874513  268.219991  271.137146  69886500   
+2025-10-31 04:00:00  276.721738  277.051436  268.899335  270.108154  86167100   
+2025-11-03 05:00:00  270.158128  270.587704  265.992153  268.789429  50194600   
+2025-11-04 05:00:00  268.070107  271.227050  267.360803  269.778473  49274800   
+
+                     Dividends  Stock Splits Symbol  
+Date                                                 
+2025-10-29 04:00:00        0.0           0.0   AAPL  
+2025-10-30 04:00:00        0.0           0.0   AAPL  
+2025-10-31 04:00:00        0.0           0.0   AAPL  
+2025-11-03 05:00:00        0.0           0.0   AAPL  
+2025-11-04 05:00:00        0.0           0.0   AAPL  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>2. 주식 시각화<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_and_save_chart</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">chart_filename</span> <span class="o">=</span> <span class="s2">&quot;stock_chart.png&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📈 주가 시각화를 생성하는 중...&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">symbol_list</span><span class="p">:</span>
+        <span class="n">stock_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">ticker</span><span class="p">]</span>
+        <span class="n">stock_data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">stock_data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stock_data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">stock_data</span><span class="p">[</span><span class="s2">&quot;Close&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">ticker</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Stock Closing Prices (Last 1 Month)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Price (USD)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+    <span class="c1"># 차트 이미지 저장</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">chart_filename</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;주가 그래프 저장 완료: </span><span class="si">{</span><span class="n">chart_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">chart_filename</span>
+
+
+<span class="n">chart_filename</span> <span class="o">=</span> <span class="n">plot_and_save_chart</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="excel">
+<h3>3. Excel 파일로 저장<a class="headerlink" href="#excel" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_excel</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1"># Excel 저장</span>
+    <span class="n">excel_filename</span> <span class="o">=</span> <span class="s2">&quot;stock_data.xlsx&quot;</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">excel_filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ Excel 파일 저장 완료: </span><span class="si">{</span><span class="n">excel_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">save_excel</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>4. 보고서 자동 생성<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">reportlab.platypus</span> <span class="kn">import</span> <span class="n">SimpleDocTemplate</span><span class="p">,</span> <span class="n">Paragraph</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Spacer</span>
+<span class="kn">from</span> <span class="nn">reportlab.pdfbase</span> <span class="kn">import</span> <span class="n">pdfmetrics</span>
+<span class="kn">from</span> <span class="nn">reportlab.pdfbase.cidfonts</span> <span class="kn">import</span> <span class="n">UnicodeCIDFont</span>
+<span class="kn">from</span> <span class="nn">reportlab.lib.styles</span> <span class="kn">import</span> <span class="n">getSampleStyleSheet</span>
+<span class="kn">from</span> <span class="nn">reportlab.lib.pagesizes</span> <span class="kn">import</span> <span class="n">letter</span>
+
+<span class="k">def</span> <span class="nf">create_pdf_report</span><span class="p">(</span><span class="n">pdf_filename</span><span class="p">,</span> <span class="n">chart_filename</span><span class="p">):</span>
+    
+    <span class="c1"># 한글 폰트 등록 (필수)</span>
+    <span class="n">pdfmetrics</span><span class="o">.</span><span class="n">registerFont</span><span class="p">(</span><span class="n">UnicodeCIDFont</span><span class="p">(</span><span class="s2">&quot;HYSMyeongJo-Medium&quot;</span><span class="p">))</span>
+
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">SimpleDocTemplate</span><span class="p">(</span><span class="n">pdf_filename</span><span class="p">,</span> <span class="n">pagesize</span><span class="o">=</span><span class="n">letter</span><span class="p">)</span>
+
+    <span class="n">styles</span> <span class="o">=</span> <span class="n">getSampleStyleSheet</span><span class="p">()</span>
+
+    <span class="c1"># 스타일에 한글 폰트 적용</span>
+    <span class="n">style_normal</span> <span class="o">=</span> <span class="n">styles</span><span class="p">[</span><span class="s2">&quot;Normal&quot;</span><span class="p">]</span>
+    <span class="n">style_normal</span><span class="o">.</span><span class="n">fontName</span> <span class="o">=</span> <span class="s2">&quot;HYSMyeongJo-Medium&quot;</span>
+    <span class="n">style_title</span> <span class="o">=</span> <span class="n">styles</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">]</span>
+    <span class="n">style_title</span><span class="o">.</span><span class="n">fontName</span> <span class="o">=</span> <span class="s2">&quot;HYSMyeongJo-Medium&quot;</span>
+
+    <span class="n">summary_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    최근 1개월간 </span><span class="si">{</span><span class="n">symbol_list</span><span class="si">}</span><span class="s2"> 주식 데이터를 분석한 결과입니다.</span>
+<span class="s2">    주요 데이터는 Excel에 저장되었습니다.</span>
+<span class="s2">    아래 그래프는 주식 종가(Closing Price)의 변화를 보여줍니다.</span>
+<span class="s2">    &quot;&quot;&quot;</span>    
+
+    <span class="n">report</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">report</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Paragraph</span><span class="p">(</span><span class="s2">&quot;주식 시장 보고서&quot;</span><span class="p">,</span> <span class="n">style_title</span><span class="p">))</span>
+    <span class="n">report</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Spacer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span> <span class="c1">#레이아웃에서 공간(space)을 추가</span>
+    <span class="n">report</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Paragraph</span><span class="p">(</span><span class="n">summary_text</span><span class="p">,</span> <span class="n">style_normal</span><span class="p">))</span>
+    <span class="n">report</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Spacer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+    <span class="c1"># 이미지 삽입</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">report</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">chart_filename</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">report</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Paragraph</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;이미지 로딩 오류: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">style_normal</span><span class="p">))</span>
+
+    <span class="n">doc</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PDF 생성 완료: </span><span class="si">{</span><span class="n">pdf_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">모든 작업이 완료되었습니다! 보고서를 확인하세요.&quot;</span><span class="p">)</span>
+
+<span class="c1"># ✅ 보고서 생성 실행</span>
+
+<span class="n">create_pdf_report</span><span class="p">(</span><span class="s2">&quot;stock_report.pdf&quot;</span><span class="p">,</span> <span class="n">chart_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>5. 메일보내기<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>구글 계정 보안 페이지 접속</p>
+<ul class="simple">
+<li><p>구글 계정 보안 페이지 접속: <a class="reference external" href="https://myaccount.google.com/">https://myaccount.google.com/</a></p></li>
+<li><p>왼쪽 메뉴에서 보안 및 로그인 클릭</p></li>
+</ul>
+</li>
+<li><p>2단계 인증 활성화하기</p>
+<ul class="simple">
+<li><p>보안 메뉴에서 <code class="docutils literal notranslate"><span class="pre">2단계</span> <span class="pre">인증</span></code> 항목 찾기</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">사용</span> <span class="pre">설정</span></code> 눌러서 2단계 인증을 켜기(휴대폰 번호 인증 또는 Google Authenticator 설정 필요)</p></li>
+</ul>
+</li>
+<li><p>앱 비밀번호(App Password) 생성</p>
+<ul class="simple">
+<li><p>다시 보안 → 2단계 인증 페이지로 들어감</p></li>
+<li><p>아래쪽에 <code class="docutils literal notranslate"><span class="pre">앱</span> <span class="pre">비밀번호(App</span> <span class="pre">passwords)</span></code> 메뉴 클릭</p></li>
+<li><p>구글 계정 비밀번호 한 번 입력</p></li>
+<li><p>생성 메뉴에서 Mail(메일), Windows 컴퓨터 등 선택</p></li>
+</ul>
+</li>
+<li><p>생성된 앱 비밀번호 사용</p>
+<ul class="simple">
+<li><p>화면에 16자리 비밀번호가 나타남</p></li>
+<li><p>앱 비밀번호는 구글 계정 비밀번호와 다름</p></li>
+<li><p>앱 비밀번호는 특정 기기/앱 전용, 여러 곳에서 재사용 가능</p></li>
+<li><p>필요 없으면 같은 메뉴에서 삭제 가능</p></li>
+<li><p>다른 사람에게 절대 공유 금지</p></li>
+</ul>
+</li>
+</ol>
+<p>※ 앱 비밀번호는 반드시 2단계 인증이 켜져 있어야 생성 가능합니다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
+<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
+<span class="kn">from</span> <span class="nn">email.mime.base</span> <span class="kn">import</span> <span class="n">MIMEBase</span>
+<span class="kn">from</span> <span class="nn">email</span> <span class="kn">import</span> <span class="n">encoders</span>
+
+<span class="c1"># 보내는 사람/받는 사람</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;your_email@gmail.com&quot;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;앱 비밀번호 또는 실제 비밀번호&quot;</span>
+<span class="n">to_email</span> <span class="o">=</span> <span class="s2">&quot;받는사람@gmail.com&quot;</span>
+
+<span class="c1"># SMTP 서버 설정</span>
+<span class="n">smtp_server</span> <span class="o">=</span> <span class="s2">&quot;smtp.gmail.com&quot;</span>
+<span class="n">smtp_port</span> <span class="o">=</span> <span class="mi">587</span>
+
+<span class="c1"># 메일 제목/본문</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
+<span class="n">msg</span><span class="p">[</span><span class="s2">&quot;From&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user</span>
+<span class="n">msg</span><span class="p">[</span><span class="s2">&quot;To&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_email</span>
+<span class="n">msg</span><span class="p">[</span><span class="s2">&quot;Subject&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;테스트 메일&quot;</span>
+
+<span class="c1"># 본문 추가</span>
+<span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;메일 본문 내용입니다.&quot;</span>
+<span class="n">msg</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">MIMEText</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s2">&quot;plain&quot;</span><span class="p">))</span>
+
+<span class="c1"># 첨부파일 추가</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;stock_report.pdf&quot;</span>  <span class="c1"># 첨부할 파일 이름</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">attachment</span><span class="p">:</span>
+    <span class="n">part</span> <span class="o">=</span> <span class="n">MIMEBase</span><span class="p">(</span><span class="s2">&quot;application&quot;</span><span class="p">,</span> <span class="s2">&quot;octet-stream&quot;</span><span class="p">)</span>
+    <span class="n">part</span><span class="o">.</span><span class="n">set_payload</span><span class="p">(</span><span class="n">attachment</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="c1"># Base64로 인코딩</span>
+<span class="n">encoders</span><span class="o">.</span><span class="n">encode_base64</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+
+<span class="c1"># 첨부파일 헤더 설정</span>
+<span class="n">part</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span>
+    <span class="s2">&quot;Content-Disposition&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;attachment; filename= </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">msg</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+
+<span class="c1"># 메일 전송</span>
+<span class="k">with</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="n">smtp_server</span><span class="p">,</span> <span class="n">smtp_port</span><span class="p">)</span> <span class="k">as</span> <span class="n">server</span><span class="p">:</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">starttls</span><span class="p">()</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;메일 발송 완료!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>메일 발송 완료!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>입력 받아 조회하기</strong></mark></div><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">search_symbol</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://query1.finance.yahoo.com/v1/finance/search?q=</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&quot;</span>
+    <span class="p">}</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>    
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">quotes</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;quotes&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">return</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;longname&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;shortname&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">quotes</span> <span class="k">if</span> <span class="s2">&quot;symbol&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">]</span>
+
+
+<span class="n">query</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;기업명 또는 주식 심볼을 입력하세요: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">search_symbol</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">select_symbol</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠ 검색 결과가 없습니다. 종료합니다.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">selected_symbol</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ 자동 인식된 심볼: </span><span class="si">{</span><span class="n">selected_symbol</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">selected_symbol</span><span class="p">]</span>   <span class="c1"># 리스트로 반환</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;여러 기업이 검색되었습니다. 번호를 선택하세요 (여러 개 선택 가능: 1,3 또는 1 3):&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">sym</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">sym</span><span class="si">}</span><span class="s2"> — </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">raw_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;선택 번호 입력: &quot;</span><span class="p">)</span>
+
+        <span class="c1"># 공백 또는 쉼표 단위로 나눠 처리</span>
+        <span class="n">choices</span> <span class="o">=</span> <span class="n">raw_input</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        
+        <span class="n">selected_symbols</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">choices</span><span class="p">:</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+                <span class="n">selected_symbols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">### 선택된 심볼 목록: </span><span class="si">{</span><span class="n">selected_symbols</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">selected_symbols</span>
+
+<span class="n">symbol_list</span> <span class="o">=</span> <span class="n">select_symbol</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_and_save_chart</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_pdf_report</span><span class="p">(</span><span class="s2">&quot;stock_report.pdf&quot;</span><span class="p">,</span> <span class="n">chart_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit 활용하여 웹에서 조회하기</strong></mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> Ex_ch14_web1.py
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;📈 주식 데이터 분석 대시보드&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># 함수: 기업명 → 심볼 자동 검색</span>
+<span class="c1"># -------------------------------</span>
+<span class="k">def</span> <span class="nf">search_symbol</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://query1.finance.yahoo.com/v1/finance/search?q=</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">quotes</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;quotes&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;longname&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;shortname&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)))</span>
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">quotes</span> <span class="k">if</span> <span class="s2">&quot;symbol&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">]</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># 사용자 입력</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;🔎 기업명 또는 주식 심볼을 입력하세요&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">selected_symbol</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">if</span> <span class="n">query</span><span class="p">:</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">search_symbol</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;검색 결과가 없습니다. 다른 기업명 또는 심볼을 입력해보세요.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">selected_symbol</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;자동 인식된 심볼: **</span><span class="si">{</span><span class="n">selected_symbol</span><span class="si">}</span><span class="s2">** (</span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sym</span><span class="si">}</span><span class="s2"> — </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">sym</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s2">&quot;여러 기업이 검색되었습니다. 선택하세요:&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+        <span class="n">selected_symbol</span> <span class="o">=</span> <span class="n">choice</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; — &quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># 주식 데이터 분석</span>
+<span class="c1"># -------------------------------</span>
+<span class="k">if</span> <span class="n">selected_symbol</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;### 📌 선택된 주식: **</span><span class="si">{</span><span class="n">selected_symbol</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
+
+    <span class="n">stock</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="n">selected_symbol</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">stock</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="s2">&quot;1mo&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># -------------------------------</span>
+    <span class="c1"># 차트 그리기</span>
+    <span class="c1"># -------------------------------</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;📈 주가 차트&quot;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Close&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">selected_symbol</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">selected_symbol</span><span class="si">}</span><span class="s2"> Closing Prices (1 Month)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Price (USD)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">pyplot</span><span class="p">(</span><span class="n">plt</span><span class="p">)</span>
+
+    <span class="c1"># -------------------------------</span>
+    <span class="c1"># 엑셀 다운로드</span>
+    <span class="c1"># -------------------------------</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;📥 데이터 다운로드&quot;</span><span class="p">)</span>
+
+    <span class="n">excel_buffer</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">excel_buffer</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;📊 엑셀 다운로드&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">excel_buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">(),</span>
+        <span class="n">file_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">selected_symbol</span><span class="si">}</span><span class="s2">_stock_data.xlsx&quot;</span><span class="p">,</span>
+        <span class="n">mime</span><span class="o">=</span><span class="s2">&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># -------------------------------</span>
+    <span class="c1"># PNG 다운로드</span>
+    <span class="c1"># -------------------------------</span>
+    <span class="n">img_buffer</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">img_buffer</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;📸 차트 이미지 다운로드&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">img_buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">(),</span>
+        <span class="n">file_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">selected_symbol</span><span class="si">}</span><span class="s2">_chart.png&quot;</span><span class="p">,</span>
+        <span class="n">mime</span><span class="o">=</span><span class="s2">&quot;image/png&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<p>이번 수업을 통해 우리는 주식 데이터를 실제로 불러와 분석하고, 그래프 시각화 및 보고서 제작까지 하나의 흐름으로 이어지는 데이터 분석 과정을 직접 경험했다. 또한 Streamlit을 활용해 웹 기반 조회 기능까지 구현함으로써, 배운 내용을 실전 환경에 바로 적용할 수 있는 역량을 갖추게 되었다. 앞으로 다양한 데이터에 응용하며 분석 자동화와 웹 서비스 개발로 확장해보길 기대한다.</p>
 <hr class="docutils" />
-<font color='Blue' size="4">
+<font color='Grey' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -431,6 +1143,32 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>자동화 보고 시스템</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>필요 모듈 설치</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>스마트 주식 분석/보고 프로그램</strong></mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. 주식 데이터 수집</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2. 주식 시각화</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">3. Excel 파일로 저장</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4. 보고서 자동 생성</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5. 메일보내기</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>입력 받아 조회하기</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-streamlit-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>Streamlit 활용하여 웹에서 조회하기</strong></mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);"><strong>마무리</strong></mark></div></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
