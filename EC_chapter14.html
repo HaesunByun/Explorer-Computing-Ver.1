@@ -515,105 +515,6 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Open</th>
-      <th>High</th>
-      <th>Low</th>
-      <th>Close</th>
-      <th>Volume</th>
-      <th>Dividends</th>
-      <th>Stock Splits</th>
-      <th>Symbol</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2025-10-29 00:00:00-04:00</th>
-      <td>269.019206</td>
-      <td>271.147148</td>
-      <td>266.851294</td>
-      <td>269.438812</td>
-      <td>51086700</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>AAPL</td>
-    </tr>
-    <tr>
-      <th>2025-10-30 00:00:00-04:00</th>
-      <td>271.726571</td>
-      <td>273.874513</td>
-      <td>268.219991</td>
-      <td>271.137146</td>
-      <td>69886500</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>AAPL</td>
-    </tr>
-    <tr>
-      <th>2025-10-31 00:00:00-04:00</th>
-      <td>276.721738</td>
-      <td>277.051436</td>
-      <td>268.899335</td>
-      <td>270.108154</td>
-      <td>86167100</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>AAPL</td>
-    </tr>
-    <tr>
-      <th>2025-11-03 00:00:00-05:00</th>
-      <td>270.158128</td>
-      <td>270.587704</td>
-      <td>265.992153</td>
-      <td>268.789429</td>
-      <td>50194600</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>AAPL</td>
-    </tr>
-    <tr>
-      <th>2025-11-04 00:00:00-05:00</th>
-      <td>268.070107</td>
-      <td>271.227050</td>
-      <td>267.360803</td>
-      <td>269.778473</td>
-      <td>49274800</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>AAPL</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <ul class="simple">
 <li><p>DatetimeIndex에서 시간대 정보는 현재 큰 의미가 없기 때문에 시간대(timezone) 정보를 제거하여 날짜 인덱스를 표준 날짜 형식으로 통일시킨다.</p>
@@ -658,26 +559,6 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <span class="n">symbol_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AAPL&quot;</span><span class="p">,</span> <span class="s2">&quot;TSLA&quot;</span><span class="p">]</span>
 <span class="n">df</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">symbol_list</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s2">&quot;1mo&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 주식 데이터를 가져오는 중...
-                           Open        High         Low       Close    Volume  \
-Date                                                                            
-2025-10-29 04:00:00  269.019206  271.147148  266.851294  269.438812  51086700   
-2025-10-30 04:00:00  271.726571  273.874513  268.219991  271.137146  69886500   
-2025-10-31 04:00:00  276.721738  277.051436  268.899335  270.108154  86167100   
-2025-11-03 05:00:00  270.158128  270.587704  265.992153  268.789429  50194600   
-2025-11-04 05:00:00  268.070107  271.227050  267.360803  269.778473  49274800   
-
-                     Dividends  Stock Splits Symbol  
-Date                                                 
-2025-10-29 04:00:00        0.0           0.0   AAPL  
-2025-10-30 04:00:00        0.0           0.0   AAPL  
-2025-10-31 04:00:00        0.0           0.0   AAPL  
-2025-11-03 05:00:00        0.0           0.0   AAPL  
-2025-11-04 05:00:00        0.0           0.0   AAPL  
 </pre></div>
 </div>
 </div>
@@ -995,14 +876,18 @@ Date
 <span class="c1"># -------------------------------</span>
 <span class="k">def</span> <span class="nf">search_symbol</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
     <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://query1.finance.yahoo.com/v1/finance/search?q=</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&quot;</span>
+    <span class="p">}</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>    
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
     <span class="n">quotes</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;quotes&quot;</span><span class="p">,</span> <span class="p">[])</span>
-    <span class="k">return</span> <span class="p">[(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;longname&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;shortname&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)))</span>
-            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">quotes</span> <span class="k">if</span> <span class="s2">&quot;symbol&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;symbol&quot;</span><span class="p">],</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;longname&quot;</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;shortname&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">quotes</span> <span class="k">if</span> <span class="s2">&quot;symbol&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">]</span>
 
 <span class="c1"># -------------------------------</span>
 <span class="c1"># 사용자 입력</span>
