@@ -361,10 +361,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-vs-code-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Visual Studio Code(VS Code)</mark></div></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-vs-code-windows-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code 설치 방법 (Windows 기준)</mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-anaconda-windows-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Anaconda 설치(Windows 기준)</mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-windows-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Visual Studio Code 설치(Windows 기준)</mark></div></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-vs-code-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code 실행</mark></div></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code의 확장팩 추가 설치</mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">가상 환경 구축 </mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI 사전 테스트</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -386,11 +390,66 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <p><font size=5> <strong> <mark style="background-color: #f5fff5;"> ✅ 학습목표와 기대효과 </mark></strong></font></p>
 <mark style="background-color: #f5fff5;">
 🔹 학습목표
-  <ul><li> VS code를 설치하고 코딩환경을 만들어보자.</li></ul>
+  <ul><li> Anaconda와 VS code를 설치하고 코딩환경을 만들어보자.</li></ul>
 🔹 기대효과
   <ul><li> VS Code의 주요 기능과 특징을 이해하고, Python 등 다양한 언어의 코딩 환경을 직접 구축할 수 있다.</li></ul></mark>
-</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-vs-code-mark-div">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Visual Studio Code(VS Code)</mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-vs-code-mark-div" title="Permalink to this headline">#</a></h2>
+</div><div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-anaconda-windows-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Anaconda 설치(Windows 기준)</mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-anaconda-windows-mark-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Anaconda는 파이썬(Python) 프로그래밍을 쉽게 사용할 수 있도록 여러 도구를 한 번에 묶어 놓은 통합 프로그램이다.</p></li>
+<li><p>파이썬으로 데이터 분석, 인공지능, 시각화 등을 하려면 다양한 라이브러리가 필요한데, 이를 하나씩 설치하면 오류가 자주 발생한다. Anaconda는 이런 문제를 줄이기 위해 다음을 함께 제공한다.</p>
+<ul>
+<li><p>Python (프로그래밍 언어)</p></li>
+<li><p>주요 라이브러리 (numpy, pandas, matplotlib 등)</p></li>
+<li><p>Jupyter Notebook (코드 실습 도구)</p></li>
+<li><p>conda (프로그램 환경 관리 도구)</p></li>
+</ul>
+</li>
+<li><p>Anaconda는 <font color='red'>파이썬 실습에 필요한 기본 환경을 한 번에 설치해주는 패키지 세트</font>라고 보면 된다.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong>공식 사이트 접속</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.anaconda.com/download%EC%97%90">https://www.anaconda.com/download에</a> 접속</p></li>
+</ul>
+</li>
+<li><p><strong>자신의 컴퓨터에 맞는 버전 선택</strong></p></li>
+<li><p><strong>설치 프로그램 실행</strong></p>
+<ul class="simple">
+<li><p>다운로드한 설치 파일을 더블클릭해 실행</p></li>
+</ul>
+</li>
+<li><p><strong>설치 옵션 선택</strong></p>
+<ol class="arabic simple">
+<li><p>화면 ① Welcome ➡ Next 클릭</p></li>
+<li><p>화면 ② License Agreement ➡ I Agree 클릭</p></li>
+<li><p>화면 ③ Installation Type ➡ Just Me (Recommended) 선택✅</p></li>
+<li><p>화면 ④ Installation Location</p>
+<ul class="simple">
+<li><p>⚠ Windows 사용자 계정 이름이 한글인 경우 오류가 발생할 수 있습니다.</p></li>
+<li><p>설치 경로를 기본값 대신 다음처럼 변경하세요: C:\anaconda3</p></li>
+<li><p>사용자 계정 이름이 영문이면 그대로 하셔도 됩니다.(예: C:\Users\Username\anaconda3)</p></li>
+</ul>
+</li>
+<li><p>화면 ⑤ Advanced Options (가장 중요)</p>
+<ul class="simple">
+<li><p><font color='red'>Add Anaconda to my PATH environment variable	❌ 절대 체크하지 말 것</font></p></li>
+<li><p>Register Anaconda as my default Python	✅ 체크 유지</p></li>
+</ul>
+</li>
+<li><p>설치 진행</p></li>
+<li><p>설치 확인 (중요)</p>
+<ul class="simple">
+<li><p>Windows 시작 메뉴에서 Anaconda Prompt 검색,</p></li>
+<li><p>명령 입력 conda –version</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-windows-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Visual Studio Code 설치(Windows 기준)</mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-windows-mark-div" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>VS code는 마이크로소프트에서 개발한 <strong>무료 오픈소스 코드 편집기</strong>이다. 가볍지만 강력한 기능을 갖추고 있어 많은 개발자들이 사용하고 있다.</p></li>
 </ul>
@@ -409,9 +468,6 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 <li><p><strong>리소스 사용 증가</strong>: 여러 확장 기능을 많이 설치하면 속도가 느려지고 메모리 사용량이 증가할 수 있다.</p></li>
 <li><p><strong>GUI 기반 작업엔 불편</strong>: GUI 앱을 설계할 때 드래그앤드롭 방식의 UI 빌더가 지원되지 않아 효율적이지 않다.</p></li>
 </ul>
-</div>
-<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-vs-code-windows-mark-div">
-<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code 설치 방법 (Windows 기준)</mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-vs-code-windows-mark-div" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
 <li><p><strong>공식 사이트 접속</strong></p>
 <ul class="simple">
@@ -518,13 +574,66 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </tbody>
 </table>
 <p>이 세 가지는 Python 개발의 기본 세트이다.</p>
+</div>
+<div class="section" id="div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div">
+<h2><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">가상 환경 구축 </mark></div><a class="headerlink" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>가상환경이란 하나의 컴퓨터 안에서 독립적인 Python 실행 공간을 만드는 것을 의미한다.</p></li>
+<li><p>가상환경을 사용하면 하나의 컴퓨터 안에서 서로 다른 Python 버전을 각각 독립적으로 사용할 수 있다.</p></li>
+<li><p>또한 각 환경마다 필요한 라이브러리들을 별도로 설치하여 관리할 수 있다.</p></li>
+<li><p>한 환경에서 설치하거나 변경한 내용이 다른 환경에 영향을 주지 않는다.</p></li>
+<li><p>터미널을 열어 아래 명령어를 실행해보자.</p></li>
+<li><p>우리 수업에서는 라이브러리 호환성과 수업 운영의 안정성을 고려하여 Python 3.10 버전을 사용한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">computing</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>가상환경이 만들어지면 아래 명령어로 활성화 시킨다.</p></li>
+<li><p>정상 활성화가 되면 프롬프트가 (computing) C:\Users… 와 같이 바뀔 것이다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">computing</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>정상 활성화가 되면 프롬프트가 (computing) C:\Users… 와 같이 바뀔 것이다.</p></li>
+<li><p>이제 모든 환경 설정이 완료되었다.</p></li>
+<li><p>우리 수업에서는 VS Code에서 인터프리터를 선택할 때 Anaconda3\envs\computing\python.exe와 같이 (computing) 환경이 표시된 항목을 선택하면 된다.</p></li>
+</ul>
+<div class="section" id="gui">
+<h3>GUI 사전 테스트<a class="headerlink" href="#gui" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tkinter 테스트&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;300x200&quot;</span><span class="p">)</span>
+
+<span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello, Tkinter!&quot;</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div style="background-color:rgba(247, 239, 246, 1); padding: 10px; border-radius: 5px;"><mark style="background-color:rgba(247, 239, 246, 1);"> 이제 VS Code를 사용하여 학습할 준비를 갖추었다!
-앞으로 한 학기 동안 Python을 활용하여 GUI 프로그래밍, 게임 개발, 웹 대시보드, 자동화 등 다양한 주제를 체계적으로 배우고 실습해보는 여정을 힘차게 시작해보자! 차근차근 하나씩 익혀가며 나만의 프로젝트도 만들어보고, 프로그래밍의 재미와 성취감을 마음껏 느껴보자.</mark>
+앞으로 한 학기 동안 Python을 활용하여 다양한 주제를 체계적으로 배우고 실습해보는 여정을 힘차게 시작해보자! 차근차근 하나씩 익혀가며 나만의 프로젝트도 만들어보고, 프로그래밍의 재미와 성취감을 마음껏 느껴보자.</mark>
 </div><hr class="docutils" />
 <font color='Blue' size="4">
 F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Applications in Everyday Life)</font>
 <hr class="docutils" />
 <p>서울대학교 학부대학 강의교수 변해선</p>
+</div>
 </div>
 </div>
 
@@ -589,10 +698,14 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-vs-code-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Visual Studio Code(VS Code)</mark></div></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-vs-code-windows-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code 설치 방법 (Windows 기준)</mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-anaconda-windows-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Anaconda 설치(Windows 기준)</mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-visual-studio-code-windows-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">Visual Studio Code 설치(Windows 기준)</mark></div></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-vs-code-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code 실행</mark></div></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">VS Code의 확장팩 추가 설치</mark></div></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#div-style-background-color-rgba-208-205-208-1-padding-10px-border-radius-5px-mark-style-background-color-rgba-208-205-208-1-mark-div"><div style="background-color:rgba(208, 205, 208, 1); padding: 10px; border-radius: 5px;"><mark style="background-color: rgba(208, 205, 208, 1);">가상 환경 구축 </mark></div></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">GUI 사전 테스트</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
