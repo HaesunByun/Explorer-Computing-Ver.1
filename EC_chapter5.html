@@ -623,39 +623,92 @@ F37.206 컴퓨팅 탐색: 실생활에서 활용하기(Exploring Computing: Appl
 </ul>
 <div class="section" id="id3">
 <h3>🧩 키보드 이벤트 처리<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+
 <font size=2>
+
 <ul class="simple">
 <li><p><strong>pygame 키보드 이벤트 타입(event.type) 종류</strong></p></li>
 </ul>
+
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>이벤트 종류</p></th>
-<th class="head"><p>설명</p></th>
+<tr>
+<th>이벤트 종류</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.KEYDOWN</span></code></p></td>
-<td><p>키가 눌렸을 때 발생</p></td>
+<tr>
+<td><code>pygame.KEYDOWN</code></td>
+<td>키가 눌렸을 때 발생</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pygame.KEYUP</span></code></p></td>
-<td><p>키에서 손을 뗐을 때 발생</p></td>
+<tr>
+<td><code>pygame.KEYUP</code></td>
+<td>키에서 손을 뗐을 때 발생</td>
 </tr>
 </tbody>
 </table>
+
+<br>
+
 <ul class="simple">
-<li><p><strong>키 상수 (pygame.K_*)</strong>
-| 키     | 상수                | 설명              |
-| —– | —————– | ————— |
-| 방향키 ↑ | <code class="docutils literal notranslate"><span class="pre">pygame.K_UP</span></code>     | 위쪽 방향키          |
-| 방향키 ↓ | <code class="docutils literal notranslate"><span class="pre">pygame.K_DOWN</span></code>   | 아래쪽 방향키         |
-| 방향키 ← | <code class="docutils literal notranslate"><span class="pre">pygame.K_LEFT</span></code>   | 왼쪽 방향키          |
-| 방향키 → | <code class="docutils literal notranslate"><span class="pre">pygame.K_RIGHT</span></code>  | 오른쪽 방향키         |
-| 스페이스바 | <code class="docutils literal notranslate"><span class="pre">pygame.K_SPACE</span></code>  | 점프/발사 등으로 자주 사용 |
-| ESC   | <code class="docutils literal notranslate"><span class="pre">pygame.K_ESCAPE</span></code> | 게임 종료용으로 자주 사용  |
-| A 키   | <code class="docutils literal notranslate"><span class="pre">pygame.K_a</span></code>      | 알파벳 키 (소문자 기준)  |
-| 숫자 1  | <code class="docutils literal notranslate"><span class="pre">pygame.K_1</span></code>      | 숫자 키            |</p></li>
+<li><p><strong>키 상수 (pygame.K_*)</strong></p></li>
 </ul>
-</font>  </div>
+
+<table class="colwidths-auto table">
+<thead>
+<tr>
+<th>키</th>
+<th>상수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>방향키 ↑</td>
+<td><code>pygame.K_UP</code></td>
+<td>위쪽 방향키</td>
+</tr>
+<tr>
+<td>방향키 ↓</td>
+<td><code>pygame.K_DOWN</code></td>
+<td>아래쪽 방향키</td>
+</tr>
+<tr>
+<td>방향키 ←</td>
+<td><code>pygame.K_LEFT</code></td>
+<td>왼쪽 방향키</td>
+</tr>
+<tr>
+<td>방향키 →</td>
+<td><code>pygame.K_RIGHT</code></td>
+<td>오른쪽 방향키</td>
+</tr>
+<tr>
+<td>스페이스바</td>
+<td><code>pygame.K_SPACE</code></td>
+<td>점프/발사 등으로 자주 사용</td>
+</tr>
+<tr>
+<td>ESC</td>
+<td><code>pygame.K_ESCAPE</code></td>
+<td>게임 종료용으로 자주 사용</td>
+</tr>
+<tr>
+<td>A 키</td>
+<td><code>pygame.K_a</code></td>
+<td>알파벳 키 (소문자 기준)</td>
+</tr>
+<tr>
+<td>숫자 1</td>
+<td><code>pygame.K_1</code></td>
+<td>숫자 키</td>
+</tr>
+</tbody>
+</table>
+
+</font>
+</div>
 <div class="section" id="id4">
 <h3>🧩 마우스 이벤트 처리<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <font size=2>
